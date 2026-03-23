@@ -4,4 +4,7 @@
     <string name="Login">Log in\n</string>
     <string name="login">Log in</string>
     <string name="register">Registrarse</string>
+    <string name="Dayly_progress">Progreso diario</string>
+    <string name="Target">Objetivo</string>
+    <string name="profile">Perfil</string>
 </resources>
