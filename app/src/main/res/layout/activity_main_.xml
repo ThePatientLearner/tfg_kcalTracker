@@ -37,11 +37,11 @@
             android:textAllCaps="false"
             app:cornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnLogoutMainActicity_"
+            app:layout_constraintEnd_toStartOf="@+id/btnLogoutMainActivity_"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnLogoutMainActicity_"
+            android:id="@+id/btnLogoutMainActivity_"
             android:layout_width="97dp"
             android:layout_height="42dp"
             android:backgroundTint="#F87171"
@@ -67,80 +67,141 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="15dp">
+            android:padding="20dp">
 
             <TextView
                 android:id="@+id/lblDayProgressMainActivity"
-                android:layout_width="234dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:text="@string/Dayly_progress"
                 android:textColor="#0F172A"
-                android:textSize="32sp"
+                android:textSize="20sp"
                 android:textStyle="bold" />
 
-            <!-- Circular Progress Placeholder -->
-            <FrameLayout
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="24dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <com.google.android.material.progressindicator.CircularProgressIndicator
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:progress="62"
-                    app:indicatorColor="#0284C7"
-                    app:indicatorSize="180dp"
-                    app:trackColor="#E2E8F0"
-                    app:trackThickness="16dp" />
+                <!-- Progress Circle Left -->
+                <FrameLayout
+                    android:layout_width="140dp"
+                    android:layout_height="140dp">
 
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/barProgressMainActivity_"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:progress="62"
+                        app:indicatorColor="#0284C7"
+                        app:indicatorSize="130dp"
+                        app:trackColor="#E2E8F0"
+                        app:trackThickness="12dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/lblCurrentKcalMainActivity_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1250"
+                            android:textColor="#0F172A"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/lblMaxKcalMainActivity_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/ 2000 kcal"
+                            android:textColor="#64748B"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <!-- Details Right -->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:layout_marginStart="40dp"
                     android:orientation="vertical">
 
+                    <!-- BMI Section -->
                     <TextView
-                        android:id="@+id/lblCurrentKcalActivityMain_"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1250"
-                        android:textColor="#0F172A"
-                        android:textSize="44sp"
+                        android:text="IMC (BMI)"
+                        android:textColor="#64748B"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtIMCValueMainActivity_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="..."
+                            android:textColor="#0F172A"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtIMCStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/bg_status_normal"
+                            android:paddingHorizontal="8dp"
+                            android:paddingVertical="2dp"
+                            android:text="Normal"
+                            android:textColor="#166534"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="12dp"
+                        android:background="#F1F5F9" />
+
+                    <!-- Weight Section -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WEIGHT (KG)"
+                        android:textColor="#64748B"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/lblMaxKcalActivityMain_"
+                        android:id="@+id/txtWeightValueMainActivity_"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="/ 2000 kcal"
-                        android:textColor="#64748B"
-                        android:textSize="16sp" />
+                        android:layout_marginTop="4dp"
+                        android:text="... kg"
+                        android:textColor="#0F172A"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
                 </LinearLayout>
-            </FrameLayout>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                app:cardBackgroundColor="#F0FDF4"
-                app:cardCornerRadius="16dp"
-                app:strokeColor="#DCFCE7"
-                app:strokeWidth="1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="7dp"
-                    android:text="Remaining: 750 kcal"
-                    android:textColor="#166534"
-                    android:textStyle="bold" />
-            </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
