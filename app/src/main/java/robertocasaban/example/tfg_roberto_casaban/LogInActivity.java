@@ -58,7 +58,6 @@ public class LogInActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-
     }
 
     private void updateUi(FirebaseUser user){
