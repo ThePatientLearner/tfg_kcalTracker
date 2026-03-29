@@ -100,6 +100,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         });
 
+        // ── Reset ────────────────────────────────────────────────────────────────
+        binding.btnResetMainActivity.setOnClickListener(v -> {
+            foodEntryAdapter.clear();
+            updateKcalDisplay();
+        });
+
         // ── Bottom Navigation ─────────────────────────────────────────────────────
         binding.bottomNav.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
