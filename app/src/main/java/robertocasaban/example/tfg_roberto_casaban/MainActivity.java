@@ -129,6 +129,41 @@ public class MainActivity extends AppCompatActivity {
 
         // Lista de alimentos añadidos al día
         foodEntryAdapter = new FoodEntryAdapter();
+        foodEntryAdapter.setOnEntryClickListener((position, entry) -> {
+            new AlertDialog.Builder(this)
+                    .setTitle(entry.getName())
+                    .setItems(new String[]{"Cambiar gramos", "Eliminar"}, (dialog, which) -> {
+                        if (which == 0) {
+                            // Cambiar gramos
+                            EditText input = new EditText(this);
+                            input.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);
+                            input.setHint("Gramos (ej: 150)");
+                            input.setText(String.valueOf((int) entry.getGrams()));
+                            int dp16 = (int) (16 * getResources().getDisplayMetrics().density);
+                            input.setPadding(dp16, dp16, dp16, dp16);
+
+                            new AlertDialog.Builder(this)
+                                    .setTitle("Cambiar gramos")
+                                    .setView(input)
+                                    .setPositiveButton("Actualizar", (d, w) -> {
+                                        String val = input.getText().toString().trim();
+                                        if (val.isEmpty()) return;
+                                        double newGrams = Double.parseDouble(val);
+                                        if (newGrams <= 0) return;
+                                        foodEntryAdapter.updateEntry(position,
+                                                new FoodEntry(entry.getName(), entry.getKcalPer100g(), newGrams));
+                                        updateKcalDisplay();
+                                    })
+                                    .setNegativeButton("Cancelar", null)
+                                    .show();
+                        } else {
+                            // Eliminar
+                            foodEntryAdapter.removeEntry(position);
+                            updateKcalDisplay();
+                        }
+                    })
+                    .show();
+        });
         binding.recyclerViewMainActivity.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerViewMainActivity.setAdapter(foodEntryAdapter);
     }

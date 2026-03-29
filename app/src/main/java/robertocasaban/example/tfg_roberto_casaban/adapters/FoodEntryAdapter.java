@@ -20,7 +20,16 @@ import robertocasaban.example.tfg_roberto_casaban.models.FoodEntry;
  */
 public class FoodEntryAdapter extends RecyclerView.Adapter<FoodEntryAdapter.ViewHolder> {
 
+    public interface OnEntryClickListener {
+        void onEntryClick(int position, FoodEntry entry);
+    }
+
     private final List<FoodEntry> entries = new ArrayList<>();
+    private OnEntryClickListener listener;
+
+    public void setOnEntryClickListener(OnEntryClickListener listener) {
+        this.listener = listener;
+    }
 
     /** Añade una nueva entrada y notifica al RecyclerView */
     public void addEntry(FoodEntry entry) {
@@ -33,6 +42,18 @@ public class FoodEntryAdapter extends RecyclerView.Adapter<FoodEntryAdapter.View
         double total = 0;
         for (FoodEntry e : entries) total += e.getTotalKcal();
         return total;
+    }
+
+    /** Elimina una entrada por posición */
+    public void removeEntry(int position) {
+        entries.remove(position);
+        notifyItemRemoved(position);
+    }
+
+    /** Reemplaza una entrada (para actualizar gramos) */
+    public void updateEntry(int position, FoodEntry entry) {
+        entries.set(position, entry);
+        notifyItemChanged(position);
     }
 
     /** Limpia todos los alimentos (para el botón Reset) */
@@ -55,6 +76,9 @@ public class FoodEntryAdapter extends RecyclerView.Adapter<FoodEntryAdapter.View
         holder.txtName.setText(entry.getName());
         holder.txtDetails.setText(String.format("%.0fg  •  %.0f kcal/100g", entry.getGrams(), entry.getKcalPer100g()));
         holder.txtKcal.setText(String.format("%.0f", entry.getTotalKcal()));
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) listener.onEntryClick(holder.getAdapterPosition(), entry);
+        });
     }
 
     @Override
