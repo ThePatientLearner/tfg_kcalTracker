@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/mascot_bunny">
+
+    <!-- Bounce whole body -->
+    <target
+        android:name="bounce"
+        android:animation="@animator/bounce_up_down" />
+
+    <!-- Wiggle ears -->
+    <target
+        android:name="earLeft"
+        android:animation="@animator/ear_left_wiggle" />
+    <target
+        android:name="earRight"
+        android:animation="@animator/ear_right_wiggle" />
+
+    <!-- Wave arms -->
+    <target
+        android:name="armLeft"
+        android:animation="@animator/arm_left_wave" />
+    <target
+        android:name="armRight"
+        android:animation="@animator/arm_right_wave" />
+
+</animated-vector>

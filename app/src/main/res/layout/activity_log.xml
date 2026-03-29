@@ -7,33 +7,59 @@
     android:background="#F5F7FA">
 
     <!-- Logo -->
-    <ImageView
-        android:id="@+id/imgLogoLogInActivity"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:src="@mipmap/ic_launcher"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/txtTitleLogInActivity"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="60dp"/>
 
     <!-- Titulo -->
 
     <!-- Email -->
-    <TextView
+
+    <ImageView
+        android:id="@+id/imgLogoLogInActivity"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/mascot_bunny_animated"
+        app:layout_constraintBottom_toTopOf="@id/txtTitleLogInActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
         android:id="@+id/txtTitleLogInActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Calorie Tracker"
-        android:textColor="#333333"
-        android:textSize="26sp"
-        android:textStyle="bold"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imgLogoLogInActivity" />
+        app:layout_constraintTop_toBottomOf="@id/imgLogoLogInActivity">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_flame"
+            android:contentDescription="Flame icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Kcal"
+            android:textColor="#0F172A"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:text="Tracker"
+            android:textColor="#0284C7"
+            android:textSize="38sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emailLayout"
@@ -93,12 +119,12 @@
         android:id="@+id/txtRegisterLogInActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Register"
+        android:layout_marginTop="20dp"
+        android:text="@string/register_text_button"
         android:textColor="#4CAF50"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/btnLoginLogInActivity"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLoginLogInActivity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

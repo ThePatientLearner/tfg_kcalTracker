@@ -1,7 +1,11 @@
 package robertocasaban.example.tfg_roberto_casaban;
 
 import android.content.Intent;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Toast;
 
@@ -22,6 +26,8 @@ public class LogInActivity extends AppCompatActivity {
     private ActivityLogBinding binding;
     private FirebaseUser user;
     private FirebaseAuth auth;
+    private Handler animHandler;
+    private Runnable animRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +64,33 @@ public class LogInActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        // Iniciar animación de la mascota en bucle
+        startMascotAnimation();
+    }
+
+    private void startMascotAnimation() {
+        animHandler = new Handler(Looper.getMainLooper());
+        animRunnable = new Runnable() {
+            @Override
+            public void run() {
+                Drawable drawable = binding.imgLogoLogInActivity.getDrawable();
+                if (drawable instanceof Animatable) {
+                    ((Animatable) drawable).start();
+                }
+                // Repetir cada 1.2 segundos (duración total de la animación)
+                animHandler.postDelayed(this, 1200);
+            }
+        };
+        animHandler.post(animRunnable);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (animHandler != null && animRunnable != null) {
+            animHandler.removeCallbacks(animRunnable);
+        }
     }
 
     private void updateUi(FirebaseUser user){

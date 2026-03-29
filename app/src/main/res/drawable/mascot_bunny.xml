@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- ===== BOUNCE GROUP (wraps everything) ===== -->
+    <group
+        android:name="bounce"
+        android:pivotX="60"
+        android:pivotY="120"
+        android:translateY="0">
+
+        <!-- ===== LEFT EAR ===== -->
+        <group
+            android:name="earLeft"
+            android:pivotX="45"
+            android:pivotY="38"
+            android:rotation="0">
+            <!-- Outer ear -->
+            <path
+                android:fillColor="#C4B5A5"
+                android:pathData="M42,8 C38,2 32,0 30,4 C27,10 33,22 38,34 C40,38 44,40 46,38 C50,34 48,16 42,8 Z" />
+            <!-- Inner ear pink -->
+            <path
+                android:fillColor="#E0909F"
+                android:pathData="M40,12 C37,7 34,6 33,8 C31,12 35,22 38,30 C39,33 42,34 43,32 C45,28 44,18 40,12 Z" />
+        </group>
+
+        <!-- ===== RIGHT EAR ===== -->
+        <group
+            android:name="earRight"
+            android:pivotX="75"
+            android:pivotY="38"
+            android:rotation="0">
+            <!-- Outer ear -->
+            <path
+                android:fillColor="#C4B5A5"
+                android:pathData="M78,8 C82,2 88,0 90,4 C93,10 87,22 82,34 C80,38 76,40 74,38 C70,34 72,16 78,8 Z" />
+            <!-- Inner ear pink -->
+            <path
+                android:fillColor="#E0909F"
+                android:pathData="M80,12 C83,7 86,6 87,8 C89,12 85,22 82,30 C81,33 78,34 77,32 C75,28 76,18 80,12 Z" />
+        </group>
+
+        <!-- ===== HEAD ===== -->
+        <!-- Head base -->
+        <path
+            android:fillColor="#D5CBBF"
+            android:pathData="M60,28 C74,28 85,38 85,52 C85,66 74,74 60,74 C46,74 35,66 35,52 C35,38 46,28 60,28 Z" />
+
+        <!-- ===== HEADBAND ===== -->
+        <!-- Red sport headband -->
+        <path
+            android:fillColor="#EF4444"
+            android:pathData="M36,42 C36,42 42,34 60,34 C78,34 84,42 84,42 L84,47 C84,47 78,40 60,40 C42,40 36,47 36,47 Z" />
+        <!-- Headband stripe -->
+        <path
+            android:fillColor="#FBBF24"
+            android:pathData="M36,44 C36,44 42,37 60,37 C78,37 84,44 84,44 L84,45.5 C84,45.5 78,38.5 60,38.5 C42,38.5 36,45.5 36,45.5 Z" />
+
+        <!-- ===== FACE ===== -->
+        <!-- Left eye -->
+        <path
+            android:fillColor="#1E293B"
+            android:pathData="M50,52 C50,49.5 51.5,48 53,48 C54.5,48 56,49.5 56,52 C56,54.5 54.5,56 53,56 C51.5,56 50,54.5 50,52 Z" />
+        <!-- Left eye shine -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M52,49.5 C52.8,49.5 53.5,50 53.5,50.8 C53.5,51.5 52.8,52 52,52 C51.2,52 50.5,51.5 50.5,50.8 C50.5,50 51.2,49.5 52,49.5 Z" />
+        <!-- Right eye -->
+        <path
+            android:fillColor="#1E293B"
+            android:pathData="M64,52 C64,49.5 65.5,48 67,48 C68.5,48 70,49.5 70,52 C70,54.5 68.5,56 67,56 C65.5,56 64,54.5 64,52 Z" />
+        <!-- Right eye shine -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M66,49.5 C66.8,49.5 67.5,50 67.5,50.8 C67.5,51.5 66.8,52 66,52 C65.2,52 64.5,51.5 64.5,50.8 C64.5,50 65.2,49.5 66,49.5 Z" />
+
+        <!-- Nose -->
+        <path
+            android:fillColor="#E0909F"
+            android:pathData="M57.5,58 C57.5,57 58.5,56 60,56 C61.5,56 62.5,57 62.5,58 C62.5,59.2 61.5,60 60,60 C58.5,60 57.5,59.2 57.5,58 Z" />
+
+        <!-- Mouth -->
+        <path
+            android:strokeColor="#A88A7A"
+            android:strokeWidth="1"
+            android:fillColor="#00000000"
+            android:pathData="M56,62 C57.5,64 58.5,65 60,65 C61.5,65 62.5,64 64,62" />
+
+        <!-- Left cheek blush -->
+        <path
+            android:fillColor="#22F4B4C1"
+            android:pathData="M41,57 C41,54 43,52 46,52 C49,52 51,54 51,57 C51,60 49,62 46,62 C43,62 41,60 41,57 Z" />
+        <!-- Right cheek blush -->
+        <path
+            android:fillColor="#22F4B4C1"
+            android:pathData="M69,57 C69,54 71,52 74,52 C77,52 79,54 79,57 C79,60 77,62 74,62 C71,62 69,60 69,57 Z" />
+
+        <!-- ===== BODY ===== -->
+        <!-- Body -->
+        <path
+            android:fillColor="#D5CBBF"
+            android:pathData="M60,72 C72,72 80,78 80,88 C80,96 72,100 60,100 C48,100 40,96 40,88 C40,78 48,72 60,72 Z" />
+        <!-- Belly -->
+        <path
+            android:fillColor="#E8DDD3"
+            android:pathData="M60,76 C68,76 73,80 73,87 C73,93 68,96 60,96 C52,96 47,93 47,87 C47,80 52,76 60,76 Z" />
+
+        <!-- ===== ARMS ===== -->
+        <!-- Left arm -->
+        <group
+            android:name="armLeft"
+            android:pivotX="42"
+            android:pivotY="78"
+            android:rotation="0">
+            <path
+                android:fillColor="#C4B5A5"
+                android:pathData="M42,78 C38,80 32,84 30,88 C29,90 30,92 32,91 C35,89 40,86 42,84 Z" />
+        </group>
+
+        <!-- Right arm -->
+        <group
+            android:name="armRight"
+            android:pivotX="78"
+            android:pivotY="78"
+            android:rotation="0">
+            <path
+                android:fillColor="#C4B5A5"
+                android:pathData="M78,78 C82,80 88,84 90,88 C91,90 90,92 88,91 C85,89 80,86 78,84 Z" />
+        </group>
+
+        <!-- ===== SNEAKERS ===== -->
+        <!-- Left sneaker -->
+        <path
+            android:fillColor="#0284C7"
+            android:pathData="M44,96 C44,96 40,97 38,99 C36,101 36,104 38,105 C40,106 48,106 52,105 C54,104 54,101 52,99 C50,97 48,96 48,96 Z" />
+        <!-- Left sneaker sole -->
+        <path
+            android:fillColor="#1E293B"
+            android:pathData="M37,104 C37,104 40,106 45,106.5 C50,107 53,106 54,104.5 C54,106 51,108 45,108 C39,108 37,106 37,104 Z" />
+        <!-- Left sneaker stripe -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M40,100 C42,99 46,99 50,100 L49,101.5 C46,100.5 43,100.5 41,101.5 Z" />
+        <!-- Left sneaker lace dots -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M44,98 C44.8,98 45.5,98.3 45.5,98.8 C45.5,99.3 44.8,99.5 44,99.5 C43.2,99.5 42.5,99.3 42.5,98.8 C42.5,98.3 43.2,98 44,98 Z" />
+
+        <!-- Right sneaker -->
+        <path
+            android:fillColor="#0284C7"
+            android:pathData="M72,96 C72,96 68,97 66,99 C64,101 64,104 66,105 C68,106 76,106 80,105 C82,104 82,101 80,99 C78,97 76,96 76,96 Z" />
+        <!-- Right sneaker sole -->
+        <path
+            android:fillColor="#1E293B"
+            android:pathData="M65,104 C65,104 68,106 73,106.5 C78,107 81,106 82,104.5 C82,106 79,108 73,108 C67,108 65,106 65,104 Z" />
+        <!-- Right sneaker stripe -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M68,100 C70,99 74,99 78,100 L77,101.5 C74,100.5 71,100.5 69,101.5 Z" />
+        <!-- Right sneaker lace dots -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M74,98 C74.8,98 75.5,98.3 75.5,98.8 C75.5,99.3 74.8,99.5 74,99.5 C73.2,99.5 72.5,99.3 72.5,98.8 C72.5,98.3 73.2,98 74,98 Z" />
+
+    </group>
+</vector>
