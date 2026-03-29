@@ -412,6 +412,37 @@ public class MainActivity extends AppCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View dialogView = getLayoutInflater().inflate(R.layout.alert_kg_edit, null);
         builder.setView(dialogView);
+
+        android.widget.TextView txtPesoActual   = dialogView.findViewById(R.id.txtPesoActualValue);
+        EditText                editImcDeseado  = dialogView.findViewById(R.id.editTextText4);
+        android.widget.TextView txtImcActual    = dialogView.findViewById(R.id.textView6);
+        android.widget.TextView txtPesoObjetivo = dialogView.findViewById(R.id.textView7);
+
+        if (currentProfile != null) {
+            double heightM   = currentProfile.getHeight() / 100.0;
+            double imcActual = currentProfile.getWeight() / (heightM * heightM);
+
+            txtPesoActual.setText(String.format("%.1f kg", currentProfile.getWeight()));
+            txtImcActual.setText(String.format("%.1f", imcActual));
+
+            editImcDeseado.addTextChangedListener(new android.text.TextWatcher() {
+                @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+                @Override
+                public void afterTextChanged(android.text.Editable s) {
+                    String val = s.toString().trim();
+                    if (val.isEmpty()) { txtPesoObjetivo.setText("..?"); return; }
+                    try {
+                        double imcDeseado   = Double.parseDouble(val);
+                        double pesoObjetivo = imcDeseado * heightM * heightM;
+                        txtPesoObjetivo.setText(String.format("%.1f kg", pesoObjetivo));
+                    } catch (NumberFormatException e) {
+                        txtPesoObjetivo.setText("..?");
+                    }
+                }
+            });
+        }
+
         builder.setPositiveButton("Cerrar", (dialog, which) -> dialog.dismiss());
         builder.create().show();
     }
