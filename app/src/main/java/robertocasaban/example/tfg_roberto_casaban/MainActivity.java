@@ -2,6 +2,7 @@ package robertocasaban.example.tfg_roberto_casaban;
 
 import android.content.Intent;
 import android.util.Log;
+import java.time.LocalDate;
 import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
@@ -390,6 +391,22 @@ public class MainActivity extends AppCompatActivity {
     // ══════════════════════════════════════════════════════════════════════════════
     //  DIÁLOGOS
     // ══════════════════════════════════════════════════════════════════════════════
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        checkDailyReset();
+    }
+
+    private void checkDailyReset() {
+        String today = LocalDate.now().toString();
+        String lastReset = sp.getString("last_reset_date", "");
+        if (!today.equals(lastReset)) {
+            foodEntryAdapter.clear();
+            updateKcalDisplay();
+            sp.edit().putString("last_reset_date", today).apply();
+        }
+    }
 
     private void showTargetDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
