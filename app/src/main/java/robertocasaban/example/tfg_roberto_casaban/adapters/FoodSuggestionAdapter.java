@@ -43,7 +43,7 @@ public class FoodSuggestionAdapter extends RecyclerView.Adapter<FoodSuggestionAd
             for (FoodProduct p : products) {
                 if (p.hasValidData()) {
                     suggestions.add(p);
-                    if (suggestions.size() >= 3) break;
+                    if (suggestions.size() >= 5) break;
                 }
             }
         }

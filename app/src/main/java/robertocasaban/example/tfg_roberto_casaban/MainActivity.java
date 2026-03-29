@@ -50,7 +50,12 @@ public class MainActivity extends AppCompatActivity {
 
     // ─── Firebase ────────────────────────────────────────────────────────────────
     private DatabaseReference refUsers;
+    private DatabaseReference refUserFoods;
     private UserProfile currentProfile;
+
+    // ─── Fecha y UID del usuario ──────────────────────────────────────────────────
+    private String todayDate;
+    private String currentUid;
 
     // ─── Local DB ────────────────────────────────────────────────────────────────
     private LocalDatabaseHelper localDb;
@@ -87,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
         );
         refUsers = database.getReference("users");
 
+        todayDate = LocalDate.now().toString();
+        FirebaseUser initUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (initUser != null) {
+            currentUid   = initUser.getUid();
+            refUserFoods = refUsers.child(currentUid).child("foods").child(todayDate);
+        }
+
         setupRecyclerViews();
         setupSearch();
         loadUserProfile();
@@ -103,6 +115,8 @@ public class MainActivity extends AppCompatActivity {
 
         // ── Reset ────────────────────────────────────────────────────────────────
         binding.btnResetMainActivity.setOnClickListener(v -> {
+            if (refUserFoods != null) refUserFoods.removeValue();
+            if (currentUid != null) localDb.clearFoodEntriesForDate(currentUid, todayDate);
             foodEntryAdapter.clear();
             updateKcalDisplay();
         });
@@ -157,14 +171,27 @@ public class MainActivity extends AppCompatActivity {
                                         if (val.isEmpty()) return;
                                         double newGrams = Double.parseDouble(val);
                                         if (newGrams <= 0) return;
-                                        foodEntryAdapter.updateEntry(position,
-                                                new FoodEntry(entry.getName(), entry.getKcalPer100g(), newGrams));
+                                        FoodEntry updated = new FoodEntry(entry.getName(), entry.getKcalPer100g(), newGrams);
+                                        updated.setFirebaseKey(entry.getFirebaseKey());
+                                        if (refUserFoods != null && entry.getFirebaseKey() != null) {
+                                            refUserFoods.child(entry.getFirebaseKey()).child("grams").setValue(newGrams);
+                                        }
+                                        if (entry.getFirebaseKey() != null) {
+                                            localDb.updateFoodEntryGrams(entry.getFirebaseKey(), newGrams);
+                                        }
+                                        foodEntryAdapter.updateEntry(position, updated);
                                         updateKcalDisplay();
                                     })
                                     .setNegativeButton("Cancelar", null)
                                     .show();
                         } else {
                             // Eliminar
+                            if (refUserFoods != null && entry.getFirebaseKey() != null) {
+                                refUserFoods.child(entry.getFirebaseKey()).removeValue();
+                            }
+                            if (entry.getFirebaseKey() != null) {
+                                localDb.deleteFoodEntry(entry.getFirebaseKey());
+                            }
                             foodEntryAdapter.removeEntry(position);
                             updateKcalDisplay();
                         }
@@ -203,19 +230,15 @@ public class MainActivity extends AppCompatActivity {
     // ══════════════════════════════════════════════════════════════════════════════
 
     private void searchFood(String query) {
-        // Normalizar el query igual que nombreLower: minúsculas sin acentos
+        // Normalizar igual que nombreLower: minúsculas sin acentos
         String queryNorm = Normalizer.normalize(query.toLowerCase(), Normalizer.Form.NFD)
                 .replaceAll("\\p{InCombiningDiacriticalMarks}+", "");
 
-        // Firebase: busca nodos cuyo nombreLower empieza por el query normalizado
-        // \uf8ff es el carácter Unicode más alto, sirve de límite superior del rango
+        // Firebase no soporta búsqueda por subcadena, así que descargamos todos
+        // los alimentos y filtramos en cliente con contains()
         FirebaseDatabase.getInstance(
                 "https://tfg-robertocasaban-default-rtdb.europe-west1.firebasedatabase.app/")
                 .getReference("foods")
-                .orderByChild("nombreLower")
-                .startAt(queryNorm)
-                .endAt(queryNorm + "\uf8ff")
-                .limitToFirst(5)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
 
                     @Override
@@ -223,8 +246,11 @@ public class MainActivity extends AppCompatActivity {
                         List<FoodProduct> products = new ArrayList<>();
                         for (DataSnapshot child : snapshot.getChildren()) {
                             FoodProduct p = child.getValue(FoodProduct.class);
-                            if (p != null && p.hasValidData()) {
+                            if (p != null && p.hasValidData()
+                                    && p.getNombreLower() != null
+                                    && p.getNombreLower().contains(queryNorm)) {
                                 products.add(p);
+                                if (products.size() >= 5) break;
                             }
                         }
 
@@ -289,6 +315,16 @@ public class MainActivity extends AppCompatActivity {
     // ══════════════════════════════════════════════════════════════════════════════
 
     private void addFoodEntry(FoodEntry entry) {
+        if (refUserFoods != null) {
+            DatabaseReference newRef = refUserFoods.push();
+            entry.setFirebaseKey(newRef.getKey());
+            java.util.HashMap<String, Object> data = new java.util.HashMap<>();
+            data.put("name", entry.getName());
+            data.put("kcalPer100g", entry.getKcalPer100g());
+            data.put("grams", entry.getGrams());
+            newRef.setValue(data);
+        }
+        if (currentUid != null) localDb.saveFoodEntry(currentUid, todayDate, entry);
         foodEntryAdapter.addEntry(entry);
         updateKcalDisplay();
         Toast.makeText(this,
@@ -303,6 +339,17 @@ public class MainActivity extends AppCompatActivity {
         if (kcalObjetivo > 0) {
             int progress = (int) Math.min((totalKcal / kcalObjetivo) * 100, 100);
             binding.barProgressMainActivity.setProgress(progress);
+        }
+
+        syncTotalKcal(totalKcal);
+    }
+
+    private void syncTotalKcal(double totalKcal) {
+        if (refUserFoods != null) {
+            refUserFoods.child("totalKcal").setValue(totalKcal);
+        }
+        if (currentUid != null) {
+            localDb.saveDailyTotal(currentUid, todayDate, totalKcal);
         }
     }
 
@@ -327,19 +374,70 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user == null) return;
 
+        // Mostrar datos locales inmediatamente (disponible sin conexión)
+        UserProfile localProfile = localDb.getUserProfile(user.getUid());
+        if (localProfile != null) {
+            currentProfile = localProfile;
+            updateProfileUI(localProfile);
+            loadTodayFoodEntriesFromLocal();
+        }
+
+        // Firebase actualiza por encima con los datos más recientes
         refUsers.child(user.getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                currentProfile = snapshot.getValue(UserProfile.class);
-                if (currentProfile != null) updateProfileUI(currentProfile);
+                UserProfile remoteProfile = snapshot.getValue(UserProfile.class);
+                if (remoteProfile != null) {
+                    localDb.saveUserProfile(user.getUid(), remoteProfile);
+                    currentProfile = remoteProfile;
+                    updateProfileUI(remoteProfile);
+                    loadTodayFoodEntries();
+                }
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(MainActivity.this,
-                        "Error al cargar perfil: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.e("FIREBASE_PROFILE", "Error al cargar perfil: " + error.getMessage());
+                // Ya se mostraron los datos locales arriba; no hace falta hacer nada más
             }
         });
+    }
+
+    private void loadTodayFoodEntries() {
+        if (refUserFoods == null) return;
+        refUserFoods.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                foodEntryAdapter.clear();
+                if (currentUid != null) localDb.clearFoodEntriesForDate(currentUid, todayDate);
+                for (DataSnapshot child : snapshot.getChildren()) {
+                    String name  = child.child("name").getValue(String.class);
+                    Double kcal  = child.child("kcalPer100g").getValue(Double.class);
+                    Double grams = child.child("grams").getValue(Double.class);
+                    if (name != null && kcal != null && grams != null) {
+                        FoodEntry entry = new FoodEntry(name, kcal, grams);
+                        entry.setFirebaseKey(child.getKey());
+                        foodEntryAdapter.addEntry(entry);
+                        if (currentUid != null) localDb.saveFoodEntry(currentUid, todayDate, entry);
+                    }
+                }
+                updateKcalDisplay();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("FIREBASE_FOODS", "Error al cargar comidas: " + error.getMessage());
+                // Los datos locales ya se mostraron antes de llamar a este método
+            }
+        });
+    }
+
+    private void loadTodayFoodEntriesFromLocal() {
+        if (currentUid == null) return;
+        List<FoodEntry> local = localDb.getFoodEntriesForDate(currentUid, todayDate);
+        foodEntryAdapter.clear();
+        for (FoodEntry e : local) foodEntryAdapter.addEntry(e);
+        updateKcalDisplay();
     }
 
     private void updateProfileUI(UserProfile profile) {
@@ -402,6 +500,12 @@ public class MainActivity extends AppCompatActivity {
         String today = LocalDate.now().toString();
         String lastReset = sp.getString("last_reset_date", "");
         if (!today.equals(lastReset)) {
+            todayDate = today;
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            if (user != null) {
+                currentUid   = user.getUid();
+                refUserFoods = refUsers.child(currentUid).child("foods").child(todayDate);
+            }
             foodEntryAdapter.clear();
             updateKcalDisplay();
             sp.edit().putString("last_reset_date", today).apply();

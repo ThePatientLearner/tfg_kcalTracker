@@ -9,6 +9,7 @@ public class FoodEntry {
     private final String name;
     private final double kcalPer100g;
     private final double grams;
+    private String firebaseKey;
 
     public FoodEntry(String name, double kcalPer100g, double grams) {
         this.name        = name;
@@ -19,6 +20,8 @@ public class FoodEntry {
     public String getName()        { return name; }
     public double getKcalPer100g() { return kcalPer100g; }
     public double getGrams()       { return grams; }
+    public String getFirebaseKey() { return firebaseKey; }
+    public void setFirebaseKey(String key) { this.firebaseKey = key; }
 
     /** Calcula las kcal totales según los gramos consumidos */
     public double getTotalKcal() {
