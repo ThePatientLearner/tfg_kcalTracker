@@ -1,0 +1,5629 @@
+{
+  "foods": {
+    "1": {
+      "nombre": "Arroz Blanco",
+      "nombreLower": "arroz blanco",
+      "calorias": 345.0,
+      "proteinas": 8.1,
+      "grasas": 0.7,
+      "carbohidratos": 76.5,
+      "fibra": 1.2
+    },
+    "2": {
+      "nombre": "Arroz blanco cocido (sancochado)",
+      "nombreLower": "arroz blanco cocido (sancochado)",
+      "calorias": 106.0,
+      "proteinas": 2.2,
+      "grasas": 0.1,
+      "carbohidratos": 24.0,
+      "fibra": 0.4
+    },
+    "3": {
+      "nombre": "Arroz blanco. variedad Araure",
+      "nombreLower": "arroz blanco. variedad araure",
+      "calorias": 353.0,
+      "proteinas": 8.6,
+      "grasas": 0.6,
+      "carbohidratos": 78.4,
+      "fibra": 0.8
+    },
+    "4": {
+      "nombre": "Arroz blanco. variedad Cimarrón",
+      "nombreLower": "arroz blanco. variedad cimarron",
+      "calorias": 355.0,
+      "proteinas": 6.1,
+      "grasas": 0.9,
+      "carbohidratos": 80.5,
+      "fibra": 1.2
+    },
+    "5": {
+      "nombre": "Arroz blanco. variedad Oryzica",
+      "nombreLower": "arroz blanco. variedad oryzica",
+      "calorias": 353.0,
+      "proteinas": 9.2,
+      "grasas": 0.6,
+      "carbohidratos": 77.6,
+      "fibra": 1.3
+    },
+    "6": {
+      "nombre": "Harina de Arroz",
+      "nombreLower": "harina de arroz",
+      "calorias": 366.0,
+      "proteinas": 7.6,
+      "grasas": 0.7,
+      "carbohidratos": 82.9,
+      "fibra": 0.0
+    },
+    "7": {
+      "nombre": "Harina de Arroz enriquecida",
+      "nombreLower": "harina de arroz enriquecida",
+      "calorias": 370.0,
+      "proteinas": 8.5,
+      "grasas": 0.7,
+      "carbohidratos": 83.0,
+      "fibra": 0.0
+    },
+    "8": {
+      "nombre": "Arroz integral",
+      "nombreLower": "arroz integral",
+      "calorias": 354.0,
+      "proteinas": 8.5,
+      "grasas": 1.5,
+      "carbohidratos": 76.7,
+      "fibra": 3.6
+    },
+    "9": {
+      "nombre": "Arroz integral cocido (sancochado)",
+      "nombreLower": "arroz integral cocido (sancochado)",
+      "calorias": 96.0,
+      "proteinas": 2.4,
+      "grasas": 0.3,
+      "carbohidratos": 20.8,
+      "fibra": 1.8
+    },
+    "10": {
+      "nombre": "Arroz integral. variedad Araure",
+      "nombreLower": "arroz integral. variedad araure",
+      "calorias": 351.0,
+      "proteinas": 8.9,
+      "grasas": 2.9,
+      "carbohidratos": 72.2,
+      "fibra": 3.1
+    },
+    "11": {
+      "nombre": "Arroz integral. variedad Cimarrón",
+      "nombreLower": "arroz integral. variedad cimarron",
+      "calorias": 352.0,
+      "proteinas": 6.8,
+      "grasas": 2.7,
+      "carbohidratos": 75.0,
+      "fibra": 3.1
+    },
+    "12": {
+      "nombre": "Arroz integral. variedad Oryzica",
+      "nombreLower": "arroz integral. variedad oryzica",
+      "calorias": 350.0,
+      "proteinas": 9.6,
+      "grasas": 3.3,
+      "carbohidratos": 70.5,
+      "fibra": 3.5
+    },
+    "13": {
+      "nombre": "Harina de Avena",
+      "nombreLower": "harina de avena",
+      "calorias": 384.0,
+      "proteinas": 14.7,
+      "grasas": 8.6,
+      "carbohidratos": 61.9,
+      "fibra": 4.2
+    },
+    "14": {
+      "nombre": "Avena en Hojuelas",
+      "nombreLower": "avena en hojuelas",
+      "calorias": 348.0,
+      "proteinas": 9.6,
+      "grasas": 7.3,
+      "carbohidratos": 61.0,
+      "fibra": 10.2
+    },
+    "15": {
+      "nombre": "Avena Hojuelas saborizadas",
+      "nombreLower": "avena hojuelas saborizadas",
+      "calorias": 395.0,
+      "proteinas": 5.4,
+      "grasas": 5.8,
+      "carbohidratos": 80.3,
+      "fibra": 0.0
+    },
+    "16": {
+      "nombre": "Cebada grano entero",
+      "nombreLower": "cebada grano entero",
+      "calorias": 317.0,
+      "proteinas": 11.3,
+      "grasas": 1.8,
+      "carbohidratos": 64.0,
+      "fibra": 10.0
+    },
+    "17": {
+      "nombre": "Harina de  enriquecida",
+      "nombreLower": "harina de  enriquecida",
+      "calorias": 356.0,
+      "proteinas": 8.3,
+      "grasas": 2.2,
+      "carbohidratos": 75.8,
+      "fibra": 4.6
+    },
+    "18": {
+      "nombre": "Cebada perlada",
+      "nombreLower": "cebada perlada",
+      "calorias": 323.0,
+      "proteinas": 9.0,
+      "grasas": 1.0,
+      "carbohidratos": 69.5,
+      "fibra": 8.5
+    },
+    "19": {
+      "nombre": "Arepa de Maíz amarillo. enriquecida",
+      "nombreLower": "arepa de maiz amarillo. enriquecida",
+      "calorias": 184.0,
+      "proteinas": 4.2,
+      "grasas": 0.7,
+      "carbohidratos": 40.2,
+      "fibra": 3.9
+    },
+    "20": {
+      "nombre": "Maíz amarillo. grano entero",
+      "nombreLower": "maiz amarillo. grano entero",
+      "calorias": 284.0,
+      "proteinas": 8.5,
+      "grasas": 4.0,
+      "carbohidratos": 53.6,
+      "fibra": 18.8
+    },
+    "21": {
+      "nombre": "Harina de Maíz amarillo grano completo (funche)",
+      "nombreLower": "harina de maiz amarillo grano completo (funche)",
+      "calorias": 286.0,
+      "proteinas": 7.3,
+      "grasas": 3.5,
+      "carbohidratos": 76.0,
+      "fibra": 2.2
+    },
+    "22": {
+      "nombre": "Harina de Maíz amarillo precocida",
+      "nombreLower": "harina de maiz amarillo precocida",
+      "calorias": 355.0,
+      "proteinas": 7.2,
+      "grasas": 1.2,
+      "carbohidratos": 78.8,
+      "fibra": 3.2
+    },
+    "23": {
+      "nombre": "Harina de Maíz amarillo precocida enriquecida",
+      "nombreLower": "harina de maiz amarillo precocida enriquecida",
+      "calorias": 355.0,
+      "proteinas": 7.2,
+      "grasas": 1.2,
+      "carbohidratos": 78.8,
+      "fibra": 3.2
+    },
+    "24": {
+      "nombre": "Hojuelas de Maíz amarillo azucaradas enriquecidas",
+      "nombreLower": "hojuelas de maiz amarillo azucaradas enriquecidas",
+      "calorias": 363.0,
+      "proteinas": 3.7,
+      "grasas": 0.1,
+      "carbohidratos": 86.7,
+      "fibra": 3.3
+    },
+    "25": {
+      "nombre": "Hojuelas de Maíz amarillo enriquecidas",
+      "nombreLower": "hojuelas de maiz amarillo enriquecidas",
+      "calorias": 350.0,
+      "proteinas": 6.7,
+      "grasas": 0.4,
+      "carbohidratos": 80.0,
+      "fibra": 3.3
+    },
+    "26": {
+      "nombre": "Maíz amarillo inflado azucarado enriquecido",
+      "nombreLower": "maiz amarillo inflado azucarado enriquecido",
+      "calorias": 369.0,
+      "proteinas": 5.5,
+      "grasas": 0.0,
+      "carbohidratos": 86.7,
+      "fibra": 3.3
+    },
+    "27": {
+      "nombre": "Maíz amarillo tierno enlatado. estilo crema",
+      "nombreLower": "maiz amarillo tierno enlatado. estilo crema",
+      "calorias": 77.0,
+      "proteinas": 1.5,
+      "grasas": 0.2,
+      "carbohidratos": 17.2,
+      "fibra": 1.7
+    },
+    "28": {
+      "nombre": "Queso  azul da nés",
+      "nombreLower": "queso  azul da nes",
+      "calorias": 337.0,
+      "proteinas": 22.8,
+      "grasas": 26.5,
+      "carbohidratos": 1.9,
+      "fibra": 0.0
+    },
+    "29": {
+      "nombre": "Arepa de Maíz blanco enriquecida",
+      "nombreLower": "arepa de maiz blanco enriquecida",
+      "calorias": 168.0,
+      "proteinas": 3.8,
+      "grasas": 0.6,
+      "carbohidratos": 36.9,
+      "fibra": 3.6
+    },
+    "30": {
+      "nombre": "Arepa de Maíz blanco grano pelado con cal",
+      "nombreLower": "arepa de maiz blanco grano pelado con cal",
+      "calorias": 196.0,
+      "proteinas": 5.7,
+      "grasas": 2.5,
+      "carbohidratos": 38.5,
+      "fibra": 0.0
+    },
+    "31": {
+      "nombre": "Maíz blanco grano entero",
+      "nombreLower": "maiz blanco grano entero",
+      "calorias": 286.0,
+      "proteinas": 9.0,
+      "grasas": 4.3,
+      "carbohidratos": 52.8,
+      "fibra": 18.8
+    },
+    "32": {
+      "nombre": "Harina de Maíz blanco integral precocida",
+      "nombreLower": "harina de maiz blanco integral precocida",
+      "calorias": 354.0,
+      "proteinas": 7.1,
+      "grasas": 3.8,
+      "carbohidratos": 72.9,
+      "fibra": 5.5
+    },
+    "33": {
+      "nombre": "Harina  de Maíz blanco precocida",
+      "nombreLower": "harina  de maiz blanco precocida",
+      "calorias": 354.0,
+      "proteinas": 7.2,
+      "grasas": 1.1,
+      "carbohidratos": 77.7,
+      "fibra": 2.5
+    },
+    "34": {
+      "nombre": "Harina de Maíz blanco precocida enriquecida",
+      "nombreLower": "harina de maiz blanco precocida enriquecida",
+      "calorias": 354.0,
+      "proteinas": 7.2,
+      "grasas": 1.1,
+      "carbohidratos": 77.7,
+      "fibra": 2.5
+    },
+    "35": {
+      "nombre": "Hallaquita de Maíz blanco",
+      "nombreLower": "hallaquita de maiz blanco",
+      "calorias": 130.0,
+      "proteinas": 2.6,
+      "grasas": 0.3,
+      "carbohidratos": 28.6,
+      "fibra": 0.7
+    },
+    "36": {
+      "nombre": "Maíz blanco pilado",
+      "nombreLower": "maiz blanco pilado",
+      "calorias": 339.0,
+      "proteinas": 7.8,
+      "grasas": 1.5,
+      "carbohidratos": 73.6,
+      "fibra": 4.5
+    },
+    "37": {
+      "nombre": "Harina de Maíz cariaco",
+      "nombreLower": "harina de maiz cariaco",
+      "calorias": 360.0,
+      "proteinas": 9.5,
+      "grasas": 4.1,
+      "carbohidratos": 73.7,
+      "fibra": 0.0
+    },
+    "38": {
+      "nombre": "Harina de Maíz tostado",
+      "nombreLower": "harina de maiz tostado",
+      "calorias": 364.0,
+      "proteinas": 9.9,
+      "grasas": 4.6,
+      "carbohidratos": 73.3,
+      "fibra": 0.0
+    },
+    "39": {
+      "nombre": "Maicena enriquecida (almidón de maíz)",
+      "nombreLower": "maicena enriquecida (almidon de maiz)",
+      "calorias": 345.0,
+      "proteinas": 0.6,
+      "grasas": 0.2,
+      "carbohidratos": 85.6,
+      "fibra": 0.0
+    },
+    "40": {
+      "nombre": "Maíz tierno (jojoto)",
+      "nombreLower": "maiz tierno (jojoto)",
+      "calorias": 98.0,
+      "proteinas": 3.4,
+      "grasas": 1.0,
+      "carbohidratos": 18.8,
+      "fibra": 1.9
+    },
+    "41": {
+      "nombre": "Galletas de soda",
+      "nombreLower": "galletas de soda",
+      "calorias": 415.0,
+      "proteinas": 8.6,
+      "grasas": 10.2,
+      "carbohidratos": 72.4,
+      "fibra": 0.0
+    },
+    "42": {
+      "nombre": "Galletas dulces (tipo María)",
+      "nombreLower": "galletas dulces (tipo maria)",
+      "calorias": 420.0,
+      "proteinas": 7.7,
+      "grasas": 9.2,
+      "carbohidratos": 77.1,
+      "fibra": 0.0
+    },
+    "43": {
+      "nombre": "Galletas integrales dulces (Honey Bran)",
+      "nombreLower": "galletas integrales dulces (honey bran)",
+      "calorias": 392.0,
+      "proteinas": 8.0,
+      "grasas": 13.5,
+      "carbohidratos": 66.8,
+      "fibra": 6.4
+    },
+    "44": {
+      "nombre": "Galletas integrales saladas (Kracker Bran)",
+      "nombreLower": "galletas integrales saladas (kracker bran)",
+      "calorias": 412.0,
+      "proteinas": 9.7,
+      "grasas": 12.6,
+      "carbohidratos": 65.0,
+      "fibra": 6.4
+    },
+    "45": {
+      "nombre": "Saltines",
+      "nombreLower": "saltines",
+      "calorias": 415.0,
+      "proteinas": 10.3,
+      "grasas": 9.4,
+      "carbohidratos": 72.8,
+      "fibra": 0.0
+    },
+    "46": {
+      "nombre": "Galletas simples surtidas",
+      "nombreLower": "galletas simples surtidas",
+      "calorias": 438.0,
+      "proteinas": 6.0,
+      "grasas": 12.7,
+      "carbohidratos": 75.0,
+      "fibra": 0.0
+    },
+    "47": {
+      "nombre": "Pan blanco tipo sandwich",
+      "nombreLower": "pan blanco tipo sandwich",
+      "calorias": 263.0,
+      "proteinas": 9.4,
+      "grasas": 3.0,
+      "carbohidratos": 49.6,
+      "fibra": 2.6
+    },
+    "48": {
+      "nombre": "Pan canilla",
+      "nombreLower": "pan canilla",
+      "calorias": 295.0,
+      "proteinas": 11.4,
+      "grasas": 2.3,
+      "carbohidratos": 57.1,
+      "fibra": 3.1
+    },
+    "49": {
+      "nombre": "Pan de centeno",
+      "nombreLower": "pan de centeno",
+      "calorias": 257.0,
+      "proteinas": 9.2,
+      "grasas": 0.7,
+      "carbohidratos": 48.1,
+      "fibra": 6.5
+    },
+    "50": {
+      "nombre": "Pan de glúten",
+      "nombreLower": "pan de gluten",
+      "calorias": 299.0,
+      "proteinas": 17.3,
+      "grasas": 1.8,
+      "carbohidratos": 54.0,
+      "fibra": 0.0
+    },
+    "51": {
+      "nombre": "Pan de Trigo integral",
+      "nombreLower": "pan de trigo integral",
+      "calorias": 241.0,
+      "proteinas": 9.0,
+      "grasas": 2.6,
+      "carbohidratos": 45.4,
+      "fibra": 6.2
+    },
+    "52": {
+      "nombre": "Pan de horno",
+      "nombreLower": "pan de horno",
+      "calorias": 416.0,
+      "proteinas": 5.1,
+      "grasas": 16.7,
+      "carbohidratos": 67.4,
+      "fibra": 0.0
+    },
+    "53": {
+      "nombre": "Panela de San Joaquín",
+      "nombreLower": "panela de san joaquin",
+      "calorias": 370.0,
+      "proteinas": 6.3,
+      "grasas": 5.3,
+      "carbohidratos": 74.8,
+      "fibra": 0.0
+    },
+    "54": {
+      "nombre": "Pastas no enriquecidas",
+      "nombreLower": "pastas no enriquecidas",
+      "calorias": 363.0,
+      "proteinas": 15.6,
+      "grasas": 1.6,
+      "carbohidratos": 71.9,
+      "fibra": 0.0
+    },
+    "55": {
+      "nombre": "Pastas no enriquecidas cocidas",
+      "nombreLower": "pastas no enriquecidas cocidas",
+      "calorias": 113.0,
+      "proteinas": 4.3,
+      "grasas": 0.6,
+      "carbohidratos": 22.6,
+      "fibra": 0.0
+    },
+    "56": {
+      "nombre": "Pastas enriquecidas",
+      "nombreLower": "pastas enriquecidas",
+      "calorias": 353.0,
+      "proteinas": 15.0,
+      "grasas": 1.9,
+      "carbohidratos": 69.3,
+      "fibra": 0.0
+    },
+    "57": {
+      "nombre": "Pastas enriquecidas cocidas",
+      "nombreLower": "pastas enriquecidas cocidas",
+      "calorias": 124.0,
+      "proteinas": 4.6,
+      "grasas": 0.7,
+      "carbohidratos": 24.9,
+      "fibra": 0.0
+    },
+    "58": {
+      "nombre": "Pastas al Huevo",
+      "nombreLower": "pastas al huevo",
+      "calorias": 372.0,
+      "proteinas": 15.6,
+      "grasas": 2.3,
+      "carbohidratos": 72.4,
+      "fibra": 0.0
+    },
+    "59": {
+      "nombre": "Pastas al Huevo cocidas",
+      "nombreLower": "pastas al huevo cocidas",
+      "calorias": 126.0,
+      "proteinas": 6.2,
+      "grasas": 1.0,
+      "carbohidratos": 23.2,
+      "fibra": 0.0
+    },
+    "60": {
+      "nombre": "Pastas con espinacas",
+      "nombreLower": "pastas con espinacas",
+      "calorias": 365.0,
+      "proteinas": 14.8,
+      "grasas": 1.8,
+      "carbohidratos": 72.8,
+      "fibra": 0.0
+    },
+    "61": {
+      "nombre": "Pastas con espinacas cocidas",
+      "nombreLower": "pastas con espinacas cocidas",
+      "calorias": 108.0,
+      "proteinas": 5.3,
+      "grasas": 0.8,
+      "carbohidratos": 27.1,
+      "fibra": 0.0
+    },
+    "62": {
+      "nombre": "Sémola de Trigo Durum",
+      "nombreLower": "semola de trigo durum",
+      "calorias": 337.0,
+      "proteinas": 12.2,
+      "grasas": 1.7,
+      "carbohidratos": 68.3,
+      "fibra": 3.1
+    },
+    "63": {
+      "nombre": "Sémola granular de Trigo panadero",
+      "nombreLower": "semola granular de trigo panadero",
+      "calorias": 337.0,
+      "proteinas": 11.5,
+      "grasas": 0.9,
+      "carbohidratos": 70.8,
+      "fibra": 2.7
+    },
+    "64": {
+      "nombre": "Afrecho de Trigo. Dark North Spring (DNS)",
+      "nombreLower": "afrecho de trigo. dark north spring (dns)",
+      "calorias": 170.0,
+      "proteinas": 16.3,
+      "grasas": 4.5,
+      "carbohidratos": 16.1,
+      "fibra": 43.8
+    },
+    "65": {
+      "nombre": "Afrecho de Trigo. Hard Amber Durum (HAD)",
+      "nombreLower": "afrecho de trigo. hard amber durum (had)",
+      "calorias": 172.0,
+      "proteinas": 13.3,
+      "grasas": 5.2,
+      "carbohidratos": 17.9,
+      "fibra": 47.7
+    },
+    "66": {
+      "nombre": "Afrecho de Trigo. Soft Red Wheat (SRW)",
+      "nombreLower": "afrecho de trigo. soft red wheat (srw)",
+      "calorias": 193.0,
+      "proteinas": 14.2,
+      "grasas": 4.4,
+      "carbohidratos": 24.1,
+      "fibra": 42.5
+    },
+    "67": {
+      "nombre": "Arepa andina de Trigo",
+      "nombreLower": "arepa andina de trigo",
+      "calorias": 303.0,
+      "proteinas": 10.9,
+      "grasas": 2.6,
+      "carbohidratos": 59.7,
+      "fibra": 0.0
+    },
+    "68": {
+      "nombre": "Trigo entero. variedad (DNS)",
+      "nombreLower": "trigo entero. variedad (dns)",
+      "calorias": 313.0,
+      "proteinas": 13.3,
+      "grasas": 2.2,
+      "carbohidratos": 59.9,
+      "fibra": 13.0
+    },
+    "69": {
+      "nombre": "Trigo entero. variedad (HAD)",
+      "nombreLower": "trigo entero. variedad (had)",
+      "calorias": 316.0,
+      "proteinas": 12.9,
+      "grasas": 2.8,
+      "carbohidratos": 59.7,
+      "fibra": 11.9
+    },
+    "70": {
+      "nombre": "Trigo entero. variedad (SRW)",
+      "nombreLower": "trigo entero. variedad (srw)",
+      "calorias": 313.0,
+      "proteinas": 10.4,
+      "grasas": 2.1,
+      "carbohidratos": 63.2,
+      "fibra": 11.1
+    },
+    "71": {
+      "nombre": "Germen tostado de Trigo",
+      "nombreLower": "germen tostado de trigo",
+      "calorias": 381.0,
+      "proteinas": 30.5,
+      "grasas": 11.7,
+      "carbohidratos": 38.5,
+      "fibra": 11.6
+    },
+    "72": {
+      "nombre": "Harina panadera de Trigo. variedad (DNS)",
+      "nombreLower": "harina panadera de trigo. variedad (dns)",
+      "calorias": 347.0,
+      "proteinas": 13.5,
+      "grasas": 1.2,
+      "carbohidratos": 70.5,
+      "fibra": 2.8
+    },
+    "73": {
+      "nombre": "Harina de Trigo panadera enriquecida",
+      "nombreLower": "harina de trigo panadera enriquecida",
+      "calorias": 347.0,
+      "proteinas": 13.5,
+      "grasas": 1.2,
+      "carbohidratos": 70.5,
+      "fibra": 2.8
+    },
+    "74": {
+      "nombre": "Harina de Trigo. variedad (HAD)",
+      "nombreLower": "harina de trigo. variedad (had)",
+      "calorias": 339.0,
+      "proteinas": 14.0,
+      "grasas": 2.8,
+      "carbohidratos": 64.5,
+      "fibra": 4.3
+    },
+    "75": {
+      "nombre": "Harina galletera de Trigo variedad (SRW)",
+      "nombreLower": "harina galletera de trigo variedad (srw)",
+      "calorias": 349.0,
+      "proteinas": 9.3,
+      "grasas": 1.2,
+      "carbohidratos": 75.3,
+      "fibra": 3.1
+    },
+    "76": {
+      "nombre": "Salvado de Trigo",
+      "nombreLower": "salvado de trigo",
+      "calorias": 347.0,
+      "proteinas": 14.5,
+      "grasas": 2.8,
+      "carbohidratos": 72.6,
+      "fibra": 0.0
+    },
+    "77": {
+      "nombre": "Gallina",
+      "nombreLower": "gallina",
+      "calorias": 240.0,
+      "proteinas": 18.5,
+      "grasas": 18.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "78": {
+      "nombre": "Paloma",
+      "nombreLower": "paloma",
+      "calorias": 273.0,
+      "proteinas": 18.6,
+      "grasas": 22.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "79": {
+      "nombre": "Pato",
+      "nombreLower": "pato",
+      "calorias": 321.0,
+      "proteinas": 16.0,
+      "grasas": 28.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "80": {
+      "nombre": "Pavo",
+      "nombreLower": "pavo",
+      "calorias": 261.0,
+      "proteinas": 20.0,
+      "grasas": 20.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "81": {
+      "nombre": "Pechuga de pavo estándar (charcutería)",
+      "nombreLower": "pechuga de pavo estandar (charcuteria)",
+      "calorias": 76.0,
+      "proteinas": 15.2,
+      "grasas": 0.7,
+      "carbohidratos": 2.2,
+      "fibra": 0.0
+    },
+    "82": {
+      "nombre": "Pechuga de pavo superior (charcutería)",
+      "nombreLower": "pechuga de pavo superior (charcuteria)",
+      "calorias": 103.0,
+      "proteinas": 22.6,
+      "grasas": 1.3,
+      "carbohidratos": 0.1,
+      "fibra": 0.0
+    },
+    "83": {
+      "nombre": "Alas de pollo. con piel",
+      "nombreLower": "alas de pollo. con piel",
+      "calorias": 217.0,
+      "proteinas": 18.3,
+      "grasas": 16.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "84": {
+      "nombre": "Alas de pollo. sin piel",
+      "nombreLower": "alas de pollo. sin piel",
+      "calorias": 120.0,
+      "proteinas": 22.0,
+      "grasas": 3.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "85": {
+      "nombre": "Bologna de pollo",
+      "nombreLower": "bologna de pollo",
+      "calorias": 254.0,
+      "proteinas": 13.2,
+      "grasas": 18.3,
+      "carbohidratos": 9.1,
+      "fibra": 0.0
+    },
+    "86": {
+      "nombre": "Pollo",
+      "nombreLower": "pollo",
+      "calorias": 183.0,
+      "proteinas": 20.2,
+      "grasas": 11.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "87": {
+      "nombre": "Pollo enlatado",
+      "nombreLower": "pollo enlatado",
+      "calorias": 168.0,
+      "proteinas": 9.6,
+      "grasas": 8.2,
+      "carbohidratos": 14.0,
+      "fibra": 0.0
+    },
+    "88": {
+      "nombre": "Pollo guisado enlatado",
+      "nombreLower": "pollo guisado enlatado",
+      "calorias": 141.0,
+      "proteinas": 10.3,
+      "grasas": 6.3,
+      "carbohidratos": 10.7,
+      "fibra": 0.0
+    },
+    "89": {
+      "nombre": "Hígado de pollo",
+      "nombreLower": "higado de pollo",
+      "calorias": 157.0,
+      "proteinas": 17.9,
+      "grasas": 7.3,
+      "carbohidratos": 5.0,
+      "fibra": 0.0
+    },
+    "90": {
+      "nombre": "Jamón de pollo. estándar",
+      "nombreLower": "jamon de pollo. estandar",
+      "calorias": 95.0,
+      "proteinas": 12.4,
+      "grasas": 3.8,
+      "carbohidratos": 2.7,
+      "fibra": 0.0
+    },
+    "91": {
+      "nombre": "Jamón de pollo. superior",
+      "nombreLower": "jamon de pollo. superior",
+      "calorias": 118.0,
+      "proteinas": 16.2,
+      "grasas": 5.2,
+      "carbohidratos": 1.5,
+      "fibra": 0.0
+    },
+    "92": {
+      "nombre": "Molleja de pollo",
+      "nombreLower": "molleja de pollo",
+      "calorias": 94.0,
+      "proteinas": 18.1,
+      "grasas": 1.2,
+      "carbohidratos": 2.7,
+      "fibra": 0.0
+    },
+    "93": {
+      "nombre": "Muslo de pollo. con piel",
+      "nombreLower": "muslo de pollo. con piel",
+      "calorias": 182.0,
+      "proteinas": 18.2,
+      "grasas": 12.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "94": {
+      "nombre": "Muslo de pollo. sin piel",
+      "nombreLower": "muslo de pollo. sin piel",
+      "calorias": 115.0,
+      "proteinas": 20.1,
+      "grasas": 3.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "95": {
+      "nombre": "Pasta de pollo",
+      "nombreLower": "pasta de pollo",
+      "calorias": 208.0,
+      "proteinas": 13.4,
+      "grasas": 14.0,
+      "carbohidratos": 7.1,
+      "fibra": 0.0
+    },
+    "96": {
+      "nombre": "Pechuga de pollo. cocida",
+      "nombreLower": "pechuga de pollo. cocida",
+      "calorias": 143.0,
+      "proteinas": 28.6,
+      "grasas": 3.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "97": {
+      "nombre": "Pechuga de pollo. estándar (charcutería)",
+      "nombreLower": "pechuga de pollo. estandar (charcuteria)",
+      "calorias": 71.0,
+      "proteinas": 14.0,
+      "grasas": 0.8,
+      "carbohidratos": 2.0,
+      "fibra": 0.0
+    },
+    "98": {
+      "nombre": "Pechuga de pollo. superior (charcutería)",
+      "nombreLower": "pechuga de pollo. superior (charcuteria)",
+      "calorias": 92.0,
+      "proteinas": 19.9,
+      "grasas": 0.8,
+      "carbohidratos": 1.4,
+      "fibra": 0.0
+    },
+    "99": {
+      "nombre": "Pechuga de pollo. con piel",
+      "nombreLower": "pechuga de pollo. con piel",
+      "calorias": 167.0,
+      "proteinas": 20.9,
+      "grasas": 9.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "100": {
+      "nombre": "Pechuga de pollo. sin piel",
+      "nombreLower": "pechuga de pollo. sin piel",
+      "calorias": 103.0,
+      "proteinas": 23.1,
+      "grasas": 1.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "101": {
+      "nombre": "Pierna de pollo. con piel",
+      "nombreLower": "pierna de pollo. con piel",
+      "calorias": 156.0,
+      "proteinas": 19.3,
+      "grasas": 8.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "102": {
+      "nombre": "Pierna de pollo. sin piel",
+      "nombreLower": "pierna de pollo. sin piel",
+      "calorias": 113.0,
+      "proteinas": 20.6,
+      "grasas": 3.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "103": {
+      "nombre": "Salchicha de pollo. enlatada",
+      "nombreLower": "salchicha de pollo. enlatada",
+      "calorias": 185.0,
+      "proteinas": 9.9,
+      "grasas": 13.3,
+      "carbohidratos": 6.3,
+      "fibra": 0.0
+    },
+    "104": {
+      "nombre": "Carne jamonizada de cerdo enlatada",
+      "nombreLower": "carne jamonizada de cerdo enlatada",
+      "calorias": 129.0,
+      "proteinas": 11.1,
+      "grasas": 5.7,
+      "carbohidratos": 8.3,
+      "fibra": 0.0
+    },
+    "105": {
+      "nombre": "Costilla de cerdo",
+      "nombreLower": "costilla de cerdo",
+      "calorias": 295.0,
+      "proteinas": 16.5,
+      "grasas": 25.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "106": {
+      "nombre": "Chuleta de cerdo",
+      "nombreLower": "chuleta de cerdo",
+      "calorias": 250.0,
+      "proteinas": 18.3,
+      "grasas": 19.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "107": {
+      "nombre": "Chuleta de cerdo. magra (sin grasa visible)",
+      "nombreLower": "chuleta de cerdo. magra (sin grasa visible)",
+      "calorias": 111.0,
+      "proteinas": 22.9,
+      "grasas": 2.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "108": {
+      "nombre": "Chuleta de cerdo. ahumada",
+      "nombreLower": "chuleta de cerdo. ahumada",
+      "calorias": 201.0,
+      "proteinas": 25.2,
+      "grasas": 11.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "109": {
+      "nombre": "Lomo de cerdo",
+      "nombreLower": "lomo de cerdo",
+      "calorias": 192.0,
+      "proteinas": 19.5,
+      "grasas": 12.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "110": {
+      "nombre": "Lomo de cerdo. magro (sin grasa visible)",
+      "nombreLower": "lomo de cerdo. magro (sin grasa visible)",
+      "calorias": 121.0,
+      "proteinas": 24.4,
+      "grasas": 2.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "111": {
+      "nombre": "Paleta de cerdo",
+      "nombreLower": "paleta de cerdo",
+      "calorias": 219.0,
+      "proteinas": 18.0,
+      "grasas": 16.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "112": {
+      "nombre": "Paleta de cerdo. magra (sin grasa visible)",
+      "nombreLower": "paleta de cerdo. magra (sin grasa visible)",
+      "calorias": 102.0,
+      "proteinas": 21.1,
+      "grasas": 2.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "113": {
+      "nombre": "Pernil de cerdo",
+      "nombreLower": "pernil de cerdo",
+      "calorias": 158.0,
+      "proteinas": 19.2,
+      "grasas": 9.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "114": {
+      "nombre": "Pernil de cerdo. magro (sin grasa visible)",
+      "nombreLower": "pernil de cerdo. magro (sin grasa visible)",
+      "calorias": 120.0,
+      "proteinas": 21.4,
+      "grasas": 3.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "115": {
+      "nombre": "Chicharrón de cerdo",
+      "nombreLower": "chicharron de cerdo",
+      "calorias": 646.0,
+      "proteinas": 20.9,
+      "grasas": 62.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "116": {
+      "nombre": "Higado de cerdo",
+      "nombreLower": "higado de cerdo",
+      "calorias": 134.0,
+      "proteinas": 20.0,
+      "grasas": 4.7,
+      "carbohidratos": 3.0,
+      "fibra": 0.0
+    },
+    "117": {
+      "nombre": "Jamón  de cerdo ahumado. semi gordo. con hueso",
+      "nombreLower": "jamon  de cerdo ahumado. semi gordo. con hueso",
+      "calorias": 360.0,
+      "proteinas": 17.7,
+      "grasas": 31.8,
+      "carbohidratos": 0.7,
+      "fibra": 0.0
+    },
+    "118": {
+      "nombre": "Jamón  de cerdo cocido. estándar",
+      "nombreLower": "jamon  de cerdo cocido. estandar",
+      "calorias": 94.0,
+      "proteinas": 13.2,
+      "grasas": 3.9,
+      "carbohidratos": 1.6,
+      "fibra": 0.0
+    },
+    "119": {
+      "nombre": "Jamón de cerdo cocido. superior",
+      "nombreLower": "jamon de cerdo cocido. superior",
+      "calorias": 106.0,
+      "proteinas": 16.6,
+      "grasas": 4.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "120": {
+      "nombre": "Jamón de cerdo endiablado enlatado",
+      "nombreLower": "jamon de cerdo endiablado enlatado",
+      "calorias": 301.0,
+      "proteinas": 12.9,
+      "grasas": 26.7,
+      "carbohidratos": 2.3,
+      "fibra": 0.0
+    },
+    "121": {
+      "nombre": "Jamón de espalda",
+      "nombreLower": "jamon de espalda",
+      "calorias": 116.0,
+      "proteinas": 13.1,
+      "grasas": 6.1,
+      "carbohidratos": 2.1,
+      "fibra": 0.0
+    },
+    "122": {
+      "nombre": "Jamón serrano. sin hueso. y sin",
+      "nombreLower": "jamon serrano. sin hueso. y sin",
+      "calorias": 175.0,
+      "proteinas": 35.4,
+      "grasas": 3.4,
+      "carbohidratos": 0.6,
+      "fibra": 0.0
+    },
+    "123": {
+      "nombre": "Pasta endiablada enlatada",
+      "nombreLower": "pasta endiablada enlatada",
+      "calorias": 288.0,
+      "proteinas": 13.5,
+      "grasas": 24.3,
+      "carbohidratos": 3.7,
+      "fibra": 0.0
+    },
+    "124": {
+      "nombre": "Salchicha de cerdo enlatada",
+      "nombreLower": "salchicha de cerdo enlatada",
+      "calorias": 119.0,
+      "proteinas": 6.5,
+      "grasas": 7.0,
+      "carbohidratos": 7.4,
+      "fibra": 0.0
+    },
+    "125": {
+      "nombre": "Salchicha de cerdo y res.",
+      "nombreLower": "salchicha de cerdo y res.",
+      "calorias": 202.0,
+      "proteinas": 7.6,
+      "grasas": 16.0,
+      "carbohidratos": 7.0,
+      "fibra": 0.0
+    },
+    "126": {
+      "nombre": "Tocineta cruda",
+      "nombreLower": "tocineta cruda",
+      "calorias": 628.0,
+      "proteinas": 9.1,
+      "grasas": 65.0,
+      "carbohidratos": 1.6,
+      "fibra": 0.0
+    },
+    "127": {
+      "nombre": "Tocineta  frita",
+      "nombreLower": "tocineta  frita",
+      "calorias": 599.0,
+      "proteinas": 25.0,
+      "grasas": 55.0,
+      "carbohidratos": 1.0,
+      "fibra": 0.0
+    },
+    "128": {
+      "nombre": "Conejo",
+      "nombreLower": "conejo",
+      "calorias": 151.0,
+      "proteinas": 20.3,
+      "grasas": 7.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "129": {
+      "nombre": "Cordero",
+      "nombreLower": "cordero",
+      "calorias": 247.0,
+      "proteinas": 18.2,
+      "grasas": 19.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "130": {
+      "nombre": "Chigüire",
+      "nombreLower": "chiguire",
+      "calorias": 80.0,
+      "proteinas": 18.4,
+      "grasas": 0.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "131": {
+      "nombre": "Chigüire . carne seca de",
+      "nombreLower": "chiguire . carne seca de",
+      "calorias": 153.0,
+      "proteinas": 33.9,
+      "grasas": 0.6,
+      "carbohidratos": 2.9,
+      "fibra": 0.0
+    },
+    "132": {
+      "nombre": "Chivo",
+      "nombreLower": "chivo",
+      "calorias": 159.0,
+      "proteinas": 18.7,
+      "grasas": 9.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "133": {
+      "nombre": "Iguana",
+      "nombreLower": "iguana",
+      "calorias": 106.0,
+      "proteinas": 24.4,
+      "grasas": 0.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "134": {
+      "nombre": "Ternera",
+      "nombreLower": "ternera",
+      "calorias": 122.0,
+      "proteinas": 19.3,
+      "grasas": 5.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "135": {
+      "nombre": "Venado",
+      "nombreLower": "venado",
+      "calorias": 134.0,
+      "proteinas": 31.4,
+      "grasas": 0.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "136": {
+      "nombre": "bologna",
+      "nombreLower": "bologna",
+      "calorias": 207.0,
+      "proteinas": 15.6,
+      "grasas": 15.1,
+      "carbohidratos": 2.2,
+      "fibra": 0.0
+    },
+    "137": {
+      "nombre": "Chorizo",
+      "nombreLower": "chorizo",
+      "calorias": 273.0,
+      "proteinas": 15.8,
+      "grasas": 22.8,
+      "carbohidratos": 1.1,
+      "fibra": 0.0
+    },
+    "138": {
+      "nombre": "Chorizo carupanero",
+      "nombreLower": "chorizo carupanero",
+      "calorias": 370.0,
+      "proteinas": 16.6,
+      "grasas": 33.5,
+      "carbohidratos": 0.4,
+      "fibra": 0.0
+    },
+    "139": {
+      "nombre": "Chorizo cocido",
+      "nombreLower": "chorizo cocido",
+      "calorias": 367.0,
+      "proteinas": 19.5,
+      "grasas": 30.6,
+      "carbohidratos": 3.4,
+      "fibra": 0.0
+    },
+    "140": {
+      "nombre": "Chorizo español",
+      "nombreLower": "chorizo espanol",
+      "calorias": 379.0,
+      "proteinas": 25.7,
+      "grasas": 21.9,
+      "carbohidratos": 1.2,
+      "fibra": 0.0
+    },
+    "141": {
+      "nombre": "Chorizo húngaro",
+      "nombreLower": "chorizo hungaro",
+      "calorias": 305.0,
+      "proteinas": 19.5,
+      "grasas": 23.7,
+      "carbohidratos": 3.4,
+      "fibra": 0.0
+    },
+    "142": {
+      "nombre": "Chorizo frankfurter. cocido",
+      "nombreLower": "chorizo frankfurter. cocido",
+      "calorias": 244.0,
+      "proteinas": 14.0,
+      "grasas": 20.0,
+      "carbohidratos": 2.0,
+      "fibra": 0.0
+    },
+    "143": {
+      "nombre": "Morcilla alemana (23)",
+      "nombreLower": "morcilla alemana (23)",
+      "calorias": 292.0,
+      "proteinas": 18.6,
+      "grasas": 22.7,
+      "carbohidratos": 3.2,
+      "fibra": 0.0
+    },
+    "144": {
+      "nombre": "Morcilla con arroz y cebolla (23)",
+      "nombreLower": "morcilla con arroz y cebolla (23)",
+      "calorias": 280.0,
+      "proteinas": 9.8,
+      "grasas": 22.2,
+      "carbohidratos": 10.2,
+      "fibra": 0.0
+    },
+    "145": {
+      "nombre": "Morcilla condimentada (23)",
+      "nombreLower": "morcilla condimentada (23)",
+      "calorias": 197.0,
+      "proteinas": 15.0,
+      "grasas": 12.6,
+      "carbohidratos": 6.0,
+      "fibra": 0.0
+    },
+    "146": {
+      "nombre": "Mortadela económica",
+      "nombreLower": "mortadela economica",
+      "calorias": 324.0,
+      "proteinas": 13.0,
+      "grasas": 27.2,
+      "carbohidratos": 6.7,
+      "fibra": 0.0
+    },
+    "147": {
+      "nombre": "Mortadela especial",
+      "nombreLower": "mortadela especial",
+      "calorias": 237.0,
+      "proteinas": 15.6,
+      "grasas": 16.9,
+      "carbohidratos": 5.7,
+      "fibra": 0.0
+    },
+    "148": {
+      "nombre": "Mortadela exa",
+      "nombreLower": "mortadela exa",
+      "calorias": 312.0,
+      "proteinas": 12.8,
+      "grasas": 27.1,
+      "carbohidratos": 4.1,
+      "fibra": 0.0
+    },
+    "149": {
+      "nombre": "Pasta de hígado (liverwurst)",
+      "nombreLower": "pasta de higado (liverwurst)",
+      "calorias": 268.0,
+      "proteinas": 16.8,
+      "grasas": 21.6,
+      "carbohidratos": 1.7,
+      "fibra": 0.0
+    },
+    "150": {
+      "nombre": "Salchicha de cerdo",
+      "nombreLower": "salchicha de cerdo",
+      "calorias": 448.0,
+      "proteinas": 10.8,
+      "grasas": 44.8,
+      "carbohidratos": 0.4,
+      "fibra": 0.0
+    },
+    "151": {
+      "nombre": "Salchicha (perro caliente)",
+      "nombreLower": "salchicha (perro caliente)",
+      "calorias": 206.0,
+      "proteinas": 13.8,
+      "grasas": 15.5,
+      "carbohidratos": 2.2,
+      "fibra": 0.0
+    },
+    "152": {
+      "nombre": "Salchicha (Viena)",
+      "nombreLower": "salchicha (viena)",
+      "calorias": 211.0,
+      "proteinas": 15.8,
+      "grasas": 16.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "153": {
+      "nombre": "Salchichón",
+      "nombreLower": "salchichon",
+      "calorias": 460.0,
+      "proteinas": 27.3,
+      "grasas": 38.2,
+      "carbohidratos": 1.8,
+      "fibra": 0.0
+    },
+    "154": {
+      "nombre": "Carne molida",
+      "nombreLower": "carne molida",
+      "calorias": 201.0,
+      "proteinas": 18.2,
+      "grasas": 14.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "155": {
+      "nombre": "Chocozuela",
+      "nombreLower": "chocozuela",
+      "calorias": 100.0,
+      "proteinas": 22.3,
+      "grasas": 1.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "156": {
+      "nombre": "Falda",
+      "nombreLower": "falda",
+      "calorias": 91.0,
+      "proteinas": 20.6,
+      "grasas": 0.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "157": {
+      "nombre": "Ganso",
+      "nombreLower": "ganso",
+      "calorias": 91.0,
+      "proteinas": 21.3,
+      "grasas": 0.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "158": {
+      "nombre": "Lagarto",
+      "nombreLower": "lagarto",
+      "calorias": 84.0,
+      "proteinas": 20.5,
+      "grasas": 0.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "159": {
+      "nombre": "Lomito",
+      "nombreLower": "lomito",
+      "calorias": 91.0,
+      "proteinas": 18.7,
+      "grasas": 1.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "160": {
+      "nombre": "Muchacho redondo",
+      "nombreLower": "muchacho redondo",
+      "calorias": 98.0,
+      "proteinas": 21.8,
+      "grasas": 1.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "161": {
+      "nombre": "Papelón",
+      "nombreLower": "papelon",
+      "calorias": 89.0,
+      "proteinas": 19.8,
+      "grasas": 1.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "162": {
+      "nombre": "Pollo de res",
+      "nombreLower": "pollo de res",
+      "calorias": 89.0,
+      "proteinas": 21.0,
+      "grasas": 0.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "163": {
+      "nombre": "Pulpa negra",
+      "nombreLower": "pulpa negra",
+      "calorias": 104.0,
+      "proteinas": 21.6,
+      "grasas": 1.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "164": {
+      "nombre": "Punta asera",
+      "nombreLower": "punta asera",
+      "calorias": 111.0,
+      "proteinas": 21.7,
+      "grasas": 2.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "165": {
+      "nombre": "Solomo",
+      "nombreLower": "solomo",
+      "calorias": 98.0,
+      "proteinas": 23.2,
+      "grasas": 0.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "166": {
+      "nombre": "Carne de almuerzo enlatada",
+      "nombreLower": "carne de almuerzo enlatada",
+      "calorias": 220.0,
+      "proteinas": 11.5,
+      "grasas": 14.8,
+      "carbohidratos": 10.2,
+      "fibra": 0.0
+    },
+    "167": {
+      "nombre": "Carne de almuerzo. de res y cerdo enlatada",
+      "nombreLower": "carne de almuerzo. de res y cerdo enlatada",
+      "calorias": 188.0,
+      "proteinas": 10.6,
+      "grasas": 10.5,
+      "carbohidratos": 12.7,
+      "fibra": 0.0
+    },
+    "168": {
+      "nombre": "Carne de buey enlatada",
+      "nombreLower": "carne de buey enlatada",
+      "calorias": 158.0,
+      "proteinas": 11.0,
+      "grasas": 7.6,
+      "carbohidratos": 11.5,
+      "fibra": 0.0
+    },
+    "169": {
+      "nombre": "Carne mechada enlatada",
+      "nombreLower": "carne mechada enlatada",
+      "calorias": 162.0,
+      "proteinas": 13.2,
+      "grasas": 9.1,
+      "carbohidratos": 6.9,
+      "fibra": 0.0
+    },
+    "170": {
+      "nombre": "Carne mechada con soya enlatada",
+      "nombreLower": "carne mechada con soya enlatada",
+      "calorias": 158.0,
+      "proteinas": 13.4,
+      "grasas": 9.5,
+      "carbohidratos": 4.7,
+      "fibra": 0.0
+    },
+    "171": {
+      "nombre": "Carne mechada",
+      "nombreLower": "carne mechada",
+      "calorias": 137.0,
+      "proteinas": 14.6,
+      "grasas": 7.2,
+      "carbohidratos": 5.8,
+      "fibra": 0.0
+    },
+    "172": {
+      "nombre": "Salchicha tipo frankfurter enlatada",
+      "nombreLower": "salchicha tipo frankfurter enlatada",
+      "calorias": 230.0,
+      "proteinas": 9.3,
+      "grasas": 19.4,
+      "carbohidratos": 4.6,
+      "fibra": 0.0
+    },
+    "173": {
+      "nombre": "Corazón",
+      "nombreLower": "corazon",
+      "calorias": 113.0,
+      "proteinas": 16.8,
+      "grasas": 4.9,
+      "carbohidratos": 0.5,
+      "fibra": 0.0
+    },
+    "174": {
+      "nombre": "Hígado",
+      "nombreLower": "higado",
+      "calorias": 128.0,
+      "proteinas": 19.3,
+      "grasas": 3.8,
+      "carbohidratos": 4.1,
+      "fibra": 0.0
+    },
+    "175": {
+      "nombre": "Lengua",
+      "nombreLower": "lengua",
+      "calorias": 193.0,
+      "proteinas": 18.4,
+      "grasas": 12.3,
+      "carbohidratos": 2.1,
+      "fibra": 0.0
+    },
+    "176": {
+      "nombre": "Panza",
+      "nombreLower": "panza",
+      "calorias": 104.0,
+      "proteinas": 15.0,
+      "grasas": 3.8,
+      "carbohidratos": 2.4,
+      "fibra": 0.0
+    },
+    "177": {
+      "nombre": "Riñón",
+      "nombreLower": "rinon",
+      "calorias": 129.0,
+      "proteinas": 15.0,
+      "grasas": 7.3,
+      "carbohidratos": 0.9,
+      "fibra": 0.0
+    },
+    "178": {
+      "nombre": "Sesos",
+      "nombreLower": "sesos",
+      "calorias": 129.0,
+      "proteinas": 10.4,
+      "grasas": 9.6,
+      "carbohidratos": 0.2,
+      "fibra": 0.0
+    },
+    "179": {
+      "nombre": "Ubre",
+      "nombreLower": "ubre",
+      "calorias": 195.0,
+      "proteinas": 15.4,
+      "grasas": 11.7,
+      "carbohidratos": 7.0,
+      "fibra": 0.0
+    },
+    "180": {
+      "nombre": "Anchova",
+      "nombreLower": "anchova",
+      "calorias": 134.0,
+      "proteinas": 21.0,
+      "grasas": 5.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "181": {
+      "nombre": "Anchova  frita",
+      "nombreLower": "anchova  frita",
+      "calorias": 192.0,
+      "proteinas": 25.0,
+      "grasas": 10.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "182": {
+      "nombre": "Anchova  sancochada",
+      "nombreLower": "anchova  sancochada",
+      "calorias": 171.0,
+      "proteinas": 23.4,
+      "grasas": 8.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "183": {
+      "nombre": "Arenque  ahumado",
+      "nombreLower": "arenque  ahumado",
+      "calorias": 293.0,
+      "proteinas": 24.3,
+      "grasas": 21.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "184": {
+      "nombre": "Atún",
+      "nombreLower": "atun",
+      "calorias": 111.0,
+      "proteinas": 26.1,
+      "grasas": 0.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "185": {
+      "nombre": "Atún  al natural enlatado. escurrido",
+      "nombreLower": "atun  al natural enlatado. escurrido",
+      "calorias": 96.0,
+      "proteinas": 23.2,
+      "grasas": 0.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "186": {
+      "nombre": "Atún  en aceite enlatado. escurrido",
+      "nombreLower": "atun  en aceite enlatado. escurrido",
+      "calorias": 167.0,
+      "proteinas": 29.0,
+      "grasas": 5.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "187": {
+      "nombre": "Bacalao",
+      "nombreLower": "bacalao",
+      "calorias": 73.0,
+      "proteinas": 17.5,
+      "grasas": 0.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "188": {
+      "nombre": "Bacalao  seco salado",
+      "nombreLower": "bacalao  seco salado",
+      "calorias": 341.0,
+      "proteinas": 78.9,
+      "grasas": 2.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "189": {
+      "nombre": "Bonito",
+      "nombreLower": "bonito",
+      "calorias": 134.0,
+      "proteinas": 24.4,
+      "grasas": 4.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "190": {
+      "nombre": "Bonito  frito",
+      "nombreLower": "bonito  frito",
+      "calorias": 224.0,
+      "proteinas": 31.8,
+      "grasas": 10.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "191": {
+      "nombre": "Bonito  sancochado",
+      "nombreLower": "bonito  sancochado",
+      "calorias": 163.0,
+      "proteinas": 29.0,
+      "grasas": 5.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "192": {
+      "nombre": "Buco  o curito cocido",
+      "nombreLower": "buco  o curito cocido",
+      "calorias": 141.0,
+      "proteinas": 24.1,
+      "grasas": 4.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "193": {
+      "nombre": "Caballa",
+      "nombreLower": "caballa",
+      "calorias": 159.0,
+      "proteinas": 21.3,
+      "grasas": 8.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "194": {
+      "nombre": "Cachama",
+      "nombreLower": "cachama",
+      "calorias": 82.0,
+      "proteinas": 18.7,
+      "grasas": 0.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "195": {
+      "nombre": "Cachicato",
+      "nombreLower": "cachicato",
+      "calorias": 90.0,
+      "proteinas": 21.2,
+      "grasas": 0.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "196": {
+      "nombre": "Carite",
+      "nombreLower": "carite",
+      "calorias": 90.0,
+      "proteinas": 21.1,
+      "grasas": 0.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "197": {
+      "nombre": "Carpa",
+      "nombreLower": "carpa",
+      "calorias": 92.0,
+      "proteinas": 16.0,
+      "grasas": 3.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "198": {
+      "nombre": "Cazón",
+      "nombreLower": "cazon",
+      "calorias": 103.0,
+      "proteinas": 25.4,
+      "grasas": 0.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "199": {
+      "nombre": "Coporo",
+      "nombreLower": "coporo",
+      "calorias": 126.0,
+      "proteinas": 25.1,
+      "grasas": 2.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "200": {
+      "nombre": "Corocoro",
+      "nombreLower": "corocoro",
+      "calorias": 93.0,
+      "proteinas": 19.7,
+      "grasas": 1.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "201": {
+      "nombre": "Corocoro   frito",
+      "nombreLower": "corocoro   frito",
+      "calorias": 163.0,
+      "proteinas": 25.1,
+      "grasas": 7.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "202": {
+      "nombre": "Corocoro  sancochado",
+      "nombreLower": "corocoro  sancochado",
+      "calorias": 110.0,
+      "proteinas": 23.1,
+      "grasas": 1.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "203": {
+      "nombre": "Corvina",
+      "nombreLower": "corvina",
+      "calorias": 94.0,
+      "proteinas": 20.8,
+      "grasas": 1.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "204": {
+      "nombre": "Chicharro",
+      "nombreLower": "chicharro",
+      "calorias": 102.0,
+      "proteinas": 21.3,
+      "grasas": 1.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "205": {
+      "nombre": "Chicharro  frito",
+      "nombreLower": "chicharro  frito",
+      "calorias": 249.0,
+      "proteinas": 33.0,
+      "grasas": 13.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "206": {
+      "nombre": "Chicharro  sancochado",
+      "nombreLower": "chicharro  sancochado",
+      "calorias": 116.0,
+      "proteinas": 25.4,
+      "grasas": 1.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "207": {
+      "nombre": "Jurel",
+      "nombreLower": "jurel",
+      "calorias": 112.0,
+      "proteinas": 22.0,
+      "grasas": 2.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "208": {
+      "nombre": "Jurel  frito",
+      "nombreLower": "jurel  frito",
+      "calorias": 205.0,
+      "proteinas": 33.1,
+      "grasas": 8.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "209": {
+      "nombre": "Jurel  sancochado",
+      "nombreLower": "jurel  sancochado",
+      "calorias": 133.0,
+      "proteinas": 28.7,
+      "grasas": 2.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "210": {
+      "nombre": "Lamparosa",
+      "nombreLower": "lamparosa",
+      "calorias": 97.0,
+      "proteinas": 20.2,
+      "grasas": 1.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "211": {
+      "nombre": "Lamparosa  frita",
+      "nombreLower": "lamparosa  frita",
+      "calorias": 218.0,
+      "proteinas": 29.6,
+      "grasas": 11.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "212": {
+      "nombre": "Lamparosa  sancochada",
+      "nombreLower": "lamparosa  sancochada",
+      "calorias": 104.0,
+      "proteinas": 22.7,
+      "grasas": 1.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "213": {
+      "nombre": "Lebranche",
+      "nombreLower": "lebranche",
+      "calorias": 142.0,
+      "proteinas": 19.3,
+      "grasas": 7.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "214": {
+      "nombre": "Lebranche  frito",
+      "nombreLower": "lebranche  frito",
+      "calorias": 188.0,
+      "proteinas": 25.5,
+      "grasas": 9.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "215": {
+      "nombre": "Lebranche sancochado",
+      "nombreLower": "lebranche sancochado",
+      "calorias": 138.0,
+      "proteinas": 20.2,
+      "grasas": 6.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "216": {
+      "nombre": "Lenguado",
+      "nombreLower": "lenguado",
+      "calorias": 85.0,
+      "proteinas": 20.3,
+      "grasas": 0.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "217": {
+      "nombre": "loro",
+      "nombreLower": "loro",
+      "calorias": 81.0,
+      "proteinas": 18.9,
+      "grasas": 0.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "218": {
+      "nombre": "Merluza",
+      "nombreLower": "merluza",
+      "calorias": 91.0,
+      "proteinas": 20.5,
+      "grasas": 1.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "219": {
+      "nombre": "Mero",
+      "nombreLower": "mero",
+      "calorias": 89.0,
+      "proteinas": 19.4,
+      "grasas": 1.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "220": {
+      "nombre": "Mojarra",
+      "nombreLower": "mojarra",
+      "calorias": 85.0,
+      "proteinas": 18.6,
+      "grasas": 1.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "221": {
+      "nombre": "Pámpano",
+      "nombreLower": "pampano",
+      "calorias": 92.0,
+      "proteinas": 19.9,
+      "grasas": 1.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "222": {
+      "nombre": "Pargo",
+      "nombreLower": "pargo",
+      "calorias": 77.0,
+      "proteinas": 18.2,
+      "grasas": 0.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "223": {
+      "nombre": "Perla  de mar",
+      "nombreLower": "perla  de mar",
+      "calorias": 74.0,
+      "proteinas": 17.7,
+      "grasas": 0.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "224": {
+      "nombre": "Picúa",
+      "nombreLower": "picua",
+      "calorias": 94.0,
+      "proteinas": 20.9,
+      "grasas": 1.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "225": {
+      "nombre": "Rayado",
+      "nombreLower": "rayado",
+      "calorias": 84.0,
+      "proteinas": 19.2,
+      "grasas": 0.8,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "226": {
+      "nombre": "Rayado  sancochado",
+      "nombreLower": "rayado  sancochado",
+      "calorias": 106.0,
+      "proteinas": 24.8,
+      "grasas": 0.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "227": {
+      "nombre": "Róbalo",
+      "nombreLower": "robalo",
+      "calorias": 102.0,
+      "proteinas": 21.1,
+      "grasas": 1.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "228": {
+      "nombre": "Róbalo  frito",
+      "nombreLower": "robalo  frito",
+      "calorias": 156.0,
+      "proteinas": 28.7,
+      "grasas": 4.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "229": {
+      "nombre": "Róbalo  sancochado",
+      "nombreLower": "robalo  sancochado",
+      "calorias": 107.0,
+      "proteinas": 23.2,
+      "grasas": 1.6,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "230": {
+      "nombre": "Roncador",
+      "nombreLower": "roncador",
+      "calorias": 82.0,
+      "proteinas": 19.3,
+      "grasas": 0.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "231": {
+      "nombre": "Salmón  enlatado",
+      "nombreLower": "salmon  enlatado",
+      "calorias": 145.0,
+      "proteinas": 19.7,
+      "grasas": 7.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "232": {
+      "nombre": "Sardinas",
+      "nombreLower": "sardinas",
+      "calorias": 145.0,
+      "proteinas": 20.6,
+      "grasas": 7.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "233": {
+      "nombre": "Sardinas  enlatadas (parte sólida)",
+      "nombreLower": "sardinas  enlatadas (parte solida)",
+      "calorias": 183.0,
+      "proteinas": 24.9,
+      "grasas": 9.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "234": {
+      "nombre": "Sierra",
+      "nombreLower": "sierra",
+      "calorias": 119.0,
+      "proteinas": 23.0,
+      "grasas": 3.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "235": {
+      "nombre": "Sierra  frita",
+      "nombreLower": "sierra  frita",
+      "calorias": 189.0,
+      "proteinas": 30.0,
+      "grasas": 7.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "236": {
+      "nombre": "Sierra  sancochada",
+      "nombreLower": "sierra  sancochada",
+      "calorias": 131.0,
+      "proteinas": 25.3,
+      "grasas": 3.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "237": {
+      "nombre": "Tajalí",
+      "nombreLower": "tajali",
+      "calorias": 98.0,
+      "proteinas": 19.3,
+      "grasas": 2.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "238": {
+      "nombre": "Tajalí  frito",
+      "nombreLower": "tajali  frito",
+      "calorias": 212.0,
+      "proteinas": 29.0,
+      "grasas": 10.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "239": {
+      "nombre": "Tajalí  sancochado",
+      "nombreLower": "tajali  sancochado",
+      "calorias": 111.0,
+      "proteinas": 22.9,
+      "grasas": 2.2,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "240": {
+      "nombre": "Trucha  arcoiris",
+      "nombreLower": "trucha  arcoiris",
+      "calorias": 103.0,
+      "proteinas": 19.5,
+      "grasas": 2.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "241": {
+      "nombre": "Trucha  de mar",
+      "nombreLower": "trucha  de mar",
+      "calorias": 74.0,
+      "proteinas": 17.9,
+      "grasas": 0.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "242": {
+      "nombre": "Almejas",
+      "nombreLower": "almejas",
+      "calorias": 73.0,
+      "proteinas": 12.6,
+      "grasas": 1.6,
+      "carbohidratos": 2.0,
+      "fibra": 0.0
+    },
+    "243": {
+      "nombre": "Calamares",
+      "nombreLower": "calamares",
+      "calorias": 80.0,
+      "proteinas": 16.8,
+      "grasas": 1.4,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "244": {
+      "nombre": "Camarones",
+      "nombreLower": "camarones",
+      "calorias": 91.0,
+      "proteinas": 19.7,
+      "grasas": 1.3,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "245": {
+      "nombre": "Cangrejos  enlatados",
+      "nombreLower": "cangrejos  enlatados",
+      "calorias": 97.0,
+      "proteinas": 17.4,
+      "grasas": 2.5,
+      "carbohidratos": 1.1,
+      "fibra": 0.0
+    },
+    "246": {
+      "nombre": "chipi-chipi  cocidos",
+      "nombreLower": "chipi-chipi  cocidos",
+      "calorias": 81.0,
+      "proteinas": 17.4,
+      "grasas": 0.8,
+      "carbohidratos": 1.0,
+      "fibra": 0.0
+    },
+    "247": {
+      "nombre": "Guacuco",
+      "nombreLower": "guacuco",
+      "calorias": 121.0,
+      "proteinas": 18.3,
+      "grasas": 4.6,
+      "carbohidratos": 1.7,
+      "fibra": 0.0
+    },
+    "248": {
+      "nombre": "Langosta",
+      "nombreLower": "langosta",
+      "calorias": 84.0,
+      "proteinas": 16.2,
+      "grasas": 1.9,
+      "carbohidratos": 0.5,
+      "fibra": 0.0
+    },
+    "249": {
+      "nombre": "Langostinos",
+      "nombreLower": "langostinos",
+      "calorias": 89.0,
+      "proteinas": 20.3,
+      "grasas": 0.9,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "250": {
+      "nombre": "Mejillones  enlatados",
+      "nombreLower": "mejillones  enlatados",
+      "calorias": 104.0,
+      "proteinas": 17.2,
+      "grasas": 3.3,
+      "carbohidratos": 1.3,
+      "fibra": 0.0
+    },
+    "251": {
+      "nombre": "Osas",
+      "nombreLower": "osas",
+      "calorias": 42.0,
+      "proteinas": 5.8,
+      "grasas": 0.5,
+      "carbohidratos": 3.5,
+      "fibra": 0.0
+    },
+    "252": {
+      "nombre": "Pepitonas  enlatadas",
+      "nombreLower": "pepitonas  enlatadas",
+      "calorias": 88.0,
+      "proteinas": 16.8,
+      "grasas": 1.2,
+      "carbohidratos": 2.4,
+      "fibra": 0.0
+    },
+    "253": {
+      "nombre": "Pulpo",
+      "nombreLower": "pulpo",
+      "calorias": 64.0,
+      "proteinas": 14.2,
+      "grasas": 0.6,
+      "carbohidratos": 0.4,
+      "fibra": 0.0
+    },
+    "254": {
+      "nombre": "Huevo de  Codorniz.",
+      "nombreLower": "huevo de  codorniz.",
+      "calorias": 179.0,
+      "proteinas": 11.6,
+      "grasas": 13.1,
+      "carbohidratos": 3.6,
+      "fibra": 0.0
+    },
+    "255": {
+      "nombre": "Huevo entero de gallina",
+      "nombreLower": "huevo entero de gallina",
+      "calorias": 156.0,
+      "proteinas": 12.4,
+      "grasas": 11.1,
+      "carbohidratos": 1.5,
+      "fibra": 0.0
+    },
+    "256": {
+      "nombre": "Clara de Huevo de gallina",
+      "nombreLower": "clara de huevo de gallina",
+      "calorias": 46.0,
+      "proteinas": 10.8,
+      "grasas": 0.2,
+      "carbohidratos": 0.6,
+      "fibra": 0.0
+    },
+    "257": {
+      "nombre": "Yema de Huevo de gallina",
+      "nombreLower": "yema de huevo de gallina",
+      "calorias": 354.0,
+      "proteinas": 16.1,
+      "grasas": 31.6,
+      "carbohidratos": 1.2,
+      "fibra": 0.0
+    },
+    "258": {
+      "nombre": "Huevo en polvo",
+      "nombreLower": "huevo en polvo",
+      "calorias": 576.0,
+      "proteinas": 46.8,
+      "grasas": 42.0,
+      "carbohidratos": 2.6,
+      "fibra": 0.0
+    },
+    "259": {
+      "nombre": "Huevo de Iguana",
+      "nombreLower": "huevo de iguana",
+      "calorias": 166.0,
+      "proteinas": 16.2,
+      "grasas": 10.4,
+      "carbohidratos": 2.0,
+      "fibra": 0.0
+    },
+    "260": {
+      "nombre": "Huevo de Huevo de Lisa",
+      "nombreLower": "huevo de huevo de lisa",
+      "calorias": 367.0,
+      "proteinas": 39.9,
+      "grasas": 19.0,
+      "carbohidratos": 9.0,
+      "fibra": 0.0
+    },
+    "261": {
+      "nombre": "Huevo de  Tortuga",
+      "nombreLower": "huevo de  tortuga",
+      "calorias": 111.0,
+      "proteinas": 12.6,
+      "grasas": 6.3,
+      "carbohidratos": 0.9,
+      "fibra": 0.0
+    },
+    "262": {
+      "nombre": "Leche de burra",
+      "nombreLower": "leche de burra",
+      "calorias": 44.0,
+      "proteinas": 1.7,
+      "grasas": 1.2,
+      "carbohidratos": 6.5,
+      "fibra": 0.0
+    },
+    "263": {
+      "nombre": "Leche  de cabra",
+      "nombreLower": "leche  de cabra",
+      "calorias": 75.0,
+      "proteinas": 4.0,
+      "grasas": 4.8,
+      "carbohidratos": 4.0,
+      "fibra": 0.0
+    },
+    "264": {
+      "nombre": "Leche humana",
+      "nombreLower": "leche humana",
+      "calorias": 78.0,
+      "proteinas": 1.1,
+      "grasas": 4.0,
+      "carbohidratos": 9.5,
+      "fibra": 0.0
+    },
+    "265": {
+      "nombre": "Leche  de soya",
+      "nombreLower": "leche  de soya",
+      "calorias": 36.0,
+      "proteinas": 3.4,
+      "grasas": 1.5,
+      "carbohidratos": 2.1,
+      "fibra": 0.0
+    },
+    "266": {
+      "nombre": "Leche  líquida completa",
+      "nombreLower": "leche  liquida completa",
+      "calorias": 63.0,
+      "proteinas": 3.5,
+      "grasas": 3.4,
+      "carbohidratos": 4.7,
+      "fibra": 0.0
+    },
+    "267": {
+      "nombre": "Leche  líquida descremada",
+      "nombreLower": "leche  liquida descremada",
+      "calorias": 43.0,
+      "proteinas": 3.6,
+      "grasas": 0.9,
+      "carbohidratos": 5.0,
+      "fibra": 0.0
+    },
+    "268": {
+      "nombre": "Leche  en polvo completa. enriquecida",
+      "nombreLower": "leche  en polvo completa. enriquecida",
+      "calorias": 492.0,
+      "proteinas": 25.8,
+      "grasas": 26.7,
+      "carbohidratos": 38.0,
+      "fibra": 0.0
+    },
+    "269": {
+      "nombre": "Leche  en polvo descremada",
+      "nombreLower": "leche  en polvo descremada",
+      "calorias": 356.0,
+      "proteinas": 35.0,
+      "grasas": 1.0,
+      "carbohidratos": 51.8,
+      "fibra": 0.0
+    },
+    "270": {
+      "nombre": "Leche condensada",
+      "nombreLower": "leche condensada",
+      "calorias": 324.0,
+      "proteinas": 8.0,
+      "grasas": 8.7,
+      "carbohidratos": 53.5,
+      "fibra": 0.0
+    },
+    "271": {
+      "nombre": "Leche  Evaporada",
+      "nombreLower": "leche  evaporada",
+      "calorias": 138.0,
+      "proteinas": 6.8,
+      "grasas": 7.9,
+      "carbohidratos": 9.8,
+      "fibra": 0.0
+    },
+    "272": {
+      "nombre": "Crema de leche pasteurizada",
+      "nombreLower": "crema de leche pasteurizada",
+      "calorias": 382.0,
+      "proteinas": 2.0,
+      "grasas": 40.3,
+      "carbohidratos": 2.9,
+      "fibra": 0.0
+    },
+    "273": {
+      "nombre": "Cuajada",
+      "nombreLower": "cuajada",
+      "calorias": 257.0,
+      "proteinas": 15.5,
+      "grasas": 18.9,
+      "carbohidratos": 6.2,
+      "fibra": 0.0
+    },
+    "274": {
+      "nombre": "Mantequilla",
+      "nombreLower": "mantequilla",
+      "calorias": 731.0,
+      "proteinas": 0.6,
+      "grasas": 81.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "275": {
+      "nombre": "Nata",
+      "nombreLower": "nata",
+      "calorias": 326.0,
+      "proteinas": 2.5,
+      "grasas": 32.0,
+      "carbohidratos": 7.1,
+      "fibra": 0.0
+    },
+    "276": {
+      "nombre": "Suero de Leche criollo pasteurizado",
+      "nombreLower": "suero de leche criollo pasteurizado",
+      "calorias": 63.0,
+      "proteinas": 3.1,
+      "grasas": 3.3,
+      "carbohidratos": 5.3,
+      "fibra": 0.0
+    },
+    "277": {
+      "nombre": "Queso amarillo fundido. tipo americano",
+      "nombreLower": "queso amarillo fundido. tipo americano",
+      "calorias": 376.0,
+      "proteinas": 22.4,
+      "grasas": 31.2,
+      "carbohidratos": 1.3,
+      "fibra": 0.0
+    },
+    "278": {
+      "nombre": "Queso  amarillo fundido para untar",
+      "nombreLower": "queso  amarillo fundido para untar",
+      "calorias": 277.0,
+      "proteinas": 12.7,
+      "grasas": 21.9,
+      "carbohidratos": 7.2,
+      "fibra": 0.0
+    },
+    "279": {
+      "nombre": "Queso amarillo holandés",
+      "nombreLower": "queso amarillo holandes",
+      "calorias": 398.0,
+      "proteinas": 26.0,
+      "grasas": 32.1,
+      "carbohidratos": 1.3,
+      "fibra": 0.0
+    },
+    "281": {
+      "nombre": "Queso  blanco duro de leche completa",
+      "nombreLower": "queso  blanco duro de leche completa",
+      "calorias": 389.0,
+      "proteinas": 24.9,
+      "grasas": 31.5,
+      "carbohidratos": 1.4,
+      "fibra": 0.0
+    },
+    "282": {
+      "nombre": "Queso  blanco duro de leche descremada",
+      "nombreLower": "queso  blanco duro de leche descremada",
+      "calorias": 224.0,
+      "proteinas": 38.2,
+      "grasas": 5.7,
+      "carbohidratos": 4.9,
+      "fibra": 0.0
+    },
+    "283": {
+      "nombre": "Queso blanco duro de leche semi-descremada",
+      "nombreLower": "queso blanco duro de leche semi-descremada",
+      "calorias": 337.0,
+      "proteinas": 34.0,
+      "grasas": 21.0,
+      "carbohidratos": 3.0,
+      "fibra": 0.0
+    },
+    "284": {
+      "nombre": "Queso  blanco fundido para untar",
+      "nombreLower": "queso  blanco fundido para untar",
+      "calorias": 304.0,
+      "proteinas": 12.3,
+      "grasas": 26.5,
+      "carbohidratos": 4.1,
+      "fibra": 0.0
+    },
+    "285": {
+      "nombre": "Queso  blanco suave",
+      "nombreLower": "queso  blanco suave",
+      "calorias": 313.0,
+      "proteinas": 18.3,
+      "grasas": 26.3,
+      "carbohidratos": 0.8,
+      "fibra": 0.0
+    },
+    "286": {
+      "nombre": "Queso Cheddar",
+      "nombreLower": "queso cheddar",
+      "calorias": 398.0,
+      "proteinas": 25.0,
+      "grasas": 32.2,
+      "carbohidratos": 2.1,
+      "fibra": 0.0
+    },
+    "287": {
+      "nombre": "Queso  de año",
+      "nombreLower": "queso  de ano",
+      "calorias": 402.0,
+      "proteinas": 24.3,
+      "grasas": 32.8,
+      "carbohidratos": 2.4,
+      "fibra": 0.0
+    },
+    "288": {
+      "nombre": "Queso  de cabra",
+      "nombreLower": "queso  de cabra",
+      "calorias": 172.0,
+      "proteinas": 16.0,
+      "grasas": 10.3,
+      "carbohidratos": 3.7,
+      "fibra": 0.0
+    },
+    "289": {
+      "nombre": "Queso de crema (cream cheese)",
+      "nombreLower": "queso de crema (cream cheese)",
+      "calorias": 377.0,
+      "proteinas": 9.0,
+      "grasas": 37.0,
+      "carbohidratos": 2.0,
+      "fibra": 0.0
+    },
+    "290": {
+      "nombre": "Queso  de mano (29)",
+      "nombreLower": "queso  de mano (29)",
+      "calorias": 316.0,
+      "proteinas": 19.3,
+      "grasas": 24.8,
+      "carbohidratos": 4.0,
+      "fibra": 0.0
+    },
+    "291": {
+      "nombre": "Queso Gouda",
+      "nombreLower": "queso gouda",
+      "calorias": 355.0,
+      "proteinas": 24.9,
+      "grasas": 27.4,
+      "carbohidratos": 2.3,
+      "fibra": 0.0
+    },
+    "292": {
+      "nombre": "Queso guayanés",
+      "nombreLower": "queso guayanes",
+      "calorias": 284.0,
+      "proteinas": 18.8,
+      "grasas": 23.0,
+      "carbohidratos": 0.4,
+      "fibra": 0.0
+    },
+    "293": {
+      "nombre": "Queso gruyere",
+      "nombreLower": "queso gruyere",
+      "calorias": 404.0,
+      "proteinas": 28.8,
+      "grasas": 31.8,
+      "carbohidratos": 0.6,
+      "fibra": 0.0
+    },
+    "294": {
+      "nombre": "Queso mozzarela",
+      "nombreLower": "queso mozzarela",
+      "calorias": 230.0,
+      "proteinas": 19.9,
+      "grasas": 16.1,
+      "carbohidratos": 1.3,
+      "fibra": 0.0
+    },
+    "295": {
+      "nombre": "Queso muenster",
+      "nombreLower": "queso muenster",
+      "calorias": 363.0,
+      "proteinas": 24.2,
+      "grasas": 28.5,
+      "carbohidratos": 2.4,
+      "fibra": 0.0
+    },
+    "296": {
+      "nombre": "Queso parmesano",
+      "nombreLower": "queso parmesano",
+      "calorias": 391.0,
+      "proteinas": 40.8,
+      "grasas": 24.7,
+      "carbohidratos": 1.3,
+      "fibra": 0.0
+    },
+    "297": {
+      "nombre": "Queso requesón",
+      "nombreLower": "queso requeson",
+      "calorias": 161.0,
+      "proteinas": 13.4,
+      "grasas": 10.8,
+      "carbohidratos": 2.6,
+      "fibra": 0.0
+    },
+    "298": {
+      "nombre": "Queso roquefort",
+      "nombreLower": "queso roquefort",
+      "calorias": 423.0,
+      "proteinas": 22.2,
+      "grasas": 36.6,
+      "carbohidratos": 1.1,
+      "fibra": 0.0
+    },
+    "299": {
+      "nombre": "Pasta para untar con sabor a queso",
+      "nombreLower": "pasta para untar con sabor a queso",
+      "calorias": 323.0,
+      "proteinas": 7.2,
+      "grasas": 28.6,
+      "carbohidratos": 9.2,
+      "fibra": 0.0
+    },
+    "300": {
+      "nombre": "Yoghurt de leche completa y frutas",
+      "nombreLower": "yoghurt de leche completa y frutas",
+      "calorias": 114.0,
+      "proteinas": 3.6,
+      "grasas": 3.2,
+      "carbohidratos": 17.7,
+      "fibra": 0.0
+    },
+    "301": {
+      "nombre": "Yoghurt dulce de leche completa",
+      "nombreLower": "yoghurt dulce de leche completa",
+      "calorias": 92.0,
+      "proteinas": 4.2,
+      "grasas": 3.6,
+      "carbohidratos": 10.8,
+      "fibra": 0.0
+    },
+    "302": {
+      "nombre": "Yoghurt líquido de leche semidescremada con frutas",
+      "nombreLower": "yoghurt liquido de leche semidescremada con frutas",
+      "calorias": 63.0,
+      "proteinas": 4.9,
+      "grasas": 1.5,
+      "carbohidratos": 7.4,
+      "fibra": 0.0
+    },
+    "303": {
+      "nombre": "Yoghurt líquido de leche descremada con frutas y edulcorante",
+      "nombreLower": "yoghurt liquido de leche descremada con frutas y edulcorante",
+      "calorias": 55.0,
+      "proteinas": 4.3,
+      "grasas": 0.7,
+      "carbohidratos": 7.8,
+      "fibra": 0.0
+    },
+    "304": {
+      "nombre": "Yoghurt natural de leche completa",
+      "nombreLower": "yoghurt natural de leche completa",
+      "calorias": 74.0,
+      "proteinas": 4.3,
+      "grasas": 3.8,
+      "carbohidratos": 5.7,
+      "fibra": 0.0
+    },
+    "305": {
+      "nombre": "Yoghurt natural de leche descremada",
+      "nombreLower": "yoghurt natural de leche descremada",
+      "calorias": 51.0,
+      "proteinas": 4.6,
+      "grasas": 0.6,
+      "carbohidratos": 6.9,
+      "fibra": 0.0
+    },
+    "306": {
+      "nombre": "Arvejas secas",
+      "nombreLower": "arvejas secas",
+      "calorias": 271.0,
+      "proteinas": 23.2,
+      "grasas": 1.4,
+      "carbohidratos": 41.3,
+      "fibra": 19.4
+    },
+    "307": {
+      "nombre": "Arvejas secas cocidas",
+      "nombreLower": "arvejas secas cocidas",
+      "calorias": 86.0,
+      "proteinas": 7.4,
+      "grasas": 0.3,
+      "carbohidratos": 13.5,
+      "fibra": 5.5
+    },
+    "308": {
+      "nombre": "Arvejas tiernas",
+      "nombreLower": "arvejas tiernas",
+      "calorias": 94.0,
+      "proteinas": 7.8,
+      "grasas": 0.5,
+      "carbohidratos": 14.5,
+      "fibra": 7.2
+    },
+    "309": {
+      "nombre": "Arvejas tiernas enlatadas",
+      "nombreLower": "arvejas tiernas enlatadas",
+      "calorias": 67.0,
+      "proteinas": 4.7,
+      "grasas": 0.3,
+      "carbohidratos": 11.4,
+      "fibra": 4.3
+    },
+    "310": {
+      "nombre": "Caraotas blancas",
+      "nombreLower": "caraotas blancas",
+      "calorias": 233.0,
+      "proteinas": 23.9,
+      "grasas": 1.5,
+      "carbohidratos": 31.0,
+      "fibra": 28.7
+    },
+    "311": {
+      "nombre": "Caraotas blancas cocidas",
+      "nombreLower": "caraotas blancas cocidas",
+      "calorias": 84.0,
+      "proteinas": 8.0,
+      "grasas": 0.5,
+      "carbohidratos": 11.8,
+      "fibra": 7.7
+    },
+    "312": {
+      "nombre": "Caraotas blancas enlatadas",
+      "nombreLower": "caraotas blancas enlatadas",
+      "calorias": 73.0,
+      "proteinas": 6.3,
+      "grasas": 0.5,
+      "carbohidratos": 10.9,
+      "fibra": 7.0
+    },
+    "313": {
+      "nombre": "Caraotas negras",
+      "nombreLower": "caraotas negras",
+      "calorias": 248.0,
+      "proteinas": 23.0,
+      "grasas": 1.6,
+      "carbohidratos": 35.4,
+      "fibra": 23.9
+    },
+    "314": {
+      "nombre": "Caraotas negras cocidas",
+      "nombreLower": "caraotas negras cocidas",
+      "calorias": 82.0,
+      "proteinas": 8.5,
+      "grasas": 0.3,
+      "carbohidratos": 11.3,
+      "fibra": 9.7
+    },
+    "315": {
+      "nombre": "Caraotas negras enlatadas",
+      "nombreLower": "caraotas negras enlatadas",
+      "calorias": 66.0,
+      "proteinas": 5.4,
+      "grasas": 1.5,
+      "carbohidratos": 7.6,
+      "fibra": 7.4
+    },
+    "316": {
+      "nombre": "Caraotas rojas",
+      "nombreLower": "caraotas rojas",
+      "calorias": 251.0,
+      "proteinas": 20.9,
+      "grasas": 2.0,
+      "carbohidratos": 37.3,
+      "fibra": 23.1
+    },
+    "317": {
+      "nombre": "Caraotas rojas cocidas",
+      "nombreLower": "caraotas rojas cocidas",
+      "calorias": 91.0,
+      "proteinas": 8.6,
+      "grasas": 0.5,
+      "carbohidratos": 13.0,
+      "fibra": 8.1
+    },
+    "318": {
+      "nombre": "Caraotas rojas enlatadas",
+      "nombreLower": "caraotas rojas enlatadas",
+      "calorias": 88.0,
+      "proteinas": 6.8,
+      "grasas": 0.7,
+      "carbohidratos": 13.5,
+      "fibra": 7.9
+    },
+    "319": {
+      "nombre": "Cuarentano",
+      "nombreLower": "cuarentano",
+      "calorias": 322.0,
+      "proteinas": 24.1,
+      "grasas": 1.3,
+      "carbohidratos": 57.4,
+      "fibra": 0.0
+    },
+    "320": {
+      "nombre": "Frijol",
+      "nombreLower": "frijol",
+      "calorias": 257.0,
+      "proteinas": 26.7,
+      "grasas": 0.9,
+      "carbohidratos": 35.5,
+      "fibra": 21.9
+    },
+    "321": {
+      "nombre": "Frijol cocido",
+      "nombreLower": "frijol cocido",
+      "calorias": 92.0,
+      "proteinas": 8.2,
+      "grasas": 0.4,
+      "carbohidratos": 14.0,
+      "fibra": 7.3
+    },
+    "322": {
+      "nombre": "Gallinazo",
+      "nombreLower": "gallinazo",
+      "calorias": 311.0,
+      "proteinas": 22.1,
+      "grasas": 1.0,
+      "carbohidratos": 61.2,
+      "fibra": 0.0
+    },
+    "323": {
+      "nombre": "Garbanzos",
+      "nombreLower": "garbanzos",
+      "calorias": 310.0,
+      "proteinas": 20.0,
+      "grasas": 4.6,
+      "carbohidratos": 47.0,
+      "fibra": 13.0
+    },
+    "324": {
+      "nombre": "Garbanzos cocidos",
+      "nombreLower": "garbanzos cocidos",
+      "calorias": 113.0,
+      "proteinas": 9.5,
+      "grasas": 1.8,
+      "carbohidratos": 14.7,
+      "fibra": 8.1
+    },
+    "325": {
+      "nombre": "Guaracaro",
+      "nombreLower": "guaracaro",
+      "calorias": 324.0,
+      "proteinas": 21.2,
+      "grasas": 1.5,
+      "carbohidratos": 60.9,
+      "fibra": 0.0
+    },
+    "326": {
+      "nombre": "Habas blancas",
+      "nombreLower": "habas blancas",
+      "calorias": 267.0,
+      "proteinas": 25.5,
+      "grasas": 1.3,
+      "carbohidratos": 38.4,
+      "fibra": 18.6
+    },
+    "327": {
+      "nombre": "Habas rojas",
+      "nombreLower": "habas rojas",
+      "calorias": 273.0,
+      "proteinas": 25.5,
+      "grasas": 1.6,
+      "carbohidratos": 39.1,
+      "fibra": 18.6
+    },
+    "328": {
+      "nombre": "Habas verdes",
+      "nombreLower": "habas verdes",
+      "calorias": 111.0,
+      "proteinas": 9.3,
+      "grasas": 0.5,
+      "carbohidratos": 17.2,
+      "fibra": 7.5
+    },
+    "329": {
+      "nombre": "Lentejas",
+      "nombreLower": "lentejas",
+      "calorias": 252.0,
+      "proteinas": 23.9,
+      "grasas": 0.9,
+      "carbohidratos": 37.0,
+      "fibra": 22.7
+    },
+    "330": {
+      "nombre": "Lentejas cocidas",
+      "nombreLower": "lentejas cocidas",
+      "calorias": 65.0,
+      "proteinas": 6.8,
+      "grasas": 0.3,
+      "carbohidratos": 8.7,
+      "fibra": 4.5
+    },
+    "331": {
+      "nombre": "Quinchoncho seco",
+      "nombreLower": "quinchoncho seco",
+      "calorias": 250.0,
+      "proteinas": 20.9,
+      "grasas": 1.0,
+      "carbohidratos": 39.3,
+      "fibra": 23.8
+    },
+    "332": {
+      "nombre": "Quinchoncho seco cocido",
+      "nombreLower": "quinchoncho seco cocido",
+      "calorias": 98.0,
+      "proteinas": 8.2,
+      "grasas": 0.5,
+      "carbohidratos": 15.2,
+      "fibra": 8.8
+    },
+    "333": {
+      "nombre": "Quinchoncho tierno",
+      "nombreLower": "quinchoncho tierno",
+      "calorias": 121.0,
+      "proteinas": 8.4,
+      "grasas": 1.0,
+      "carbohidratos": 23.2,
+      "fibra": 0.0
+    },
+    "334": {
+      "nombre": "Soya grano entero",
+      "nombreLower": "soya grano entero",
+      "calorias": 412.0,
+      "proteinas": 33.4,
+      "grasas": 16.1,
+      "carbohidratos": 38.3,
+      "fibra": 0.0
+    },
+    "335": {
+      "nombre": "Harina de Soya.",
+      "nombreLower": "harina de soya.",
+      "calorias": 442.0,
+      "proteinas": 35.4,
+      "grasas": 20.1,
+      "carbohidratos": 32.2,
+      "fibra": 0.0
+    },
+    "336": {
+      "nombre": "Harina desgrasada de Soya.",
+      "nombreLower": "harina desgrasada de soya.",
+      "calorias": 335.0,
+      "proteinas": 52.0,
+      "grasas": 0.8,
+      "carbohidratos": 32.7,
+      "fibra": 0.0
+    },
+    "337": {
+      "nombre": "Apio",
+      "nombreLower": "apio",
+      "calorias": 94.0,
+      "proteinas": 1.0,
+      "grasas": 0.1,
+      "carbohidratos": 22.3,
+      "fibra": 2.0
+    },
+    "338": {
+      "nombre": "Apio cocido",
+      "nombreLower": "apio cocido",
+      "calorias": 88.0,
+      "proteinas": 0.6,
+      "grasas": 0.5,
+      "carbohidratos": 20.3,
+      "fibra": 1.6
+    },
+    "339": {
+      "nombre": "Batata",
+      "nombreLower": "batata",
+      "calorias": 108.0,
+      "proteinas": 1.5,
+      "grasas": 0.4,
+      "carbohidratos": 24.7,
+      "fibra": 3.8
+    },
+    "340": {
+      "nombre": "Batata cocida",
+      "nombreLower": "batata cocida",
+      "calorias": 83.0,
+      "proteinas": 1.9,
+      "grasas": 0.1,
+      "carbohidratos": 18.6,
+      "fibra": 2.3
+    },
+    "341": {
+      "nombre": "Mapuey blanco",
+      "nombreLower": "mapuey blanco",
+      "calorias": 90.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 20.6,
+      "fibra": 1.3
+    },
+    "342": {
+      "nombre": "Mapuey morado",
+      "nombreLower": "mapuey morado",
+      "calorias": 112.0,
+      "proteinas": 1.2,
+      "grasas": 0.6,
+      "carbohidratos": 25.5,
+      "fibra": 1.9
+    },
+    "343": {
+      "nombre": "Ñame",
+      "nombreLower": "name",
+      "calorias": 98.0,
+      "proteinas": 2.1,
+      "grasas": 0.2,
+      "carbohidratos": 21.9,
+      "fibra": 1.5
+    },
+    "344": {
+      "nombre": "Ñame cocido",
+      "nombreLower": "name cocido",
+      "calorias": 88.0,
+      "proteinas": 1.7,
+      "grasas": 0.1,
+      "carbohidratos": 19.9,
+      "fibra": 1.8
+    },
+    "345": {
+      "nombre": "Ocumo",
+      "nombreLower": "ocumo",
+      "calorias": 103.0,
+      "proteinas": 1.7,
+      "grasas": 0.8,
+      "carbohidratos": 22.3,
+      "fibra": 2.1
+    },
+    "346": {
+      "nombre": "Ocumo cocido",
+      "nombreLower": "ocumo cocido",
+      "calorias": 101.0,
+      "proteinas": 1.0,
+      "grasas": 0.2,
+      "carbohidratos": 23.7,
+      "fibra": 2.4
+    },
+    "347": {
+      "nombre": "Ocumo chino",
+      "nombreLower": "ocumo chino",
+      "calorias": 156.0,
+      "proteinas": 1.2,
+      "grasas": 0.2,
+      "carbohidratos": 37.4,
+      "fibra": 3.5
+    },
+    "348": {
+      "nombre": "Papa",
+      "nombreLower": "papa",
+      "calorias": 81.0,
+      "proteinas": 2.0,
+      "grasas": 0.1,
+      "carbohidratos": 17.9,
+      "fibra": 1.6
+    },
+    "349": {
+      "nombre": "Papa cocida",
+      "nombreLower": "papa cocida",
+      "calorias": 68.0,
+      "proteinas": 2.0,
+      "grasas": 0.1,
+      "carbohidratos": 14.8,
+      "fibra": 1.3
+    },
+    "350": {
+      "nombre": "Papa morada",
+      "nombreLower": "papa morada",
+      "calorias": 80.0,
+      "proteinas": 2.1,
+      "grasas": 0.3,
+      "carbohidratos": 17.3,
+      "fibra": 1.0
+    },
+    "351": {
+      "nombre": "Yuca",
+      "nombreLower": "yuca",
+      "calorias": 143.0,
+      "proteinas": 1.1,
+      "grasas": 0.2,
+      "carbohidratos": 34.2,
+      "fibra": 2.3
+    },
+    "352": {
+      "nombre": "Yuca cocida",
+      "nombreLower": "yuca cocida",
+      "calorias": 129.0,
+      "proteinas": 0.8,
+      "grasas": 0.2,
+      "carbohidratos": 30.9,
+      "fibra": 2.4
+    },
+    "353": {
+      "nombre": "Acelga",
+      "nombreLower": "acelga",
+      "calorias": 19.0,
+      "proteinas": 2.0,
+      "grasas": 0.2,
+      "carbohidratos": 2.2,
+      "fibra": 3.6
+    },
+    "354": {
+      "nombre": "Aguacate",
+      "nombreLower": "aguacate",
+      "calorias": 152.0,
+      "proteinas": 1.3,
+      "grasas": 14.0,
+      "carbohidratos": 5.2,
+      "fibra": 2.8
+    },
+    "355": {
+      "nombre": "Ají chile picante",
+      "nombreLower": "aji chile picante",
+      "calorias": 41.0,
+      "proteinas": 1.2,
+      "grasas": 0.2,
+      "carbohidratos": 9.7,
+      "fibra": 0.0
+    },
+    "356": {
+      "nombre": "Ají dulce sin clasificar",
+      "nombreLower": "aji dulce sin clasificar",
+      "calorias": 46.0,
+      "proteinas": 1.9,
+      "grasas": 0.6,
+      "carbohidratos": 10.2,
+      "fibra": 0.0
+    },
+    "357": {
+      "nombre": "Ají rojo picante",
+      "nombreLower": "aji rojo picante",
+      "calorias": 63.0,
+      "proteinas": 2.2,
+      "grasas": 1.6,
+      "carbohidratos": 14.1,
+      "fibra": 0.0
+    },
+    "358": {
+      "nombre": "Ajo",
+      "nombreLower": "ajo",
+      "calorias": 129.0,
+      "proteinas": 5.1,
+      "grasas": 0.2,
+      "carbohidratos": 27.8,
+      "fibra": 0.0
+    },
+    "359": {
+      "nombre": "Ajoporro",
+      "nombreLower": "ajoporro",
+      "calorias": 36.0,
+      "proteinas": 1.5,
+      "grasas": 0.1,
+      "carbohidratos": 7.2,
+      "fibra": 4.2
+    },
+    "360": {
+      "nombre": "Alcachofa",
+      "nombreLower": "alcachofa",
+      "calorias": 25.0,
+      "proteinas": 2.8,
+      "grasas": 0.2,
+      "carbohidratos": 2.9,
+      "fibra": 6.2
+    },
+    "361": {
+      "nombre": "Apio España (Celery)",
+      "nombreLower": "apio espana (celery)",
+      "calorias": 16.0,
+      "proteinas": 0.9,
+      "grasas": 0.1,
+      "carbohidratos": 2.8,
+      "fibra": 1.5
+    },
+    "362": {
+      "nombre": "Auyama",
+      "nombreLower": "auyama",
+      "calorias": 43.0,
+      "proteinas": 1.5,
+      "grasas": 0.4,
+      "carbohidratos": 8.4,
+      "fibra": 1.3
+    },
+    "363": {
+      "nombre": "Auyama cocida",
+      "nombreLower": "auyama cocida",
+      "calorias": 27.0,
+      "proteinas": 0.8,
+      "grasas": 0.2,
+      "carbohidratos": 5.6,
+      "fibra": 1.1
+    },
+    "364": {
+      "nombre": "Berenjena",
+      "nombreLower": "berenjena",
+      "calorias": 18.0,
+      "proteinas": 1.0,
+      "grasas": 0.3,
+      "carbohidratos": 2.8,
+      "fibra": 2.7
+    },
+    "365": {
+      "nombre": "Berro",
+      "nombreLower": "berro",
+      "calorias": 18.0,
+      "proteinas": 2.2,
+      "grasas": 0.4,
+      "carbohidratos": 1.5,
+      "fibra": 3.0
+    },
+    "366": {
+      "nombre": "Brócoli",
+      "nombreLower": "brocoli",
+      "calorias": 27.0,
+      "proteinas": 3.8,
+      "grasas": 0.4,
+      "carbohidratos": 2.1,
+      "fibra": 4.4
+    },
+    "367": {
+      "nombre": "Calabacín",
+      "nombreLower": "calabacin",
+      "calorias": 11.0,
+      "proteinas": 1.2,
+      "grasas": 0.2,
+      "carbohidratos": 1.1,
+      "fibra": 0.8
+    },
+    "368": {
+      "nombre": "Cebolla",
+      "nombreLower": "cebolla",
+      "calorias": 43.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 9.0,
+      "fibra": 2.1
+    },
+    "369": {
+      "nombre": "Coliflor",
+      "nombreLower": "coliflor",
+      "calorias": 19.0,
+      "proteinas": 2.5,
+      "grasas": 0.2,
+      "carbohidratos": 1.8,
+      "fibra": 4.1
+    },
+    "370": {
+      "nombre": "Colinabo",
+      "nombreLower": "colinabo",
+      "calorias": 31.0,
+      "proteinas": 2.0,
+      "grasas": 0.1,
+      "carbohidratos": 6.4,
+      "fibra": 0.0
+    },
+    "371": {
+      "nombre": "Chayota",
+      "nombreLower": "chayota",
+      "calorias": 25.0,
+      "proteinas": 0.7,
+      "grasas": 0.2,
+      "carbohidratos": 5.2,
+      "fibra": 1.5
+    },
+    "372": {
+      "nombre": "Escarola",
+      "nombreLower": "escarola",
+      "calorias": 14.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 1.6,
+      "fibra": 2.9
+    },
+    "373": {
+      "nombre": "Espárrago",
+      "nombreLower": "esparrago",
+      "calorias": 23.0,
+      "proteinas": 2.2,
+      "grasas": 0.2,
+      "carbohidratos": 3.1,
+      "fibra": 1.5
+    },
+    "374": {
+      "nombre": "Espárrago enlatado",
+      "nombreLower": "esparrago enlatado",
+      "calorias": 25.0,
+      "proteinas": 2.4,
+      "grasas": 0.4,
+      "carbohidratos": 2.9,
+      "fibra": 1.3
+    },
+    "375": {
+      "nombre": "Espinaca",
+      "nombreLower": "espinaca",
+      "calorias": 17.0,
+      "proteinas": 2.3,
+      "grasas": 0.3,
+      "carbohidratos": 1.3,
+      "fibra": 2.5
+    },
+    "376": {
+      "nombre": "Hongos",
+      "nombreLower": "hongos",
+      "calorias": 26.0,
+      "proteinas": 2.7,
+      "grasas": 0.2,
+      "carbohidratos": 3.4,
+      "fibra": 2.0
+    },
+    "377": {
+      "nombre": "Hongos enlatados",
+      "nombreLower": "hongos enlatados",
+      "calorias": 25.0,
+      "proteinas": 2.3,
+      "grasas": 0.5,
+      "carbohidratos": 2.9,
+      "fibra": 2.0
+    },
+    "378": {
+      "nombre": "Lairén",
+      "nombreLower": "lairen",
+      "calorias": 45.0,
+      "proteinas": 0.5,
+      "grasas": 0.8,
+      "carbohidratos": 9.7,
+      "fibra": 0.0
+    },
+    "379": {
+      "nombre": "Lechuga",
+      "nombreLower": "lechuga",
+      "calorias": 10.0,
+      "proteinas": 1.2,
+      "grasas": 0.2,
+      "carbohidratos": 0.9,
+      "fibra": 2.6
+    },
+    "380": {
+      "nombre": "Nabo blanco",
+      "nombreLower": "nabo blanco",
+      "calorias": 25.0,
+      "proteinas": 1.1,
+      "grasas": 0.1,
+      "carbohidratos": 5.8,
+      "fibra": 0.0
+    },
+    "381": {
+      "nombre": "Palmito",
+      "nombreLower": "palmito",
+      "calorias": 41.0,
+      "proteinas": 1.6,
+      "grasas": 0.2,
+      "carbohidratos": 8.1,
+      "fibra": 5.8
+    },
+    "382": {
+      "nombre": "Pepino",
+      "nombreLower": "pepino",
+      "calorias": 13.0,
+      "proteinas": 0.7,
+      "grasas": 0.1,
+      "carbohidratos": 2.4,
+      "fibra": 0.8
+    },
+    "383": {
+      "nombre": "Perejil",
+      "nombreLower": "perejil",
+      "calorias": 37.0,
+      "proteinas": 4.0,
+      "grasas": 0.8,
+      "carbohidratos": 3.4,
+      "fibra": 6.0
+    },
+    "384": {
+      "nombre": "Pimentón rojo",
+      "nombreLower": "pimenton rojo",
+      "calorias": 20.0,
+      "proteinas": 0.8,
+      "grasas": 0.2,
+      "carbohidratos": 3.9,
+      "fibra": 2.3
+    },
+    "385": {
+      "nombre": "Pimentón verde",
+      "nombreLower": "pimenton verde",
+      "calorias": 19.0,
+      "proteinas": 0.9,
+      "grasas": 0.1,
+      "carbohidratos": 3.7,
+      "fibra": 2.2
+    },
+    "386": {
+      "nombre": "Quimbombó",
+      "nombreLower": "quimbombo",
+      "calorias": 34.0,
+      "proteinas": 2.4,
+      "grasas": 0.3,
+      "carbohidratos": 6.5,
+      "fibra": 0.0
+    },
+    "387": {
+      "nombre": "Rábano",
+      "nombreLower": "rabano",
+      "calorias": 15.0,
+      "proteinas": 1.0,
+      "grasas": 0.1,
+      "carbohidratos": 2.6,
+      "fibra": 1.5
+    },
+    "388": {
+      "nombre": "Remolacha",
+      "nombreLower": "remolacha",
+      "calorias": 35.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 6.9,
+      "fibra": 3.5
+    },
+    "389": {
+      "nombre": "Remolacha enlatada",
+      "nombreLower": "remolacha enlatada",
+      "calorias": 28.0,
+      "proteinas": 1.0,
+      "grasas": 0.1,
+      "carbohidratos": 5.8,
+      "fibra": 2.4
+    },
+    "390": {
+      "nombre": "Repollito de Bruselas",
+      "nombreLower": "repollito de bruselas",
+      "calorias": 40.0,
+      "proteinas": 4.7,
+      "grasas": 0.4,
+      "carbohidratos": 4.4,
+      "fibra": 5.2
+    },
+    "391": {
+      "nombre": "Repollo blanco",
+      "nombreLower": "repollo blanco",
+      "calorias": 25.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 4.3,
+      "fibra": 2.0
+    },
+    "392": {
+      "nombre": "Repollo morado",
+      "nombreLower": "repollo morado",
+      "calorias": 16.0,
+      "proteinas": 1.8,
+      "grasas": 0.3,
+      "carbohidratos": 1.4,
+      "fibra": 3.6
+    },
+    "393": {
+      "nombre": "Ruibarbo",
+      "nombreLower": "ruibarbo",
+      "calorias": 17.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 4.2,
+      "fibra": 0.0
+    },
+    "394": {
+      "nombre": "Tomate enlatado",
+      "nombreLower": "tomate enlatado",
+      "calorias": 10.0,
+      "proteinas": 1.1,
+      "grasas": 0.2,
+      "carbohidratos": 2.6,
+      "fibra": 0.6
+    },
+    "395": {
+      "nombre": "Tomate manzano",
+      "nombreLower": "tomate manzano",
+      "calorias": 15.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 1.9,
+      "fibra": 1.3
+    },
+    "396": {
+      "nombre": "Tomate perita",
+      "nombreLower": "tomate perita",
+      "calorias": 17.0,
+      "proteinas": 1.2,
+      "grasas": 0.5,
+      "carbohidratos": 1.8,
+      "fibra": 1.4
+    },
+    "397": {
+      "nombre": "Vainita",
+      "nombreLower": "vainita",
+      "calorias": 31.0,
+      "proteinas": 2.4,
+      "grasas": 0.2,
+      "carbohidratos": 4.8,
+      "fibra": 4.3
+    },
+    "398": {
+      "nombre": "Vainitas enlatadas",
+      "nombreLower": "vainitas enlatadas",
+      "calorias": 13.0,
+      "proteinas": 1.3,
+      "grasas": 0.1,
+      "carbohidratos": 1.7,
+      "fibra": 2.6
+    },
+    "399": {
+      "nombre": "Vegetales mixtos enlatados",
+      "nombreLower": "vegetales mixtos enlatados",
+      "calorias": 34.0,
+      "proteinas": 2.6,
+      "grasas": 0.3,
+      "carbohidratos": 5.1,
+      "fibra": 3.3
+    },
+    "400": {
+      "nombre": "Zanahoria",
+      "nombreLower": "zanahoria",
+      "calorias": 32.0,
+      "proteinas": 1.0,
+      "grasas": 0.2,
+      "carbohidratos": 6.5,
+      "fibra": 2.2
+    },
+    "401": {
+      "nombre": "Zanahoria enlatada",
+      "nombreLower": "zanahoria enlatada",
+      "calorias": 26.0,
+      "proteinas": 0.8,
+      "grasas": 0.3,
+      "carbohidratos": 5.0,
+      "fibra": 1.0
+    },
+    "402": {
+      "nombre": "Aceituna verde",
+      "nombreLower": "aceituna verde",
+      "calorias": 137.0,
+      "proteinas": 1.5,
+      "grasas": 13.5,
+      "carbohidratos": 2.4,
+      "fibra": 2.8
+    },
+    "403": {
+      "nombre": "Albaricoque",
+      "nombreLower": "albaricoque",
+      "calorias": 50.0,
+      "proteinas": 1.0,
+      "grasas": 0.1,
+      "carbohidratos": 11.3,
+      "fibra": 1.6
+    },
+    "404": {
+      "nombre": "Albaricoque. compota para niños",
+      "nombreLower": "albaricoque. compota para ninos",
+      "calorias": 64.0,
+      "proteinas": 1.0,
+      "grasas": 0.4,
+      "carbohidratos": 15.2,
+      "fibra": 0.0
+    },
+    "405": {
+      "nombre": "Albaricoque enlatado. con sirup",
+      "nombreLower": "albaricoque enlatado. con sirup",
+      "calorias": 84.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 20.2,
+      "fibra": 1.6
+    },
+    "406": {
+      "nombre": "Albaricoque seco",
+      "nombreLower": "albaricoque seco",
+      "calorias": 284.0,
+      "proteinas": 5.2,
+      "grasas": 0.4,
+      "carbohidratos": 64.8,
+      "fibra": 3.1
+    },
+    "407": {
+      "nombre": "Anón",
+      "nombreLower": "anon",
+      "calorias": 100.0,
+      "proteinas": 1.6,
+      "grasas": 0.2,
+      "carbohidratos": 24.6,
+      "fibra": 0.0
+    },
+    "408": {
+      "nombre": "Caimito",
+      "nombreLower": "caimito",
+      "calorias": 72.0,
+      "proteinas": 0.8,
+      "grasas": 1.6,
+      "carbohidratos": 14.5,
+      "fibra": 0.0
+    },
+    "409": {
+      "nombre": "Cambur cuyaco",
+      "nombreLower": "cambur cuyaco",
+      "calorias": 92.0,
+      "proteinas": 1.9,
+      "grasas": 0.7,
+      "carbohidratos": 19.8,
+      "fibra": 0.0
+    },
+    "410": {
+      "nombre": "Cambur guineo morado",
+      "nombreLower": "cambur guineo morado",
+      "calorias": 85.0,
+      "proteinas": 1.2,
+      "grasas": 0.6,
+      "carbohidratos": 19.3,
+      "fibra": 0.0
+    },
+    "411": {
+      "nombre": "Cambur guineo verde",
+      "nombreLower": "cambur guineo verde",
+      "calorias": 78.0,
+      "proteinas": 1.7,
+      "grasas": 0.6,
+      "carbohidratos": 17.0,
+      "fibra": 0.0
+    },
+    "412": {
+      "nombre": "Cambur. Harina de",
+      "nombreLower": "cambur. harina de",
+      "calorias": 358.0,
+      "proteinas": 3.7,
+      "grasas": 0.5,
+      "carbohidratos": 85.6,
+      "fibra": 0.0
+    },
+    "413": {
+      "nombre": "Cambur manzano",
+      "nombreLower": "cambur manzano",
+      "calorias": 95.0,
+      "proteinas": 1.0,
+      "grasas": 1.3,
+      "carbohidratos": 19.8,
+      "fibra": 3.4
+    },
+    "414": {
+      "nombre": "Cambur pasado",
+      "nombreLower": "cambur pasado",
+      "calorias": 231.0,
+      "proteinas": 3.3,
+      "grasas": 2.8,
+      "carbohidratos": 49.2,
+      "fibra": 0.0
+    },
+    "415": {
+      "nombre": "Cambur pineo",
+      "nombreLower": "cambur pineo",
+      "calorias": 70.0,
+      "proteinas": 1.5,
+      "grasas": 1.0,
+      "carbohidratos": 13.8,
+      "fibra": 3.4
+    },
+    "416": {
+      "nombre": "Cambur titiaro",
+      "nombreLower": "cambur titiaro",
+      "calorias": 132.0,
+      "proteinas": 1.4,
+      "grasas": 1.9,
+      "carbohidratos": 27.7,
+      "fibra": 0.0
+    },
+    "417": {
+      "nombre": "Cambur topocho",
+      "nombreLower": "cambur topocho",
+      "calorias": 124.0,
+      "proteinas": 1.3,
+      "grasas": 1.0,
+      "carbohidratos": 27.8,
+      "fibra": 0.0
+    },
+    "418": {
+      "nombre": "Ciruela de huesito",
+      "nombreLower": "ciruela de huesito",
+      "calorias": 80.0,
+      "proteinas": 0.9,
+      "grasas": 0.8,
+      "carbohidratos": 17.9,
+      "fibra": 0.0
+    },
+    "419": {
+      "nombre": "Ciruela morada (importada)",
+      "nombreLower": "ciruela morada (importada)",
+      "calorias": 57.0,
+      "proteinas": 0.7,
+      "grasas": 0.2,
+      "carbohidratos": 13.2,
+      "fibra": 1.7
+    },
+    "420": {
+      "nombre": "Ciruela pasa",
+      "nombreLower": "ciruela pasa",
+      "calorias": 272.0,
+      "proteinas": 2.3,
+      "grasas": 0.6,
+      "carbohidratos": 64.3,
+      "fibra": 8.3
+    },
+    "421": {
+      "nombre": "Coco maduro",
+      "nombreLower": "coco maduro",
+      "calorias": 295.0,
+      "proteinas": 3.5,
+      "grasas": 27.2,
+      "carbohidratos": 9.1,
+      "fibra": 8.4
+    },
+    "422": {
+      "nombre": "Coco tierno",
+      "nombreLower": "coco tierno",
+      "calorias": 117.0,
+      "proteinas": 1.9,
+      "grasas": 11.9,
+      "carbohidratos": 0.6,
+      "fibra": 4.1
+    },
+    "423": {
+      "nombre": "Curuba",
+      "nombreLower": "curuba",
+      "calorias": 29.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 6.6,
+      "fibra": 0.0
+    },
+    "424": {
+      "nombre": "Chirimorriñón (Chirimoya)",
+      "nombreLower": "chirimorrinon (chirimoya)",
+      "calorias": 91.0,
+      "proteinas": 1.1,
+      "grasas": 0.2,
+      "carbohidratos": 23.2,
+      "fibra": 0.0
+    },
+    "425": {
+      "nombre": "Chirimoya (Corazón)",
+      "nombreLower": "chirimoya (corazon)",
+      "calorias": 91.0,
+      "proteinas": 1.1,
+      "grasas": 1.2,
+      "carbohidratos": 20.3,
+      "fibra": 0.0
+    },
+    "426": {
+      "nombre": "Dátil seco",
+      "nombreLower": "datil seco",
+      "calorias": 281.0,
+      "proteinas": 2.2,
+      "grasas": 0.6,
+      "carbohidratos": 66.7,
+      "fibra": 8.7
+    },
+    "427": {
+      "nombre": "Durazno criollo",
+      "nombreLower": "durazno criollo",
+      "calorias": 49.0,
+      "proteinas": 0.4,
+      "grasas": 0.1,
+      "carbohidratos": 11.7,
+      "fibra": 1.6
+    },
+    "428": {
+      "nombre": "Fresa",
+      "nombreLower": "fresa",
+      "calorias": 39.0,
+      "proteinas": 0.8,
+      "grasas": 0.5,
+      "carbohidratos": 7.9,
+      "fibra": 1.8
+    },
+    "429": {
+      "nombre": "Fruta de pan",
+      "nombreLower": "fruta de pan",
+      "calorias": 90.0,
+      "proteinas": 1.3,
+      "grasas": 0.5,
+      "carbohidratos": 21.9,
+      "fibra": 0.0
+    },
+    "430": {
+      "nombre": "Granada",
+      "nombreLower": "granada",
+      "calorias": 69.0,
+      "proteinas": 0.7,
+      "grasas": 0.5,
+      "carbohidratos": 15.5,
+      "fibra": 2.4
+    },
+    "431": {
+      "nombre": "Grappe fruit",
+      "nombreLower": "grappe fruit",
+      "calorias": 32.0,
+      "proteinas": 0.8,
+      "grasas": 0.0,
+      "carbohidratos": 7.2,
+      "fibra": 0.9
+    },
+    "432": {
+      "nombre": "Guama",
+      "nombreLower": "guama",
+      "calorias": 67.0,
+      "proteinas": 1.0,
+      "grasas": 0.1,
+      "carbohidratos": 16.7,
+      "fibra": 0.0
+    },
+    "433": {
+      "nombre": "Guanábana",
+      "nombreLower": "guanabana",
+      "calorias": 63.0,
+      "proteinas": 1.0,
+      "grasas": 0.4,
+      "carbohidratos": 14.9,
+      "fibra": 0.0
+    },
+    "434": {
+      "nombre": "Guayaba colorada o rosada",
+      "nombreLower": "guayaba colorada o rosada",
+      "calorias": 29.0,
+      "proteinas": 1.0,
+      "grasas": 0.4,
+      "carbohidratos": 5.4,
+      "fibra": 3.5
+    },
+    "435": {
+      "nombre": "Guayaba parcha o blanca",
+      "nombreLower": "guayaba parcha o blanca",
+      "calorias": 49.0,
+      "proteinas": 1.0,
+      "grasas": 0.5,
+      "carbohidratos": 10.2,
+      "fibra": 5.7
+    },
+    "436": {
+      "nombre": "Higo",
+      "nombreLower": "higo",
+      "calorias": 85.0,
+      "proteinas": 1.4,
+      "grasas": 0.4,
+      "carbohidratos": 18.9,
+      "fibra": 2.4
+    },
+    "437": {
+      "nombre": "Higo seco",
+      "nombreLower": "higo seco",
+      "calorias": 252.0,
+      "proteinas": 4.0,
+      "grasas": 1.2,
+      "carbohidratos": 56.2,
+      "fibra": 13.2
+    },
+    "438": {
+      "nombre": "Icaco",
+      "nombreLower": "icaco",
+      "calorias": 51.0,
+      "proteinas": 0.4,
+      "grasas": 0.1,
+      "carbohidratos": 13.1,
+      "fibra": 0.0
+    },
+    "439": {
+      "nombre": "Jobo amarillo",
+      "nombreLower": "jobo amarillo",
+      "calorias": 77.0,
+      "proteinas": 0.8,
+      "grasas": 2.1,
+      "carbohidratos": 14.8,
+      "fibra": 0.0
+    },
+    "440": {
+      "nombre": "Kiwi",
+      "nombreLower": "kiwi",
+      "calorias": 60.0,
+      "proteinas": 1.0,
+      "grasas": 0.6,
+      "carbohidratos": 12.6,
+      "fibra": 2.1
+    },
+    "441": {
+      "nombre": "Lechosa",
+      "nombreLower": "lechosa",
+      "calorias": 31.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 6.9,
+      "fibra": 1.5
+    },
+    "442": {
+      "nombre": "Lima dulce",
+      "nombreLower": "lima dulce",
+      "calorias": 34.0,
+      "proteinas": 0.7,
+      "grasas": 0.6,
+      "carbohidratos": 7.4,
+      "fibra": 0.0
+    },
+    "443": {
+      "nombre": "Limón",
+      "nombreLower": "limon",
+      "calorias": 44.0,
+      "proteinas": 0.9,
+      "grasas": 0.6,
+      "carbohidratos": 9.6,
+      "fibra": 0.0
+    },
+    "444": {
+      "nombre": "Mamey",
+      "nombreLower": "mamey",
+      "calorias": 41.0,
+      "proteinas": 0.3,
+      "grasas": 0.6,
+      "carbohidratos": 9.9,
+      "fibra": 0.0
+    },
+    "445": {
+      "nombre": "Mamón",
+      "nombreLower": "mamon",
+      "calorias": 83.0,
+      "proteinas": 1.2,
+      "grasas": 1.3,
+      "carbohidratos": 16.9,
+      "fibra": 0.0
+    },
+    "446": {
+      "nombre": "Mandarina",
+      "nombreLower": "mandarina",
+      "calorias": 50.0,
+      "proteinas": 0.8,
+      "grasas": 0.3,
+      "carbohidratos": 11.9,
+      "fibra": 0.0
+    },
+    "447": {
+      "nombre": "Manga",
+      "nombreLower": "manga",
+      "calorias": 55.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 12.8,
+      "fibra": 2.0
+    },
+    "448": {
+      "nombre": "Mango bocado",
+      "nombreLower": "mango bocado",
+      "calorias": 62.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 14.6,
+      "fibra": 2.0
+    },
+    "449": {
+      "nombre": "Mango de hilacha",
+      "nombreLower": "mango de hilacha",
+      "calorias": 72.0,
+      "proteinas": 0.6,
+      "grasas": 0.1,
+      "carbohidratos": 17.1,
+      "fibra": 1.8
+    },
+    "450": {
+      "nombre": "Manzana. compota para niños",
+      "nombreLower": "manzana. compota para ninos",
+      "calorias": 65.0,
+      "proteinas": 0.5,
+      "grasas": 0.2,
+      "carbohidratos": 16.0,
+      "fibra": 0.0
+    },
+    "451": {
+      "nombre": "Manzana criolla",
+      "nombreLower": "manzana criolla",
+      "calorias": 42.0,
+      "proteinas": 0.4,
+      "grasas": 0.2,
+      "carbohidratos": 9.7,
+      "fibra": 1.5
+    },
+    "452": {
+      "nombre": "Manzana importada",
+      "nombreLower": "manzana importada",
+      "calorias": 55.0,
+      "proteinas": 0.3,
+      "grasas": 0.3,
+      "carbohidratos": 12.8,
+      "fibra": 1.9
+    },
+    "453": {
+      "nombre": "Manzana seca",
+      "nombreLower": "manzana seca",
+      "calorias": 270.0,
+      "proteinas": 1.4,
+      "grasas": 1.0,
+      "carbohidratos": 63.8,
+      "fibra": 9.4
+    },
+    "454": {
+      "nombre": "Melocotón",
+      "nombreLower": "melocoton",
+      "calorias": 65.0,
+      "proteinas": 0.5,
+      "grasas": 0.1,
+      "carbohidratos": 15.4,
+      "fibra": 3.0
+    },
+    "455": {
+      "nombre": "Melocotón. compota para niños",
+      "nombreLower": "melocoton. compota para ninos",
+      "calorias": 65.0,
+      "proteinas": 0.8,
+      "grasas": 0.3,
+      "carbohidratos": 15.1,
+      "fibra": 0.0
+    },
+    "456": {
+      "nombre": "Melocotón. enlatado con sirup",
+      "nombreLower": "melocoton. enlatado con sirup",
+      "calorias": 71.0,
+      "proteinas": 0.4,
+      "grasas": 0.1,
+      "carbohidratos": 17.1,
+      "fibra": 1.1
+    },
+    "457": {
+      "nombre": "Melocotón seco",
+      "nombreLower": "melocoton seco",
+      "calorias": 253.0,
+      "proteinas": 3.0,
+      "grasas": 0.6,
+      "carbohidratos": 58.8,
+      "fibra": 11.6
+    },
+    "458": {
+      "nombre": "Melón",
+      "nombreLower": "melon",
+      "calorias": 21.0,
+      "proteinas": 0.6,
+      "grasas": 0.2,
+      "carbohidratos": 4.3,
+      "fibra": 0.3
+    },
+    "459": {
+      "nombre": "Membrillo",
+      "nombreLower": "membrillo",
+      "calorias": 51.0,
+      "proteinas": 0.3,
+      "grasas": 0.5,
+      "carbohidratos": 11.4,
+      "fibra": 5.9
+    },
+    "460": {
+      "nombre": "Merey",
+      "nombreLower": "merey",
+      "calorias": 46.0,
+      "proteinas": 0.8,
+      "grasas": 0.3,
+      "carbohidratos": 11.4,
+      "fibra": 0.0
+    },
+    "461": {
+      "nombre": "Mora-Zarzamora",
+      "nombreLower": "mora-zarzamora",
+      "calorias": 66.0,
+      "proteinas": 1.2,
+      "grasas": 0.6,
+      "carbohidratos": 13.9,
+      "fibra": 3.2
+    },
+    "462": {
+      "nombre": "Naranja cajera",
+      "nombreLower": "naranja cajera",
+      "calorias": 58.0,
+      "proteinas": 0.7,
+      "grasas": 0.1,
+      "carbohidratos": 13.9,
+      "fibra": 0.0
+    },
+    "463": {
+      "nombre": "Naranja china",
+      "nombreLower": "naranja china",
+      "calorias": 44.0,
+      "proteinas": 1.4,
+      "grasas": 0.7,
+      "carbohidratos": 8.3,
+      "fibra": 0.0
+    },
+    "464": {
+      "nombre": "Naranja Valencia",
+      "nombreLower": "naranja valencia",
+      "calorias": 35.0,
+      "proteinas": 0.7,
+      "grasas": 0.0,
+      "carbohidratos": 8.8,
+      "fibra": 0.0
+    },
+    "465": {
+      "nombre": "Níspero",
+      "nombreLower": "nispero",
+      "calorias": 79.0,
+      "proteinas": 0.4,
+      "grasas": 1.0,
+      "carbohidratos": 17.9,
+      "fibra": 0.0
+    },
+    "466": {
+      "nombre": "Níspero del Japón",
+      "nombreLower": "nispero del japon",
+      "calorias": 47.0,
+      "proteinas": 0.5,
+      "grasas": 0.8,
+      "carbohidratos": 10.5,
+      "fibra": 0.0
+    },
+    "467": {
+      "nombre": "Parcha granadina",
+      "nombreLower": "parcha granadina",
+      "calorias": 33.0,
+      "proteinas": 0.8,
+      "grasas": 0.6,
+      "carbohidratos": 6.9,
+      "fibra": 0.0
+    },
+    "468": {
+      "nombre": "Parcha morada",
+      "nombreLower": "parcha morada",
+      "calorias": 51.0,
+      "proteinas": 1.3,
+      "grasas": 0.6,
+      "carbohidratos": 10.5,
+      "fibra": 0.0
+    },
+    "469": {
+      "nombre": "Parchita",
+      "nombreLower": "parchita",
+      "calorias": 78.0,
+      "proteinas": 1.8,
+      "grasas": 3.4,
+      "carbohidratos": 13.9,
+      "fibra": 0.0
+    },
+    "470": {
+      "nombre": "Patilla",
+      "nombreLower": "patilla",
+      "calorias": 21.0,
+      "proteinas": 0.5,
+      "grasas": 0.0,
+      "carbohidratos": 4.8,
+      "fibra": 0.3
+    },
+    "471": {
+      "nombre": "Pera",
+      "nombreLower": "pera",
+      "calorias": 63.0,
+      "proteinas": 0.7,
+      "grasas": 0.4,
+      "carbohidratos": 14.2,
+      "fibra": 3.0
+    },
+    "472": {
+      "nombre": "Pera. compota para niños",
+      "nombreLower": "pera. compota para ninos",
+      "calorias": 53.0,
+      "proteinas": 0.7,
+      "grasas": 0.2,
+      "carbohidratos": 13.1,
+      "fibra": 0.0
+    },
+    "473": {
+      "nombre": "Pera enlatada. con sirup",
+      "nombreLower": "pera enlatada. con sirup",
+      "calorias": 74.0,
+      "proteinas": 0.2,
+      "grasas": 0.1,
+      "carbohidratos": 18.1,
+      "fibra": 1.1
+    },
+    "474": {
+      "nombre": "Piña",
+      "nombreLower": "pina",
+      "calorias": 55.0,
+      "proteinas": 0.4,
+      "grasas": 0.2,
+      "carbohidratos": 8.4,
+      "fibra": 5.7
+    },
+    "475": {
+      "nombre": "Pitahaya",
+      "nombreLower": "pitahaya",
+      "calorias": 62.0,
+      "proteinas": 1.4,
+      "grasas": 0.4,
+      "carbohidratos": 14.6,
+      "fibra": 0.0
+    },
+    "476": {
+      "nombre": "Plátano maduro",
+      "nombreLower": "platano maduro",
+      "calorias": 137.0,
+      "proteinas": 1.2,
+      "grasas": 0.4,
+      "carbohidratos": 32.1,
+      "fibra": 1.9
+    },
+    "477": {
+      "nombre": "Plátano maduro horneado",
+      "nombreLower": "platano maduro horneado",
+      "calorias": 168.0,
+      "proteinas": 1.5,
+      "grasas": 0.2,
+      "carbohidratos": 40.1,
+      "fibra": 2.7
+    },
+    "478": {
+      "nombre": "Plátano maduro sancochado",
+      "nombreLower": "platano maduro sancochado",
+      "calorias": 133.0,
+      "proteinas": 1.2,
+      "grasas": 0.3,
+      "carbohidratos": 31.4,
+      "fibra": 2.3
+    },
+    "479": {
+      "nombre": "Plátano pintón",
+      "nombreLower": "platano pinton",
+      "calorias": 147.0,
+      "proteinas": 1.2,
+      "grasas": 0.2,
+      "carbohidratos": 35.1,
+      "fibra": 2.2
+    },
+    "480": {
+      "nombre": "Plátano verde",
+      "nombreLower": "platano verde",
+      "calorias": 148.0,
+      "proteinas": 1.4,
+      "grasas": 0.3,
+      "carbohidratos": 34.9,
+      "fibra": 2.2
+    },
+    "481": {
+      "nombre": "Plátano verde asado",
+      "nombreLower": "platano verde asado",
+      "calorias": 201.0,
+      "proteinas": 1.5,
+      "grasas": 0.5,
+      "carbohidratos": 47.9,
+      "fibra": 0.0
+    },
+    "482": {
+      "nombre": "Plátano verde. Harina de",
+      "nombreLower": "platano verde. harina de",
+      "calorias": 332.0,
+      "proteinas": 2.7,
+      "grasas": 1.6,
+      "carbohidratos": 76.6,
+      "fibra": 6.1
+    },
+    "483": {
+      "nombre": "Plátano verde sancochado",
+      "nombreLower": "platano verde sancochado",
+      "calorias": 138.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 32.7,
+      "fibra": 4.0
+    },
+    "484": {
+      "nombre": "Plátano verde. sopa de",
+      "nombreLower": "platano verde. sopa de",
+      "calorias": 74.0,
+      "proteinas": 0.4,
+      "grasas": 3.3,
+      "carbohidratos": 11.2,
+      "fibra": 0.0
+    },
+    "485": {
+      "nombre": "Pomarrosa",
+      "nombreLower": "pomarrosa",
+      "calorias": 67.0,
+      "proteinas": 0.6,
+      "grasas": 0.2,
+      "carbohidratos": 17.0,
+      "fibra": 0.0
+    },
+    "486": {
+      "nombre": "Riñón",
+      "nombreLower": "rinon",
+      "calorias": 87.0,
+      "proteinas": 2.1,
+      "grasas": 0.9,
+      "carbohidratos": 19.2,
+      "fibra": 0.0
+    },
+    "487": {
+      "nombre": "Semeruco",
+      "nombreLower": "semeruco",
+      "calorias": 40.0,
+      "proteinas": 0.4,
+      "grasas": 0.4,
+      "carbohidratos": 9.1,
+      "fibra": 0.0
+    },
+    "488": {
+      "nombre": "Tamarindo",
+      "nombreLower": "tamarindo",
+      "calorias": 296.0,
+      "proteinas": 2.4,
+      "grasas": 0.3,
+      "carbohidratos": 73.7,
+      "fibra": 0.0
+    },
+    "489": {
+      "nombre": "Tomate francés (de árbol)",
+      "nombreLower": "tomate frances (de arbol)",
+      "calorias": 44.0,
+      "proteinas": 1.8,
+      "grasas": 0.4,
+      "carbohidratos": 11.2,
+      "fibra": 0.0
+    },
+    "490": {
+      "nombre": "Toronja",
+      "nombreLower": "toronja",
+      "calorias": 38.0,
+      "proteinas": 0.6,
+      "grasas": 0.2,
+      "carbohidratos": 8.5,
+      "fibra": 0.8
+    },
+    "491": {
+      "nombre": "Tuna sin semilla",
+      "nombreLower": "tuna sin semilla",
+      "calorias": 75.0,
+      "proteinas": 0.5,
+      "grasas": 0.1,
+      "carbohidratos": 18.4,
+      "fibra": 0.0
+    },
+    "492": {
+      "nombre": "Urupagua",
+      "nombreLower": "urupagua",
+      "calorias": 200.0,
+      "proteinas": 2.7,
+      "grasas": 3.6,
+      "carbohidratos": 40.9,
+      "fibra": 0.0
+    },
+    "493": {
+      "nombre": "Uva",
+      "nombreLower": "uva",
+      "calorias": 68.0,
+      "proteinas": 0.7,
+      "grasas": 0.3,
+      "carbohidratos": 15.7,
+      "fibra": 1.5
+    },
+    "494": {
+      "nombre": "Uva de playa",
+      "nombreLower": "uva de playa",
+      "calorias": 81.0,
+      "proteinas": 1.4,
+      "grasas": 0.3,
+      "carbohidratos": 20.3,
+      "fibra": 0.0
+    },
+    "495": {
+      "nombre": "Uva pasa",
+      "nombreLower": "uva pasa",
+      "calorias": 277.0,
+      "proteinas": 2.3,
+      "grasas": 0.5,
+      "carbohidratos": 65.9,
+      "fibra": 5.3
+    },
+    "496": {
+      "nombre": "Zapote (mamey colorado)",
+      "nombreLower": "zapote (mamey colorado)",
+      "calorias": 111.0,
+      "proteinas": 1.2,
+      "grasas": 1.0,
+      "carbohidratos": 25.2,
+      "fibra": 0.0
+    },
+    "497": {
+      "nombre": "Arepa con carne mechada",
+      "nombreLower": "arepa con carne mechada",
+      "calorias": 160.0,
+      "proteinas": 15.5,
+      "grasas": 2.7,
+      "carbohidratos": 18.5,
+      "fibra": 2.3
+    },
+    "498": {
+      "nombre": "Arepa con ensalada de gallina y aguacate",
+      "nombreLower": "arepa con ensalada de gallina y aguacate",
+      "calorias": 158.0,
+      "proteinas": 9.1,
+      "grasas": 4.7,
+      "carbohidratos": 19.9,
+      "fibra": 2.2
+    },
+    "499": {
+      "nombre": "Arepa con jamón y queso amarillo",
+      "nombreLower": "arepa con jamon y queso amarillo",
+      "calorias": 176.0,
+      "proteinas": 8.6,
+      "grasas": 7.4,
+      "carbohidratos": 18.8,
+      "fibra": 1.8
+    },
+    "500": {
+      "nombre": "Arepa con pollo",
+      "nombreLower": "arepa con pollo",
+      "calorias": 160.0,
+      "proteinas": 10.9,
+      "grasas": 3.8,
+      "carbohidratos": 20.7,
+      "fibra": 2.0
+    },
+    "501": {
+      "nombre": "Arepa con queso guayanés",
+      "nombreLower": "arepa con queso guayanes",
+      "calorias": 198.0,
+      "proteinas": 8.8,
+      "grasas": 8.4,
+      "carbohidratos": 21.7,
+      "fibra": 2.5
+    },
+    "502": {
+      "nombre": "Bocadillo de guayaba",
+      "nombreLower": "bocadillo de guayaba",
+      "calorias": 322.0,
+      "proteinas": 0.4,
+      "grasas": 0.0,
+      "carbohidratos": 80.1,
+      "fibra": 0.0
+    },
+    "503": {
+      "nombre": "Cachapa de budare",
+      "nombreLower": "cachapa de budare",
+      "calorias": 137.0,
+      "proteinas": 4.0,
+      "grasas": 1.3,
+      "carbohidratos": 27.3,
+      "fibra": 6.9
+    },
+    "504": {
+      "nombre": "Cafunga",
+      "nombreLower": "cafunga",
+      "calorias": 156.0,
+      "proteinas": 3.7,
+      "grasas": 3.3,
+      "carbohidratos": 27.8,
+      "fibra": 0.0
+    },
+    "505": {
+      "nombre": "Carne mechada. frita",
+      "nombreLower": "carne mechada. frita",
+      "calorias": 247.0,
+      "proteinas": 21.3,
+      "grasas": 16.5,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "506": {
+      "nombre": "Casabe",
+      "nombreLower": "casabe",
+      "calorias": 333.0,
+      "proteinas": 1.3,
+      "grasas": 0.6,
+      "carbohidratos": 80.6,
+      "fibra": 4.1
+    },
+    "507": {
+      "nombre": "Catalina",
+      "nombreLower": "catalina",
+      "calorias": 343.0,
+      "proteinas": 8.1,
+      "grasas": 0.8,
+      "carbohidratos": 76.4,
+      "fibra": 0.0
+    },
+    "508": {
+      "nombre": "Cotufa",
+      "nombreLower": "cotufa",
+      "calorias": 50.0,
+      "proteinas": 12.0,
+      "grasas": 5.6,
+      "carbohidratos": 62.8,
+      "fibra": 10.0
+    },
+    "509": {
+      "nombre": "Churro",
+      "nombreLower": "churro",
+      "calorias": 373.0,
+      "proteinas": 11.1,
+      "grasas": 3.2,
+      "carbohidratos": 75.4,
+      "fibra": 0.0
+    },
+    "510": {
+      "nombre": "Empanada de caraota",
+      "nombreLower": "empanada de caraota",
+      "calorias": 253.0,
+      "proteinas": 4.1,
+      "grasas": 13.4,
+      "carbohidratos": 29.1,
+      "fibra": 0.0
+    },
+    "511": {
+      "nombre": "Empanada de carne",
+      "nombreLower": "empanada de carne",
+      "calorias": 282.0,
+      "proteinas": 5.8,
+      "grasas": 14.7,
+      "carbohidratos": 31.7,
+      "fibra": 0.0
+    },
+    "512": {
+      "nombre": "Empanada de cazón",
+      "nombreLower": "empanada de cazon",
+      "calorias": 262.0,
+      "proteinas": 8.6,
+      "grasas": 16.0,
+      "carbohidratos": 21.0,
+      "fibra": 0.0
+    },
+    "513": {
+      "nombre": "Empanada de queso",
+      "nombreLower": "empanada de queso",
+      "calorias": 292.0,
+      "proteinas": 6.1,
+      "grasas": 15.7,
+      "carbohidratos": 31.6,
+      "fibra": 0.0
+    },
+    "514": {
+      "nombre": "Flan preparado",
+      "nombreLower": "flan preparado",
+      "calorias": 113.0,
+      "proteinas": 2.9,
+      "grasas": 3.4,
+      "carbohidratos": 17.8,
+      "fibra": 0.0
+    },
+    "515": {
+      "nombre": "Gelatina preparada",
+      "nombreLower": "gelatina preparada",
+      "calorias": 67.0,
+      "proteinas": 1.6,
+      "grasas": 0.0,
+      "carbohidratos": 15.2,
+      "fibra": 0.0
+    },
+    "516": {
+      "nombre": "Golfeado",
+      "nombreLower": "golfeado",
+      "calorias": 326.0,
+      "proteinas": 5.2,
+      "grasas": 5.5,
+      "carbohidratos": 64.4,
+      "fibra": 0.0
+    },
+    "517": {
+      "nombre": "Hallaca criolla",
+      "nombreLower": "hallaca criolla",
+      "calorias": 183.0,
+      "proteinas": 6.5,
+      "grasas": 10.8,
+      "carbohidratos": 15.0,
+      "fibra": 0.0
+    },
+    "518": {
+      "nombre": "Hamburguesa con queso",
+      "nombreLower": "hamburguesa con queso",
+      "calorias": 247.0,
+      "proteinas": 12.3,
+      "grasas": 11.8,
+      "carbohidratos": 23.0,
+      "fibra": 1.6
+    },
+    "519": {
+      "nombre": "Hamburguesa doble carne. doble queso",
+      "nombreLower": "hamburguesa doble carne. doble queso",
+      "calorias": 285.0,
+      "proteinas": 16.3,
+      "grasas": 16.1,
+      "carbohidratos": 18.7,
+      "fibra": 1.6
+    },
+    "520": {
+      "nombre": "Hamburguesa con queso y mayonesa",
+      "nombreLower": "hamburguesa con queso y mayonesa",
+      "calorias": 250.0,
+      "proteinas": 14.0,
+      "grasas": 14.1,
+      "carbohidratos": 16.7,
+      "fibra": 1.6
+    },
+    "521": {
+      "nombre": "Hervido de gallina",
+      "nombreLower": "hervido de gallina",
+      "calorias": 74.0,
+      "proteinas": 2.4,
+      "grasas": 4.2,
+      "carbohidratos": 7.2,
+      "fibra": 0.0
+    },
+    "522": {
+      "nombre": "Hervido de pescado",
+      "nombreLower": "hervido de pescado",
+      "calorias": 49.0,
+      "proteinas": 8.6,
+      "grasas": 3.0,
+      "carbohidratos": 3.2,
+      "fibra": 0.0
+    },
+    "523": {
+      "nombre": "Hervido de res",
+      "nombreLower": "hervido de res",
+      "calorias": 60.0,
+      "proteinas": 2.8,
+      "grasas": 3.1,
+      "carbohidratos": 6.5,
+      "fibra": 0.0
+    },
+    "524": {
+      "nombre": "Jalea de mango",
+      "nombreLower": "jalea de mango",
+      "calorias": 185.0,
+      "proteinas": 0.5,
+      "grasas": 1.0,
+      "carbohidratos": 43.7,
+      "fibra": 0.0
+    },
+    "525": {
+      "nombre": "Majarete",
+      "nombreLower": "majarete",
+      "calorias": 128.0,
+      "proteinas": 1.3,
+      "grasas": 2.9,
+      "carbohidratos": 24.2,
+      "fibra": 0.0
+    },
+    "526": {
+      "nombre": "Mermelada",
+      "nombreLower": "mermelada",
+      "calorias": 287.0,
+      "proteinas": 0.5,
+      "grasas": 0.3,
+      "carbohidratos": 71.2,
+      "fibra": 0.0
+    },
+    "527": {
+      "nombre": "Mondongo (sopa)",
+      "nombreLower": "mondongo (sopa)",
+      "calorias": 95.0,
+      "proteinas": 6.9,
+      "grasas": 4.9,
+      "carbohidratos": 6.1,
+      "fibra": 0.0
+    },
+    "528": {
+      "nombre": "Pabellón",
+      "nombreLower": "pabellon",
+      "calorias": 136.0,
+      "proteinas": 10.4,
+      "grasas": 4.9,
+      "carbohidratos": 12.6,
+      "fibra": 4.3
+    },
+    "529": {
+      "nombre": "Papas fritas",
+      "nombreLower": "papas fritas",
+      "calorias": 318.0,
+      "proteinas": 4.5,
+      "grasas": 11.3,
+      "carbohidratos": 49.5,
+      "fibra": 3.6
+    },
+    "530": {
+      "nombre": "Pelota",
+      "nombreLower": "pelota",
+      "calorias": 111.0,
+      "proteinas": 0.5,
+      "grasas": 2.1,
+      "carbohidratos": 22.5,
+      "fibra": 0.0
+    },
+    "531": {
+      "nombre": "Plátano maduro frito (tajadas)",
+      "nombreLower": "platano maduro frito (tajadas)",
+      "calorias": 224.0,
+      "proteinas": 1.4,
+      "grasas": 9.2,
+      "carbohidratos": 34.0,
+      "fibra": 5.2
+    },
+    "532": {
+      "nombre": "Dulce de Plátano maduro",
+      "nombreLower": "dulce de platano maduro",
+      "calorias": 211.0,
+      "proteinas": 1.5,
+      "grasas": 0.9,
+      "carbohidratos": 49.5,
+      "fibra": 0.0
+    },
+    "533": {
+      "nombre": "Tostones de Plátano verde",
+      "nombreLower": "tostones de platano verde",
+      "calorias": 252.0,
+      "proteinas": 1.9,
+      "grasas": 10.1,
+      "carbohidratos": 38.3,
+      "fibra": 13.5
+    },
+    "534": {
+      "nombre": "Pudín preparado",
+      "nombreLower": "pudin preparado",
+      "calorias": 130.0,
+      "proteinas": 3.4,
+      "grasas": 3.1,
+      "carbohidratos": 22.2,
+      "fibra": 0.0
+    },
+    "535": {
+      "nombre": "Tapioca seca",
+      "nombreLower": "tapioca seca",
+      "calorias": 350.0,
+      "proteinas": 0.6,
+      "grasas": 0.2,
+      "carbohidratos": 86.5,
+      "fibra": 0.0
+    },
+    "536": {
+      "nombre": "Aceite",
+      "nombreLower": "aceite",
+      "calorias": 900.0,
+      "proteinas": 0.0,
+      "grasas": 100.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "537": {
+      "nombre": "Azúcar blanca",
+      "nombreLower": "azucar blanca",
+      "calorias": 398.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 99.5,
+      "fibra": 0.0
+    },
+    "538": {
+      "nombre": "Azúcar morena",
+      "nombreLower": "azucar morena",
+      "calorias": 383.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 95.8,
+      "fibra": 0.0
+    },
+    "539": {
+      "nombre": "Cacao. grano íntegro sin cáscara",
+      "nombreLower": "cacao. grano integro sin cascara",
+      "calorias": 563.0,
+      "proteinas": 12.4,
+      "grasas": 43.7,
+      "carbohidratos": 34.3,
+      "fibra": 0.0
+    },
+    "540": {
+      "nombre": "Café tostado",
+      "nombreLower": "cafe tostado",
+      "calorias": 398.0,
+      "proteinas": 14.2,
+      "grasas": 14.0,
+      "carbohidratos": 61.4,
+      "fibra": 0.0
+    },
+    "541": {
+      "nombre": "Cereal con chocolate. tipo Müsli",
+      "nombreLower": "cereal con chocolate. tipo musli",
+      "calorias": 351.0,
+      "proteinas": 6.7,
+      "grasas": 4.4,
+      "carbohidratos": 71.1,
+      "fibra": 6.7
+    },
+    "542": {
+      "nombre": "Cereal con fruta. tipo Müsli",
+      "nombreLower": "cereal con fruta. tipo musli",
+      "calorias": 331.0,
+      "proteinas": 6.7,
+      "grasas": 2.2,
+      "carbohidratos": 71.1,
+      "fibra": 8.9
+    },
+    "543": {
+      "nombre": "Cereales Infantiles  con leche",
+      "nombreLower": "cereales infantiles  con leche",
+      "calorias": 410.0,
+      "proteinas": 16.0,
+      "grasas": 8.0,
+      "carbohidratos": 69.2,
+      "fibra": 0.0
+    },
+    "544": {
+      "nombre": "Cereales Infantiles sin leche",
+      "nombreLower": "cereales infantiles sin leche",
+      "calorias": 356.0,
+      "proteinas": 16.0,
+      "grasas": 0.8,
+      "carbohidratos": 72.2,
+      "fibra": 0.0
+    },
+    "545": {
+      "nombre": "Cereales Infantiles sin leche",
+      "nombreLower": "cereales infantiles sin leche",
+      "calorias": 365.0,
+      "proteinas": 9.6,
+      "grasas": 2.6,
+      "carbohidratos": 78.9,
+      "fibra": 0.0
+    },
+    "546": {
+      "nombre": "Chocolate simple dulce",
+      "nombreLower": "chocolate simple dulce",
+      "calorias": 467.0,
+      "proteinas": 3.8,
+      "grasas": 16.8,
+      "carbohidratos": 76.1,
+      "fibra": 0.0
+    },
+    "547": {
+      "nombre": "Ensalada de frutas enlatada",
+      "nombreLower": "ensalada de frutas enlatada",
+      "calorias": 75.0,
+      "proteinas": 0.4,
+      "grasas": 0.2,
+      "carbohidratos": 17.9,
+      "fibra": 1.1
+    },
+    "548": {
+      "nombre": "Ensalada de vegetales a la Mayonesa enlatada",
+      "nombreLower": "ensalada de vegetales a la mayonesa enlatada",
+      "calorias": 83.0,
+      "proteinas": 1.3,
+      "grasas": 3.8,
+      "carbohidratos": 12.1,
+      "fibra": 0.0
+    },
+    "549": {
+      "nombre": "Flan en polvo",
+      "nombreLower": "flan en polvo",
+      "calorias": 395.0,
+      "proteinas": 0.0,
+      "grasas": 0.2,
+      "carbohidratos": 98.2,
+      "fibra": 0.0
+    },
+    "550": {
+      "nombre": "Gelatina en polvo (con azúcar y sabor)",
+      "nombreLower": "gelatina en polvo (con azucar y sabor)",
+      "calorias": 392.0,
+      "proteinas": 9.4,
+      "grasas": 0.0,
+      "carbohidratos": 28.7,
+      "fibra": 0.0
+    },
+    "551": {
+      "nombre": "Gelatina seca natural",
+      "nombreLower": "gelatina seca natural",
+      "calorias": 343.0,
+      "proteinas": 85.6,
+      "grasas": 0.1,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "552": {
+      "nombre": "Gofio cumanés",
+      "nombreLower": "gofio cumanes",
+      "calorias": 334.0,
+      "proteinas": 0.5,
+      "grasas": 1.4,
+      "carbohidratos": 80.4,
+      "fibra": 0.0
+    },
+    "553": {
+      "nombre": "Helado de crema",
+      "nombreLower": "helado de crema",
+      "calorias": 212.0,
+      "proteinas": 4.1,
+      "grasas": 12.0,
+      "carbohidratos": 22.0,
+      "fibra": 0.0
+    },
+    "554": {
+      "nombre": "Helado de leche",
+      "nombreLower": "helado de leche",
+      "calorias": 125.0,
+      "proteinas": 5.0,
+      "grasas": 4.0,
+      "carbohidratos": 25.4,
+      "fibra": 0.0
+    },
+    "555": {
+      "nombre": "Lactovisoy",
+      "nombreLower": "lactovisoy",
+      "calorias": 389.0,
+      "proteinas": 16.0,
+      "grasas": 0.9,
+      "carbohidratos": 78.4,
+      "fibra": 0.0
+    },
+    "556": {
+      "nombre": "Levadura de cerveza. seca",
+      "nombreLower": "levadura de cerveza. seca",
+      "calorias": 345.0,
+      "proteinas": 36.9,
+      "grasas": 1.6,
+      "carbohidratos": 46.6,
+      "fibra": 0.0
+    },
+    "557": {
+      "nombre": "Manteca de cerdo",
+      "nombreLower": "manteca de cerdo",
+      "calorias": 900.0,
+      "proteinas": 0.0,
+      "grasas": 100.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "558": {
+      "nombre": "Margarina",
+      "nombreLower": "margarina",
+      "calorias": 733.0,
+      "proteinas": 0.6,
+      "grasas": 81.0,
+      "carbohidratos": 0.4,
+      "fibra": 0.0
+    },
+    "559": {
+      "nombre": "Mayonesa",
+      "nombreLower": "mayonesa",
+      "calorias": 748.0,
+      "proteinas": 1.1,
+      "grasas": 80.0,
+      "carbohidratos": 6.2,
+      "fibra": 0.0
+    },
+    "560": {
+      "nombre": "Melaza",
+      "nombreLower": "melaza",
+      "calorias": 260.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 65.0,
+      "fibra": 0.0
+    },
+    "561": {
+      "nombre": "Mezcla para hacer cachapa",
+      "nombreLower": "mezcla para hacer cachapa",
+      "calorias": 366.0,
+      "proteinas": 6.9,
+      "grasas": 1.5,
+      "carbohidratos": 81.3,
+      "fibra": 0.0
+    },
+    "562": {
+      "nombre": "Mezcla para hacer panqueca",
+      "nombreLower": "mezcla para hacer panqueca",
+      "calorias": 343.0,
+      "proteinas": 8.8,
+      "grasas": 0.5,
+      "carbohidratos": 75.8,
+      "fibra": 2.0
+    },
+    "563": {
+      "nombre": "Miel de abeja",
+      "nombreLower": "miel de abeja",
+      "calorias": 319.0,
+      "proteinas": 0.3,
+      "grasas": 0.0,
+      "carbohidratos": 79.5,
+      "fibra": 0.0
+    },
+    "564": {
+      "nombre": "Miel de caña",
+      "nombreLower": "miel de cana",
+      "calorias": 296.0,
+      "proteinas": 0.5,
+      "grasas": 0.2,
+      "carbohidratos": 73.1,
+      "fibra": 0.0
+    },
+    "565": {
+      "nombre": "Mostaza",
+      "nombreLower": "mostaza",
+      "calorias": 84.0,
+      "proteinas": 4.7,
+      "grasas": 4.4,
+      "carbohidratos": 6.4,
+      "fibra": 0.0
+    },
+    "566": {
+      "nombre": "Palitos de maíz con queso con leche en polvo",
+      "nombreLower": "palitos de maiz con queso con leche en polvo",
+      "calorias": 528.0,
+      "proteinas": 6.2,
+      "grasas": 30.0,
+      "carbohidratos": 58.4,
+      "fibra": 0.0
+    },
+    "567": {
+      "nombre": "Palitos de maíz con queso sin leche en polvo",
+      "nombreLower": "palitos de maiz con queso sin leche en polvo",
+      "calorias": 496.0,
+      "proteinas": 6.0,
+      "grasas": 24.0,
+      "carbohidratos": 58.4,
+      "fibra": 0.0
+    },
+    "568": {
+      "nombre": "Papelón blanco",
+      "nombreLower": "papelon blanco",
+      "calorias": 371.0,
+      "proteinas": 0.2,
+      "grasas": 0.0,
+      "carbohidratos": 92.5,
+      "fibra": 0.0
+    },
+    "569": {
+      "nombre": "Papelón negro",
+      "nombreLower": "papelon negro",
+      "calorias": 370.0,
+      "proteinas": 0.6,
+      "grasas": 0.0,
+      "carbohidratos": 92.5,
+      "fibra": 0.0
+    },
+    "570": {
+      "nombre": "Papelón rojo",
+      "nombreLower": "papelon rojo",
+      "calorias": 360.0,
+      "proteinas": 0.7,
+      "grasas": 0.0,
+      "carbohidratos": 89.4,
+      "fibra": 0.0
+    },
+    "571": {
+      "nombre": "Pasta de tomate",
+      "nombreLower": "pasta de tomate",
+      "calorias": 78.0,
+      "proteinas": 5.2,
+      "grasas": 0.2,
+      "carbohidratos": 13.8,
+      "fibra": 5.0
+    },
+    "572": {
+      "nombre": "Productos en polvo a base de azúcar. cacao y leche",
+      "nombreLower": "productos en polvo a base de azucar. cacao y leche",
+      "calorias": 393.0,
+      "proteinas": 6.8,
+      "grasas": 2.3,
+      "carbohidratos": 86.3,
+      "fibra": 0.0
+    },
+    "573": {
+      "nombre": "Pudín en polvo",
+      "nombreLower": "pudin en polvo",
+      "calorias": 382.0,
+      "proteinas": 0.0,
+      "grasas": 0.3,
+      "carbohidratos": 94.9,
+      "fibra": 0.0
+    },
+    "574": {
+      "nombre": "Caldo con fideos o arroz",
+      "nombreLower": "caldo con fideos o arroz",
+      "calorias": 320.0,
+      "proteinas": 18.8,
+      "grasas": 4.3,
+      "carbohidratos": 51.9,
+      "fibra": 0.0
+    },
+    "575": {
+      "nombre": "Crema de pollo",
+      "nombreLower": "crema de pollo",
+      "calorias": 393.0,
+      "proteinas": 15.2,
+      "grasas": 14.1,
+      "carbohidratos": 51.5,
+      "fibra": 0.0
+    },
+    "576": {
+      "nombre": "Crema de vegetales",
+      "nombreLower": "crema de vegetales",
+      "calorias": 352.0,
+      "proteinas": 12.6,
+      "grasas": 9.1,
+      "carbohidratos": 55.9,
+      "fibra": 0.0
+    },
+    "577": {
+      "nombre": "Cubito de carne",
+      "nombreLower": "cubito de carne",
+      "calorias": 246.0,
+      "proteinas": 12.1,
+      "grasas": 15.9,
+      "carbohidratos": 13.5,
+      "fibra": 0.0
+    },
+    "578": {
+      "nombre": "Cubito de pollo",
+      "nombreLower": "cubito de pollo",
+      "calorias": 265.0,
+      "proteinas": 9.7,
+      "grasas": 17.8,
+      "carbohidratos": 16.4,
+      "fibra": 0.0
+    },
+    "580": {
+      "nombre": "Sorbete de fruta",
+      "nombreLower": "sorbete de fruta",
+      "calorias": 152.0,
+      "proteinas": 1.1,
+      "grasas": 1.5,
+      "carbohidratos": 33.6,
+      "fibra": 0.0
+    },
+    "581": {
+      "nombre": "Tomate. puré de",
+      "nombreLower": "tomate. pure de",
+      "calorias": 39.0,
+      "proteinas": 1.7,
+      "grasas": 0.1,
+      "carbohidratos": 7.8,
+      "fibra": 2.3
+    },
+    "582": {
+      "nombre": "Tomate. salsa de (tipo Ketchup)",
+      "nombreLower": "tomate. salsa de (tipo ketchup)",
+      "calorias": 94.0,
+      "proteinas": 2.0,
+      "grasas": 0.4,
+      "carbohidratos": 20.6,
+      "fibra": 3.9
+    },
+    "583": {
+      "nombre": "Aguardiente (4% alcohol)",
+      "nombreLower": "aguardiente (4% alcohol)",
+      "calorias": 278.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "584": {
+      "nombre": "Cerveza (5% alcohol)",
+      "nombreLower": "cerveza (5% alcohol)",
+      "calorias": 48.0,
+      "proteinas": 0.6,
+      "grasas": 0.0,
+      "carbohidratos": 3.8,
+      "fibra": 0.0
+    },
+    "585": {
+      "nombre": "Ginebra (45% alcohol)",
+      "nombreLower": "ginebra (45% alcohol)",
+      "calorias": 263.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "586": {
+      "nombre": "Ponche Crema (14% alcohol)",
+      "nombreLower": "ponche crema (14% alcohol)",
+      "calorias": 220.0,
+      "proteinas": 4.5,
+      "grasas": 5.2,
+      "carbohidratos": 14.4,
+      "fibra": 0.0
+    },
+    "587": {
+      "nombre": "Ron (44% alcohol)",
+      "nombreLower": "ron (44% alcohol)",
+      "calorias": 305.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "588": {
+      "nombre": "Vino (promedio 7.5% alcohol)",
+      "nombreLower": "vino (promedio 7.5% alcohol)",
+      "calorias": 53.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 0.1,
+      "fibra": 0.0
+    },
+    "589": {
+      "nombre": "Vodka (4% alcohol)",
+      "nombreLower": "vodka (4% alcohol)",
+      "calorias": 231.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "590": {
+      "nombre": "Whisky (42.2% alcohol)",
+      "nombreLower": "whisky (42.2% alcohol)",
+      "calorias": 293.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "591": {
+      "nombre": "Bebida gaseosa",
+      "nombreLower": "bebida gaseosa",
+      "calorias": 48.0,
+      "proteinas": 0.0,
+      "grasas": 0.0,
+      "carbohidratos": 12.0,
+      "fibra": 0.0
+    },
+    "592": {
+      "nombre": "Café. infusión sin azúcar",
+      "nombreLower": "cafe. infusion sin azucar",
+      "calorias": 5.0,
+      "proteinas": 0.3,
+      "grasas": 0.1,
+      "carbohidratos": 0.8,
+      "fibra": 0.0
+    },
+    "593": {
+      "nombre": "Caña. jugo de",
+      "nombreLower": "cana. jugo de",
+      "calorias": 63.0,
+      "proteinas": 0.2,
+      "grasas": 0.0,
+      "carbohidratos": 15.5,
+      "fibra": 0.0
+    },
+    "594": {
+      "nombre": "Coco. agua de",
+      "nombreLower": "coco. agua de",
+      "calorias": 18.0,
+      "proteinas": 0.2,
+      "grasas": 0.1,
+      "carbohidratos": 4.1,
+      "fibra": 0.0
+    },
+    "595": {
+      "nombre": "Chicha",
+      "nombreLower": "chicha",
+      "calorias": 98.0,
+      "proteinas": 0.6,
+      "grasas": 0.0,
+      "carbohidratos": 23.8,
+      "fibra": 0.0
+    },
+    "596": {
+      "nombre": "Chicha envasada (pure-pak)",
+      "nombreLower": "chicha envasada (pure-pak)",
+      "calorias": 85.0,
+      "proteinas": 1.6,
+      "grasas": 0.1,
+      "carbohidratos": 19.5,
+      "fibra": 0.0
+    },
+    "597": {
+      "nombre": "Malta",
+      "nombreLower": "malta",
+      "calorias": 48.0,
+      "proteinas": 0.6,
+      "grasas": 0.0,
+      "carbohidratos": 11.5,
+      "fibra": 0.0
+    },
+    "598": {
+      "nombre": "Manzana. jugo enlatado",
+      "nombreLower": "manzana. jugo enlatado",
+      "calorias": 55.0,
+      "proteinas": 0.1,
+      "grasas": 0.0,
+      "carbohidratos": 13.7,
+      "fibra": 0.0
+    },
+    "599": {
+      "nombre": "Naranja. jugo fresco",
+      "nombreLower": "naranja. jugo fresco",
+      "calorias": 29.0,
+      "proteinas": 0.4,
+      "grasas": 0.0,
+      "carbohidratos": 6.9,
+      "fibra": 0.0
+    },
+    "600": {
+      "nombre": "Naranjada",
+      "nombreLower": "naranjada",
+      "calorias": 21.0,
+      "proteinas": 0.2,
+      "grasas": 0.0,
+      "carbohidratos": 5.0,
+      "fibra": 0.0
+    },
+    "601": {
+      "nombre": "Piña. jugo enlatado",
+      "nombreLower": "pina. jugo enlatado",
+      "calorias": 63.0,
+      "proteinas": 0.3,
+      "grasas": 0.1,
+      "carbohidratos": 15.2,
+      "fibra": 0.0
+    },
+    "602": {
+      "nombre": "Té. infusión",
+      "nombreLower": "te. infusion",
+      "calorias": 2.0,
+      "proteinas": 0.1,
+      "grasas": 0.0,
+      "carbohidratos": 0.4,
+      "fibra": 0.0
+    },
+    "603": {
+      "nombre": "Uva. jugo de",
+      "nombreLower": "uva. jugo de",
+      "calorias": 74.0,
+      "proteinas": 0.4,
+      "grasas": 0.0,
+      "carbohidratos": 18.2,
+      "fibra": 0.0
+    },
+    "604": {
+      "nombre": "Almendra",
+      "nombreLower": "almendra",
+      "calorias": 579.0,
+      "proteinas": 18.6,
+      "grasas": 54.1,
+      "carbohidratos": 4.3,
+      "fibra": 15.3
+    },
+    "605": {
+      "nombre": "Avellana",
+      "nombreLower": "avellana",
+      "calorias": 622.0,
+      "proteinas": 12.5,
+      "grasas": 58.0,
+      "carbohidratos": 12.4,
+      "fibra": 6.0
+    },
+    "606": {
+      "nombre": "Castaña. cocida",
+      "nombreLower": "castana. cocida",
+      "calorias": 190.0,
+      "proteinas": 3.6,
+      "grasas": 1.9,
+      "carbohidratos": 39.7,
+      "fibra": 8.6
+    },
+    "607": {
+      "nombre": "Maní tostado. sin película",
+      "nombreLower": "mani tostado. sin pelicula",
+      "calorias": 558.0,
+      "proteinas": 28.8,
+      "grasas": 45.4,
+      "carbohidratos": 8.5,
+      "fibra": 11.1
+    },
+    "608": {
+      "nombre": "Merey",
+      "nombreLower": "merey",
+      "calorias": 567.0,
+      "proteinas": 19.4,
+      "grasas": 42.2,
+      "carbohidratos": 27.3,
+      "fibra": 2.9
+    },
+    "609": {
+      "nombre": "Nuez",
+      "nombreLower": "nuez",
+      "calorias": 772.0,
+      "proteinas": 14.0,
+      "grasas": 63.3,
+      "carbohidratos": 11.5,
+      "fibra": 6.2
+    },
+    "610": {
+      "nombre": "Nuez del Brasil",
+      "nombreLower": "nuez del brasil",
+      "calorias": 692.0,
+      "proteinas": 15.4,
+      "grasas": 67.7,
+      "carbohidratos": 5.3,
+      "fibra": 6.4
+    },
+    "611": {
+      "nombre": "Pistacho",
+      "nombreLower": "pistacho",
+      "calorias": 581.0,
+      "proteinas": 17.6,
+      "grasas": 51.6,
+      "carbohidratos": 11.6,
+      "fibra": 10.6
+    },
+    "612": {
+      "nombre": "Carne de tortuga",
+      "nombreLower": "carne de tortuga",
+      "calorias": 228.0,
+      "proteinas": 10.5,
+      "grasas": 20.7,
+      "carbohidratos": 0.0,
+      "fibra": 0.0
+    },
+    "613": {
+      "nombre": "Copoazú",
+      "nombreLower": "copoazu",
+      "calorias": 49.0,
+      "proteinas": 1.2,
+      "grasas": 0.4,
+      "carbohidratos": 10.2,
+      "fibra": 1.3
+    },
+    "614": {
+      "nombre": "Chufa",
+      "nombreLower": "chufa",
+      "calorias": 317.0,
+      "proteinas": 4.9,
+      "grasas": 15.0,
+      "carbohidratos": 45.4,
+      "fibra": 0.0
+    },
+    "615": {
+      "nombre": "Guayaba brasilera",
+      "nombreLower": "guayaba brasilera",
+      "calorias": 12.0,
+      "proteinas": 0.5,
+      "grasas": 0.0,
+      "carbohidratos": 2.4,
+      "fibra": 0.9
+    },
+    "616": {
+      "nombre": "Harina de plátano",
+      "nombreLower": "harina de platano",
+      "calorias": 330.0,
+      "proteinas": 2.9,
+      "grasas": 0.2,
+      "carbohidratos": 79.2,
+      "fibra": 6.0
+    },
+    "617": {
+      "nombre": "Larvas de guásimo",
+      "nombreLower": "larvas de guasimo",
+      "calorias": 55.0,
+      "proteinas": 7.8,
+      "grasas": 1.2,
+      "carbohidratos": 3.3,
+      "fibra": 0.0
+    },
+    "618": {
+      "nombre": "Manirote (también conocido",
+      "nombreLower": "manirote (tambien conocido",
+      "calorias": 58.0,
+      "proteinas": 0.8,
+      "grasas": 0.6,
+      "carbohidratos": 13.4,
+      "fibra": 0.0
+    },
+    "619": {
+      "nombre": "Mañoco",
+      "nombreLower": "manoco",
+      "calorias": 369.0,
+      "proteinas": 1.6,
+      "grasas": 0.4,
+      "carbohidratos": 78.2,
+      "fibra": 8.2
+    },
+    "620": {
+      "nombre": "Mañoco de pijiguao",
+      "nombreLower": "manoco de pijiguao",
+      "calorias": 378.0,
+      "proteinas": 4.9,
+      "grasas": 12.1,
+      "carbohidratos": 62.4,
+      "fibra": 12.6
+    },
+    "621": {
+      "nombre": "Moriche gusano de. asado",
+      "nombreLower": "moriche gusano de. asado",
+      "calorias": 230.0,
+      "proteinas": 8.2,
+      "grasas": 19.2,
+      "carbohidratos": 5.9,
+      "fibra": 0.0
+    },
+    "622": {
+      "nombre": "Pijiguao",
+      "nombreLower": "pijiguao",
+      "calorias": 132.0,
+      "proteinas": 3.7,
+      "grasas": 5.0,
+      "carbohidratos": 12.0,
+      "fibra": 10.3
+    },
+    "623": {
+      "nombre": "Tupiro",
+      "nombreLower": "tupiro",
+      "calorias": 20.0,
+      "proteinas": 0.5,
+      "grasas": 0.0,
+      "carbohidratos": 4.4,
+      "fibra": 1.9
+    },
+    "624": {
+      "nombre": "Yorumo",
+      "nombreLower": "yorumo",
+      "calorias": 285.0,
+      "proteinas": 0.2,
+      "grasas": 0.2,
+      "carbohidratos": 70.9,
+      "fibra": 0.0
+    },
+    "627": {
+      "nombre": "Cebollin",
+      "nombreLower": "cebollin",
+      "calorias": 43.0,
+      "proteinas": 1.4,
+      "grasas": 0.2,
+      "carbohidratos": 9.0,
+      "fibra": 2.1
+    },
+    "649": {
+      "nombre": "Bebida gaseosa",
+      "nombreLower": "bebida gaseosa",
+      "calorias": 321.0,
+      "proteinas": 10.0,
+      "grasas": 5.0,
+      "carbohidratos": 55.0,
+      "fibra": 0.0
+    },
+    "652": {
+      "nombre": "Bebida gaseosa",
+      "nombreLower": "bebida gaseosa",
+      "calorias": 748.0,
+      "proteinas": 1.1,
+      "grasas": 80.0,
+      "carbohidratos": 6.2,
+      "fibra": 0.0
+    }
+  }
+}

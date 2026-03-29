@@ -95,6 +95,7 @@ public class RegisterActivity extends AppCompatActivity {
         EditText editAge        = dialogView.findViewById(R.id.editAge);
         EditText editGoalWeight = dialogView.findViewById(R.id.editGoalWeight);
         Button   btnSave        = dialogView.findViewById(R.id.button);
+        dialogView.findViewById(R.id.btnDeleteAccount).setVisibility(View.GONE);
 
         btnSave.setOnClickListener(v -> {
             String name      = editName.getText().toString().trim();

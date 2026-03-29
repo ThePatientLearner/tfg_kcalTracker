@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Fila de sugerencia en el dropdown de búsqueda.
+    Muestra: nombre del alimento + kcal por 100g.
+    Al clicar, MainActivity abre el diálogo para introducir los gramos.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="14dp">
+
+    <!-- Icono comida -->
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="12dp"
+        android:src="@android:drawable/ic_menu_search"
+        android:tint="#0284C7"
+        android:contentDescription="Icono búsqueda" />
+
+    <!-- Nombre del alimento -->
+    <TextView
+        android:id="@+id/txtSuggestionName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Nombre alimento"
+        android:textColor="#0F172A"
+        android:textSize="15sp" />
+
+    <!-- Kcal por 100g -->
+    <TextView
+        android:id="@+id/txtSuggestionKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="000 kcal/100g"
+        android:textColor="#0284C7"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

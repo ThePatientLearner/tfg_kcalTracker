@@ -74,6 +74,15 @@
             android:layout_marginTop="20dp"
             android:text="Registrar datos personales" />
 
+        <Button
+            android:id="@+id/btnDeleteAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#D32F2F"
+            android:text="Eliminar cuenta"
+            android:textColor="#FFFFFF" />
+
     </LinearLayout>
 
 </ScrollView>

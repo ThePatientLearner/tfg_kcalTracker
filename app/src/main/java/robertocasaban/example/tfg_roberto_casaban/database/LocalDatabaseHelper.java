@@ -67,6 +67,13 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         db.close();
     }
 
+    // Elimina el perfil del usuario por su uid
+    public void deleteUserProfile(String uid) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(TABLE_USER_PROFILE, COL_UID + " = ?", new String[]{uid});
+        db.close();
+    }
+
     // Recupera el perfil del usuario por su uid
     public UserProfile getUserProfile(String uid) {
         SQLiteDatabase db = getReadableDatabase();
