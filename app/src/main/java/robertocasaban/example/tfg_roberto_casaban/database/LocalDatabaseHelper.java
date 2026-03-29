@@ -7,7 +7,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import robertocasaban.example.tfg_roberto_casaban.models.FoodEntry;
 import robertocasaban.example.tfg_roberto_casaban.models.UserProfile;
@@ -109,13 +111,11 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_GOAL_WEIGHT, profile.getGoalWeight());
 
         db.insertWithOnConflict(TABLE_USER_PROFILE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-        db.close();
     }
 
     public void deleteUserProfile(String uid) {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_USER_PROFILE, COL_UID + " = ?", new String[]{uid});
-        db.close();
     }
 
     public UserProfile getUserProfile(String uid) {
@@ -142,7 +142,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
             cursor.close();
         }
 
-        db.close();
         return profile;
     }
 
@@ -164,7 +163,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_GRAMS,         entry.getGrams());
 
         db.insertWithOnConflict(TABLE_FOOD_ENTRIES, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-        db.close();
     }
 
     /** Actualiza solo los gramos de una entrada existente. */
@@ -176,7 +174,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
 
         db.update(TABLE_FOOD_ENTRIES, values,
                 COL_FIREBASE_KEY + " = ?", new String[]{firebaseKey});
-        db.close();
     }
 
     /** Elimina una entrada por su clave de Firebase. */
@@ -184,7 +181,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
         db.delete(TABLE_FOOD_ENTRIES,
                 COL_FIREBASE_KEY + " = ?", new String[]{firebaseKey});
-        db.close();
     }
 
     /** Elimina todas las entradas de un usuario para una fecha concreta (reset del día). */
@@ -193,7 +189,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         db.delete(TABLE_FOOD_ENTRIES,
                 COL_ENTRY_UID + " = ? AND " + COL_DATE + " = ?",
                 new String[]{uid, date});
-        db.close();
     }
 
     /** Devuelve todas las entradas de comida de un usuario para una fecha concreta. */
@@ -223,7 +218,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
             cursor.close();
         }
 
-        db.close();
         return entries;
     }
 
@@ -241,7 +235,6 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_TOTAL_KCAL, totalKcal);
 
         db.insertWithOnConflict(TABLE_DAILY_TOTALS, null, values, SQLiteDatabase.CONFLICT_REPLACE);
-        db.close();
     }
 
     /** Devuelve el total de kcal guardado para un día. Retorna 0.0 si no existe. */
@@ -262,7 +255,33 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
             cursor.close();
         }
 
-        db.close();
         return total;
+    }
+
+    /** Devuelve todos los totales diarios de un usuario, ordenados por fecha ascendente. */
+    public Map<String, Double> getAllDailyTotals(String uid) {
+        SQLiteDatabase db = getReadableDatabase();
+        Map<String, Double> totals = new LinkedHashMap<>();
+
+        Cursor cursor = db.query(
+                TABLE_DAILY_TOTALS,
+                new String[]{COL_TOTAL_DATE, COL_TOTAL_KCAL},
+                COL_TOTAL_UID + " = ?",
+                new String[]{uid},
+                null, null,
+                COL_TOTAL_DATE + " ASC"
+        );
+
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                totals.put(
+                        cursor.getString(cursor.getColumnIndexOrThrow(COL_TOTAL_DATE)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_TOTAL_KCAL))
+                );
+            }
+            cursor.close();
+        }
+
+        return totals;
     }
 }

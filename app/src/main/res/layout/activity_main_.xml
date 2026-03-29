@@ -15,26 +15,57 @@
         android:padding="20dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/lblTitleMainActivity_"
+        <LinearLayout
+            android:id="@+id/logoContainer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Kcal Tracker"
-            android:textColor="#1E293B"
-            android:textSize="23sp"
-            android:textStyle="bold"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_logo_border"
+            android:paddingStart="10dp"
+            android:paddingEnd="14dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_flame"
+                android:contentDescription="Flame icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="Kcal"
+                android:textColor="#0F172A"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Tracker"
+                android:textColor="#0284C7"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnResetMainActivity_"
-            style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="87dp"
             android:layout_height="39dp"
             android:layout_marginEnd="8dp"
-            android:text="Reset"
+            android:backgroundTint="#0284C7"
+            android:text="+Pro"
             android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             app:cornerRadius="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/btnLogoutMainActivity_"
@@ -217,18 +248,8 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@id/cardSummary">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/btnAddMainActivity_"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="12dp"
-            android:backgroundTint="#22C55E"
-            android:src="@android:drawable/ic_input_add"
-            app:fabSize="normal"
-            app:tint="@color/white" />
-
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="296dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             app:boxBackgroundColor="#E2E8F0"

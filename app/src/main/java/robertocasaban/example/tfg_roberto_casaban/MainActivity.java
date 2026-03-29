@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
         setupSearch();
         loadUserProfile();
 
+
         // ── Logout ───────────────────────────────────────────────────────────────
         binding.btnLogoutMainActivity.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
@@ -113,13 +114,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(i);
         });
 
-        // ── Reset ────────────────────────────────────────────────────────────────
-        binding.btnResetMainActivity.setOnClickListener(v -> {
-            if (refUserFoods != null) refUserFoods.removeValue();
-            if (currentUid != null) localDb.clearFoodEntriesForDate(currentUid, todayDate);
-            foodEntryAdapter.clear();
-            updateKcalDisplay();
-        });
 
         // ── Bottom Navigation ─────────────────────────────────────────────────────
         binding.bottomNav.setOnItemSelectedListener(item -> {
@@ -131,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             } else if (id == R.id.nav_profile) {
                 showProfileDialog();
+                return true;
+            } else if (id == R.id.nav_stats) {
+                startActivity(new Intent(this, EstadisticasActivity.class));
                 return true;
             }
             return false;
@@ -641,4 +638,5 @@ public class MainActivity extends AppCompatActivity {
 
         dialog.show();
     }
+
 }

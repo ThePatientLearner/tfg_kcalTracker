@@ -16,38 +16,16 @@
         android:layout_height="wrap_content"
         android:padding="12dp">
 
-        <!-- Icon Container -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/iconContainer"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
-            app:cardBackgroundColor="#E0F2FE"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <ImageView
-                android:id="@+id/ivFoodIcon"
-                android:layout_width="22dp"
-                android:layout_height="22dp"
-                android:layout_gravity="center"
-                android:src="@android:drawable/ic_menu_report_image"
-                app:tint="#0284C7" />
-        </com.google.android.material.card.MaterialCardView>
-
         <!-- Food Details -->
         <LinearLayout
             android:id="@+id/textContainer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
             android:layout_marginEnd="12dp"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/kcalContainer"
-            app:layout_constraintStart_toEndOf="@id/iconContainer"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
