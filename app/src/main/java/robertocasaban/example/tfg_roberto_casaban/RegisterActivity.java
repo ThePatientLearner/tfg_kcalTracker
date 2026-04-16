@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -89,12 +90,13 @@ public class RegisterActivity extends AppCompatActivity {
 
         AlertDialog dialog = builder.create();
 
-        EditText editName       = dialogView.findViewById(R.id.editName);
-        EditText editWeight     = dialogView.findViewById(R.id.editWeight);
-        EditText editHeight     = dialogView.findViewById(R.id.editHeight);
-        EditText editAge        = dialogView.findViewById(R.id.editAge);
-        EditText editGoalWeight = dialogView.findViewById(R.id.editGoalWeight);
-        Button   btnSave        = dialogView.findViewById(R.id.button);
+        EditText   editName       = dialogView.findViewById(R.id.editName);
+        EditText   editWeight     = dialogView.findViewById(R.id.editWeight);
+        EditText   editHeight     = dialogView.findViewById(R.id.editHeight);
+        EditText   editAge        = dialogView.findViewById(R.id.editAge);
+        EditText   editGoalWeight = dialogView.findViewById(R.id.editGoalWeight);
+        RadioGroup radioGroupSex  = dialogView.findViewById(R.id.radioGroupSex);
+        Button     btnSave        = dialogView.findViewById(R.id.button);
         dialogView.findViewById(R.id.btnDeleteAccount).setVisibility(View.GONE);
 
         btnSave.setOnClickListener(v -> {
@@ -110,13 +112,16 @@ public class RegisterActivity extends AppCompatActivity {
                 return;
             }
 
+            String sex = (radioGroupSex.getCheckedRadioButtonId() == R.id.radioMujer) ? "Mujer" : "Hombre";
+
             UserProfile profile = new UserProfile(
                     name,
                     email,
                     Double.parseDouble(weightStr),
                     Double.parseDouble(heightStr),
                     Integer.parseInt(ageStr),
-                    Double.parseDouble(goalWStr)
+                    Double.parseDouble(goalWStr),
+                    sex
             );
 
             // Guarda el perfil en users/{uid} — solo accesible por ese usuario

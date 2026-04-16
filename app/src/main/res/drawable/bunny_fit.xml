@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Conejo FIT/MUSCULOSO - IMC 18.5-24.9 (Normal) - Cuerpo delgado con músculos, sonrisa abierta -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- LEFT EAR -->
+    <path android:fillColor="#C4B5A5" android:pathData="M42,8 C38,2 32,0 30,4 C27,10 33,22 38,34 C40,38 44,40 46,38 C50,34 48,16 42,8 Z" />
+    <path android:fillColor="#E0909F" android:pathData="M40,12 C37,7 34,6 33,8 C31,12 35,22 38,30 C39,33 42,34 43,32 C45,28 44,18 40,12 Z" />
+
+    <!-- RIGHT EAR -->
+    <path android:fillColor="#C4B5A5" android:pathData="M78,8 C82,2 88,0 90,4 C93,10 87,22 82,34 C80,38 76,40 74,38 C70,34 72,16 78,8 Z" />
+    <path android:fillColor="#E0909F" android:pathData="M80,12 C83,7 86,6 87,8 C89,12 85,22 82,30 C81,33 78,34 77,32 C75,28 76,18 80,12 Z" />
+
+    <!-- HEAD -->
+    <path android:fillColor="#D5CBBF" android:pathData="M60,28 C74,28 85,38 85,52 C85,66 74,74 60,74 C46,74 35,66 35,52 C35,38 46,28 60,28 Z" />
+
+    <!-- HEADBAND -->
+    <path android:fillColor="#EF4444" android:pathData="M36,42 C36,42 42,34 60,34 C78,34 84,42 84,42 L84,47 C84,47 78,40 60,40 C42,40 36,47 36,47 Z" />
+    <path android:fillColor="#FBBF24" android:pathData="M36,44 C36,44 42,37 60,37 C78,37 84,44 84,44 L84,45.5 C84,45.5 78,38.5 60,38.5 C42,38.5 36,45.5 36,45.5 Z" />
+
+    <!-- FACE - ojos contentos -->
+    <path android:fillColor="#1E293B" android:pathData="M50,52 C50,49.5 51.5,48 53,48 C54.5,48 56,49.5 56,52 C56,54.5 54.5,56 53,56 C51.5,56 50,54.5 50,52 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M52,49.5 C52.8,49.5 53.5,50 53.5,50.8 C53.5,51.5 52.8,52 52,52 C51.2,52 50.5,51.5 50.5,50.8 C50.5,50 51.2,49.5 52,49.5 Z" />
+    <path android:fillColor="#1E293B" android:pathData="M64,52 C64,49.5 65.5,48 67,48 C68.5,48 70,49.5 70,52 C70,54.5 68.5,56 67,56 C65.5,56 64,54.5 64,52 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M66,49.5 C66.8,49.5 67.5,50 67.5,50.8 C67.5,51.5 66.8,52 66,52 C65.2,52 64.5,51.5 64.5,50.8 C64.5,50 65.2,49.5 66,49.5 Z" />
+    <path android:fillColor="#E0909F" android:pathData="M57.5,58 C57.5,57 58.5,56 60,56 C61.5,56 62.5,57 62.5,58 C62.5,59.2 61.5,60 60,60 C58.5,60 57.5,59.2 57.5,58 Z" />
+
+    <!-- SONRISA ABIERTA - boca grande feliz -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,62 C56,62 58,62 60,62 C62,62 64,62 66,62 C66,62 64,67 60,67 C56,67 54,62 54,62 Z" />
+    <!-- Contorno de la boca -->
+    <path android:strokeColor="#A88A7A" android:strokeWidth="1" android:fillColor="#00000000" android:pathData="M54,62 C56,62 58,62 60,62 C62,62 64,62 66,62 C66,62 64,67 60,67 C56,67 54,62 54,62 Z" />
+    <!-- Lengua -->
+    <path
+        android:fillColor="#F4A0A0"
+        android:pathData="M57,64 C58,66 62,66 63,64 C62,65.5 58,65.5 57,64 Z" />
+
+    <!-- BODY - DELGADO pero con músculos: estrecho como underweight pero definido -->
+    <path
+        android:fillColor="#D5CBBF"
+        android:pathData="M60,72 C69,72 76,78 76,88 C76,96 69,100 60,100 C51,100 44,96 44,88 C44,78 51,72 60,72 Z" />
+    <!-- Pectorales / definición muscular -->
+    <path
+        android:fillColor="#C4B5A5"
+        android:pathData="M52,78 C54,76.5 58,76.5 60,78 C58,79.5 54,79.5 52,78 Z" />
+    <path
+        android:fillColor="#C4B5A5"
+        android:pathData="M60,78 C62,76.5 66,76.5 68,78 C66,79.5 62,79.5 60,78 Z" />
+    <!-- Abdominales (six-pack) -->
+    <path
+        android:fillColor="#E8DDD3"
+        android:pathData="M56,81 C56,81 57.5,80 60,80 C62.5,80 64,81 64,81 L64,95 C64,95 62.5,96 60,96 C57.5,96 56,95 56,95 Z" />
+    <path android:strokeColor="#C4B5A5" android:strokeWidth="0.7" android:fillColor="#00000000" android:pathData="M56.5,84 L63.5,84" />
+    <path android:strokeColor="#C4B5A5" android:strokeWidth="0.7" android:fillColor="#00000000" android:pathData="M56.5,87.5 L63.5,87.5" />
+    <path android:strokeColor="#C4B5A5" android:strokeWidth="0.7" android:fillColor="#00000000" android:pathData="M57,91 L63,91" />
+    <path android:strokeColor="#C4B5A5" android:strokeWidth="0.5" android:fillColor="#00000000" android:pathData="M60,81 L60,95" />
+
+    <!-- ARMS - musculosos pero en cuerpo delgado -->
+    <path
+        android:fillColor="#C4B5A5"
+        android:pathData="M45,76 C41,78 34,82 32,86 C31,88.5 32,91 34.5,89.5 C38,87 43,83 46,80 Z" />
+    <!-- Bíceps izq -->
+    <path
+        android:fillColor="#BBAA96"
+        android:pathData="M43,78 C41,79.5 38,82 39,83 C40,83.5 43,81 44,79 Z" />
+    <path
+        android:fillColor="#C4B5A5"
+        android:pathData="M75,76 C79,78 86,82 88,86 C89,88.5 88,91 85.5,89.5 C82,87 77,83 74,80 Z" />
+    <!-- Bíceps der -->
+    <path
+        android:fillColor="#BBAA96"
+        android:pathData="M77,78 C79,79.5 82,82 81,83 C80,83.5 77,81 76,79 Z" />
+
+    <!-- SNEAKERS -->
+    <path android:fillColor="#0284C7" android:pathData="M46,96 C46,96 43,97 41,99 C39,101 39,104 41,105 C43,106 49,106 52,105 C54,104 54,101 52,99 C50,97 48,96 48,96 Z" />
+    <path android:fillColor="#1E293B" android:pathData="M40,104 C40,104 43,106 47,106.5 C51,107 53,106 54,104.5 C54,106 51,108 47,108 C42,108 40,106 40,104 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M42,100 C44,99 48,99 51,100 L50,101.5 C48,100.5 45,100.5 43,101.5 Z" />
+
+    <path android:fillColor="#0284C7" android:pathData="M68,96 C68,96 65,97 63,99 C61,101 61,104 63,105 C65,106 71,106 74,105 C76,104 76,101 74,99 C72,97 70,96 70,96 Z" />
+    <path android:fillColor="#1E293B" android:pathData="M62,104 C62,104 65,106 69,106.5 C73,107 75,106 76,104.5 C76,106 73,108 69,108 C64,108 62,106 62,104 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M65,100 C67,99 71,99 74,100 L73,101.5 C71,100.5 68,100.5 66,101.5 Z" />
+
+</vector>

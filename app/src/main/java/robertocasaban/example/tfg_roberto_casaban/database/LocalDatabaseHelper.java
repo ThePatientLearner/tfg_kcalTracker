@@ -17,7 +17,7 @@ import robertocasaban.example.tfg_roberto_casaban.models.UserProfile;
 public class LocalDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME    = "tfg_local.db";
-    private static final int    DB_VERSION = 3;
+    private static final int    DB_VERSION = 5;
 
     // ─── Tabla: perfil de usuario ─────────────────────────────────────────────
     public static final String TABLE_USER_PROFILE = "user_profile";
@@ -28,6 +28,8 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_HEIGHT     = "height";
     public static final String COL_AGE        = "age";
     public static final String COL_GOAL_WEIGHT = "goal_weight";
+    public static final String COL_SEX         = "sex";
+    public static final String COL_IS_PRO      = "is_pro";
 
     private static final String CREATE_TABLE_USER_PROFILE =
             "CREATE TABLE " + TABLE_USER_PROFILE + " (" +
@@ -37,7 +39,9 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
             COL_WEIGHT      + " REAL, " +
             COL_HEIGHT      + " REAL, " +
             COL_AGE         + " INTEGER, " +
-            COL_GOAL_WEIGHT + " REAL" +
+            COL_GOAL_WEIGHT + " REAL, " +
+            COL_SEX         + " TEXT DEFAULT 'Hombre', " +
+            COL_IS_PRO      + " INTEGER DEFAULT 0" +
             ");";
 
     // ─── Tabla: registro diario de comidas ────────────────────────────────────
@@ -92,6 +96,12 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         if (oldVersion < 3) {
             db.execSQL(CREATE_TABLE_DAILY_TOTALS);
         }
+        if (oldVersion < 4) {
+            db.execSQL("ALTER TABLE " + TABLE_USER_PROFILE + " ADD COLUMN " + COL_SEX + " TEXT DEFAULT 'Hombre'");
+        }
+        if (oldVersion < 5) {
+            db.execSQL("ALTER TABLE " + TABLE_USER_PROFILE + " ADD COLUMN " + COL_IS_PRO + " INTEGER DEFAULT 0");
+        }
     }
 
     // ══════════════════════════════════════════════════════════════════════════
@@ -109,6 +119,8 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         values.put(COL_HEIGHT,      profile.getHeight());
         values.put(COL_AGE,         profile.getAge());
         values.put(COL_GOAL_WEIGHT, profile.getGoalWeight());
+        values.put(COL_SEX,         profile.getSex());
+        values.put(COL_IS_PRO,      profile.getIsPro() ? 1 : 0);
 
         db.insertWithOnConflict(TABLE_USER_PROFILE, null, values, SQLiteDatabase.CONFLICT_REPLACE);
     }
@@ -137,8 +149,10 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
                     cursor.getDouble(cursor.getColumnIndexOrThrow(COL_WEIGHT)),
                     cursor.getDouble(cursor.getColumnIndexOrThrow(COL_HEIGHT)),
                     cursor.getInt(cursor.getColumnIndexOrThrow(COL_AGE)),
-                    cursor.getDouble(cursor.getColumnIndexOrThrow(COL_GOAL_WEIGHT))
+                    cursor.getDouble(cursor.getColumnIndexOrThrow(COL_GOAL_WEIGHT)),
+                    cursor.getString(cursor.getColumnIndexOrThrow(COL_SEX))
             );
+            profile.setIsPro(cursor.getInt(cursor.getColumnIndexOrThrow(COL_IS_PRO)) == 1);
             cursor.close();
         }
 

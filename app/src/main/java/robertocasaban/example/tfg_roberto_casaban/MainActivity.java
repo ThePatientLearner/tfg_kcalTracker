@@ -13,10 +13,13 @@ import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
+import android.view.Window;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +32,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.android.material.button.MaterialButton;
 
 import java.text.Normalizer;
 import java.util.ArrayList;
@@ -75,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
     // ─── Kcal objetivo del día ───────────────────────────────────────────────────
     private double kcalObjetivo = 2000;
 
+    // ─── Launcher para PerfilActivity (recarga perfil si se guardó) ──────────────
+    private final ActivityResultLauncher<Intent> perfilLauncher =
+            registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+                if (result.getResultCode() == RESULT_OK) loadUserProfile();
+            });
+
     // ─────────────────────────────────────────────────────────────────────────────
 
     @Override
@@ -104,6 +114,9 @@ public class MainActivity extends AppCompatActivity {
         loadUserProfile();
 
 
+        // ── Botón +Pro ───────────────────────────────────────────────────────────
+        binding.btnResetMainActivity.setOnClickListener(v -> showProSubscriptionDialog());
+
         // ── Logout ───────────────────────────────────────────────────────────────
         binding.btnLogoutMainActivity.setOnClickListener(v -> {
             FirebaseAuth.getInstance().signOut();
@@ -121,10 +134,15 @@ public class MainActivity extends AppCompatActivity {
             if (id == R.id.btnHomeNavBar) {
                 return true;
             } else if (id == R.id.btnTargetNavBar) {
-                showTargetDialog();
+                Intent t = new Intent(this, ObjetivoActivity.class);
+                if (currentProfile != null) {
+                    t.putExtra("weight", currentProfile.getWeight());
+                    t.putExtra("height", currentProfile.getHeight());
+                }
+                startActivity(t);
                 return true;
             } else if (id == R.id.nav_profile) {
-                showProfileDialog();
+                perfilLauncher.launch(new Intent(this, PerfilActivity.class));
                 return true;
             } else if (id == R.id.nav_stats) {
                 startActivity(new Intent(this, EstadisticasActivity.class));
@@ -277,6 +295,12 @@ public class MainActivity extends AppCompatActivity {
         hideSuggestions();
         binding.txtSearchMainActivity.setText("");
 
+        // Gating: si ya hay 1 comida y el usuario no es Pro, mostrar suscripción
+        if (foodEntryAdapter.getItemCount() >= 1 && !isUserPro()) {
+            showProSubscriptionDialog();
+            return;
+        }
+
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(product.getProductName());
         builder.setMessage(String.format("%.0f kcal por 100g\n\n¿Cuántos gramos has consumido?",
@@ -289,7 +313,7 @@ public class MainActivity extends AppCompatActivity {
         inputGrams.setPadding(dp16, dp16, dp16, dp16);
         builder.setView(inputGrams);
 
-        builder.setPositiveButton("Añadir", (dialog, which) -> {
+        builder.setPositiveButton("Añadir", (dialog, mythicalWhich) -> {
             String gramsStr = inputGrams.getText().toString().trim();
             if (gramsStr.isEmpty()) {
                 Toast.makeText(this, "Introduce los gramos", Toast.LENGTH_SHORT).show();
@@ -440,8 +464,9 @@ public class MainActivity extends AppCompatActivity {
     private void updateProfileUI(UserProfile profile) {
         double heightM   = profile.getHeight() / 100.0;
         double imc       = profile.getWeight() / (heightM * heightM);
+        double tmbSexAdj = "Mujer".equals(profile.getSex()) ? -161 : 5;
         double tmb       = (10 * profile.getWeight()) + (6.25 * profile.getHeight())
-                           - (5 * profile.getAge()) + 5;
+                           - (5 * profile.getAge()) + tmbSexAdj;
         double kcalBase  = tmb + 400;
 
         String status;
@@ -509,134 +534,47 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void showTargetDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        View dialogView = getLayoutInflater().inflate(R.layout.alert_kg_edit, null);
-        builder.setView(dialogView);
+    // ══════════════════════════════════════════════════════════════════════════════
+    //  SUSCRIPCIÓN PRO
+    // ══════════════════════════════════════════════════════════════════════════════
 
-        android.widget.TextView txtPesoActual   = dialogView.findViewById(R.id.txtPesoActualValue);
-        EditText                editImcDeseado  = dialogView.findViewById(R.id.editTextText4);
-        android.widget.TextView txtImcActual    = dialogView.findViewById(R.id.textView6);
-        android.widget.TextView txtPesoObjetivo = dialogView.findViewById(R.id.textView7);
-
-        if (currentProfile != null) {
-            double heightM   = currentProfile.getHeight() / 100.0;
-            double imcActual = currentProfile.getWeight() / (heightM * heightM);
-
-            txtPesoActual.setText(String.format("%.1f kg", currentProfile.getWeight()));
-            txtImcActual.setText(String.format("%.1f", imcActual));
-
-            editImcDeseado.addTextChangedListener(new android.text.TextWatcher() {
-                @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-                @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
-                @Override
-                public void afterTextChanged(android.text.Editable s) {
-                    String val = s.toString().trim();
-                    if (val.isEmpty()) { txtPesoObjetivo.setText("..?"); return; }
-                    try {
-                        double imcDeseado   = Double.parseDouble(val);
-                        double pesoObjetivo = imcDeseado * heightM * heightM;
-                        txtPesoObjetivo.setText(String.format("%.1f kg", pesoObjetivo));
-                    } catch (NumberFormatException e) {
-                        txtPesoObjetivo.setText("..?");
-                    }
-                }
-            });
-        }
-
-        builder.setPositiveButton("Cerrar", (dialog, which) -> dialog.dismiss());
-        builder.create().show();
+    private boolean isUserPro() {
+        return currentProfile != null && currentProfile.getIsPro();
     }
 
-    private void showProfileDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        View dialogView = LayoutInflater.from(this).inflate(R.layout.popup_profile_edit, null);
-        builder.setView(dialogView);
-        AlertDialog dialog = builder.create();
+    private void showProSubscriptionDialog() {
+        View content = LayoutInflater.from(this).inflate(R.layout.dialog_pro_subscription, null);
 
-        EditText editName       = dialogView.findViewById(R.id.editName);
-        EditText editWeight     = dialogView.findViewById(R.id.editWeight);
-        EditText editHeight     = dialogView.findViewById(R.id.editHeight);
-        EditText editAge        = dialogView.findViewById(R.id.editAge);
-        EditText editGoalWeight = dialogView.findViewById(R.id.editGoalWeight);
-        Button   btnSave        = dialogView.findViewById(R.id.button);
-        Button   btnDelete      = dialogView.findViewById(R.id.btnDeleteAccount);
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(content)
+                .setCancelable(true)
+                .create();
 
-        if (currentProfile != null) {
-            editName.setText(currentProfile.getName());
-            editWeight.setText(String.valueOf(currentProfile.getWeight()));
-            editHeight.setText(String.valueOf(currentProfile.getHeight()));
-            editAge.setText(String.valueOf(currentProfile.getAge()));
-            editGoalWeight.setText(String.valueOf(currentProfile.getGoalWeight()));
-        } else {
-            btnDelete.setVisibility(View.GONE);
+        Window window = dialog.getWindow();
+        if (window != null) {
+            window.setBackgroundDrawableResource(android.R.color.transparent);
         }
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user == null) return;
+        MaterialButton btnSubscribe = content.findViewById(R.id.btnSubscribePro);
+        TextView       btnDismiss   = content.findViewById(R.id.btnDismissPro);
 
-        btnSave.setOnClickListener(v -> {
-            String name      = editName.getText().toString().trim();
-            String weightStr = editWeight.getText().toString().trim();
-            String heightStr = editHeight.getText().toString().trim();
-            String ageStr    = editAge.getText().toString().trim();
-            String goalWStr  = editGoalWeight.getText().toString().trim();
-
-            if (name.isEmpty() || weightStr.isEmpty() || heightStr.isEmpty()
-                    || ageStr.isEmpty() || goalWStr.isEmpty()) {
-                Toast.makeText(this, "Rellena todos los campos", Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            UserProfile updatedProfile = new UserProfile(
-                    name, user.getEmail(),
-                    Double.parseDouble(weightStr),
-                    Double.parseDouble(heightStr),
-                    Integer.parseInt(ageStr),
-                    Double.parseDouble(goalWStr)
-            );
-
-            refUsers.child(user.getUid()).setValue(updatedProfile)
-                    .addOnSuccessListener(aVoid -> {
-                        localDb.saveUserProfile(user.getUid(), updatedProfile);
-                        currentProfile = updatedProfile;
-                        updateProfileUI(updatedProfile);
-                        Toast.makeText(this, "Perfil actualizado", Toast.LENGTH_SHORT).show();
-                        dialog.dismiss();
-                    });
+        btnSubscribe.setOnClickListener(v -> {
+            dialog.dismiss();
+            confirmProSubscription();
         });
-
-        btnDelete.setOnClickListener(v -> {
-            new AlertDialog.Builder(this)
-                    .setTitle("Eliminar cuenta")
-                    .setMessage("¿Estás seguro? Esta acción es irreversible y borrará todos tus datos.")
-                    .setPositiveButton("Sí, eliminar", (confirmDialog, which) -> {
-                        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-                        if (currentUser == null) return;
-
-                        String uid = currentUser.getUid();
-                        refUsers.child(uid).removeValue()
-                                .addOnSuccessListener(aVoid -> {
-                                    localDb.deleteUserProfile(uid);
-                                    currentUser.delete()
-                                            .addOnSuccessListener(unused -> {
-                                                Toast.makeText(this, "Cuenta eliminada", Toast.LENGTH_SHORT).show();
-                                                dialog.dismiss();
-                                                Intent i = new Intent(this, LogInActivity.class);
-                                                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                                                startActivity(i);
-                                            })
-                                            .addOnFailureListener(e -> Toast.makeText(this,
-                                                    "Error al eliminar cuenta: " + e.getMessage(), Toast.LENGTH_LONG).show());
-                                })
-                                .addOnFailureListener(e -> Toast.makeText(this,
-                                        "Error al borrar datos: " + e.getMessage(), Toast.LENGTH_LONG).show());
-                    })
-                    .setNegativeButton("Cancelar", null)
-                    .show();
-        });
+        btnDismiss.setOnClickListener(v -> dialog.dismiss());
 
         dialog.show();
     }
 
+    private void confirmProSubscription() {
+        if (currentProfile == null || currentUid == null) {
+            Toast.makeText(this, "Inicia sesión para suscribirte", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        currentProfile.setIsPro(true);
+        refUsers.child(currentUid).child("isPro").setValue(true);
+        localDb.saveUserProfile(currentUid, currentProfile);
+        Toast.makeText(this, "¡Bienvenido a Kcal Tracker Pro!", Toast.LENGTH_LONG).show();
+    }
 }

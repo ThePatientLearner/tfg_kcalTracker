@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Conejo GORDITO - IMC 30-34.9 (Obesidad grado I) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- LEFT EAR -->
+    <path android:fillColor="#C4B5A5" android:pathData="M42,8 C38,2 32,0 30,4 C27,10 33,22 38,34 C40,38 44,40 46,38 C50,34 48,16 42,8 Z" />
+    <path android:fillColor="#E0909F" android:pathData="M40,12 C37,7 34,6 33,8 C31,12 35,22 38,30 C39,33 42,34 43,32 C45,28 44,18 40,12 Z" />
+
+    <!-- RIGHT EAR -->
+    <path android:fillColor="#C4B5A5" android:pathData="M78,8 C82,2 88,0 90,4 C93,10 87,22 82,34 C80,38 76,40 74,38 C70,34 72,16 78,8 Z" />
+    <path android:fillColor="#E0909F" android:pathData="M80,12 C83,7 86,6 87,8 C89,12 85,22 82,30 C81,33 78,34 77,32 C75,28 76,18 80,12 Z" />
+
+    <!-- HEAD - ligeramente más redondo -->
+    <path android:fillColor="#D5CBBF" android:pathData="M60,27 C75,27 87,37 87,52 C87,67 75,75 60,75 C45,75 33,67 33,52 C33,37 45,27 60,27 Z" />
+
+    <!-- HEADBAND -->
+    <path android:fillColor="#EF4444" android:pathData="M34,42 C34,42 41,33 60,33 C79,33 86,42 86,42 L86,47 C86,47 79,40 60,40 C41,40 34,47 34,47 Z" />
+    <path android:fillColor="#FBBF24" android:pathData="M34,44 C34,44 41,37 60,37 C79,37 86,44 86,44 L86,45.5 C86,45.5 79,38.5 60,38.5 C41,38.5 34,45.5 34,45.5 Z" />
+
+    <!-- FACE -->
+    <path android:fillColor="#1E293B" android:pathData="M50,52 C50,49.5 51.5,48 53,48 C54.5,48 56,49.5 56,52 C56,54.5 54.5,56 53,56 C51.5,56 50,54.5 50,52 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M52,49.5 C52.8,49.5 53.5,50 53.5,50.8 C53.5,51.5 52.8,52 52,52 C51.2,52 50.5,51.5 50.5,50.8 C50.5,50 51.2,49.5 52,49.5 Z" />
+    <path android:fillColor="#1E293B" android:pathData="M64,52 C64,49.5 65.5,48 67,48 C68.5,48 70,49.5 70,52 C70,54.5 68.5,56 67,56 C65.5,56 64,54.5 64,52 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M66,49.5 C66.8,49.5 67.5,50 67.5,50.8 C67.5,51.5 66.8,52 66,52 C65.2,52 64.5,51.5 64.5,50.8 C64.5,50 65.2,49.5 66,49.5 Z" />
+    <path android:fillColor="#E0909F" android:pathData="M57.5,58 C57.5,57 58.5,56 60,56 C61.5,56 62.5,57 62.5,58 C62.5,59.2 61.5,60 60,60 C58.5,60 57.5,59.2 57.5,58 Z" />
+    <path android:strokeColor="#A88A7A" android:strokeWidth="1" android:fillColor="#00000000" android:pathData="M56,62 C57.5,64 58.5,65 60,65 C61.5,65 62.5,64 64,62" />
+    <!-- Papada leve -->
+    <path android:fillColor="#CBBFB3" android:pathData="M54,70 C56,72 64,72 66,70 C64,73 56,73 54,70 Z" />
+
+    <!-- BODY - GORDITO: notablemente más ancho -->
+    <path
+        android:fillColor="#D5CBBF"
+        android:pathData="M60,73 C78,73 89,79 89,90 C89,99 78,104 60,104 C42,104 31,99 31,90 C31,79 42,73 60,73 Z" />
+    <!-- Barriga grande -->
+    <path
+        android:fillColor="#E8DDD3"
+        android:pathData="M60,76 C73,76 82,82 82,91 C82,97 73,101 60,101 C47,101 38,97 38,91 C38,82 47,76 60,76 Z" />
+
+    <!-- ARMS - gorditos -->
+    <path
+        android:fillColor="#C4B5A5"
+        android:pathData="M34,79 C30,81 24,85 22,89 C21,91 22,93 24,92 C27,90 32,87 36,84 Z" />
+    <path
+        android:fillColor="#C4B5A5"
+        android:pathData="M86,79 C90,81 96,85 98,89 C99,91 98,93 96,92 C93,90 88,87 84,84 Z" />
+
+    <!-- SNEAKERS -->
+    <path android:fillColor="#0284C7" android:pathData="M42,100 C42,100 38,101 36,103 C34,105 34,108 36,109 C38,110 46,110 50,109 C52,108 52,105 50,103 C48,101 46,100 46,100 Z" />
+    <path android:fillColor="#1E293B" android:pathData="M35,108 C35,108 38,110 43,110.5 C48,111 51,110 52,108.5 C52,110 49,112 43,112 C37,112 35,110 35,108 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M38,104 C40,103 44,103 48,104 L47,105.5 C44,104.5 41,104.5 39,105.5 Z" />
+
+    <path android:fillColor="#0284C7" android:pathData="M74,100 C74,100 70,101 68,103 C66,105 66,108 68,109 C70,110 78,110 82,109 C84,108 84,105 82,103 C80,101 78,100 78,100 Z" />
+    <path android:fillColor="#1E293B" android:pathData="M67,108 C67,108 70,110 75,110.5 C80,111 83,110 84,108.5 C84,110 81,112 75,112 C69,112 67,110 67,108 Z" />
+    <path android:fillColor="#FFFFFF" android:pathData="M70,104 C72,103 76,103 80,104 L79,105.5 C76,104.5 73,104.5 71,105.5 Z" />
+
+</vector>
