@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 820" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
+    </marker>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.18"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="900" height="820" fill="#f8fafc"/>
+
+  <!-- Título -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Flujo de acciones del cliente</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748b">Aplicación Android de control de kcal</text>
+
+  <!-- Inicio (oval) -->
+  <g filter="url(#soft)">
+    <rect x="385" y="95" width="130" height="44" rx="22" ry="22" fill="#0f172a"/>
+    <text x="450" y="122" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Inicio</text>
+  </g>
+  <line x1="450" y1="139" x2="450" y2="172" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Login / Registro -->
+  <g filter="url(#soft)">
+    <rect x="340" y="175" width="220" height="52" rx="10" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="450" y="199" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">Iniciar sesión / Registro</text>
+    <text x="450" y="217" text-anchor="middle" font-size="11" fill="#64748b">Firebase Auth</text>
+  </g>
+  <line x1="450" y1="227" x2="450" y2="260" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Pantalla principal -->
+  <g filter="url(#soft)">
+    <rect x="320" y="263" width="260" height="58" rx="10" ry="10" fill="#1e40af"/>
+    <text x="450" y="289" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Pantalla principal</text>
+    <text x="450" y="308" text-anchor="middle" font-size="11" fill="#dbeafe">Ver kcal consumidas del día</text>
+  </g>
+
+  <!-- Bifurcación -->
+  <line x1="450" y1="321" x2="450" y2="360" stroke="#334155" stroke-width="1.8"/>
+  <line x1="170" y1="360" x2="730" y2="360" stroke="#334155" stroke-width="1.8"/>
+  <line x1="170" y1="360" x2="170" y2="395" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="450" y1="360" x2="450" y2="395" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="730" y1="360" x2="730" y2="395" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Rama 1: Buscar comida -->
+  <g filter="url(#soft)">
+    <rect x="70" y="398" width="200" height="52" rx="10" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="170" y="422" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Buscar comida</text>
+    <text x="170" y="439" text-anchor="middle" font-size="11" fill="#64748b">Consulta a API externa</text>
+  </g>
+  <line x1="170" y1="450" x2="170" y2="483" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <g filter="url(#soft)">
+    <rect x="70" y="486" width="200" height="52" rx="10" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="170" y="510" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Añadir comida</text>
+    <text x="170" y="527" text-anchor="middle" font-size="11" fill="#64748b">Guardar local + Firebase</text>
+  </g>
+  <line x1="170" y1="538" x2="170" y2="571" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <g filter="url(#soft)">
+    <rect x="70" y="574" width="200" height="52" rx="10" ry="10" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="170" y="598" text-anchor="middle" font-size="13" font-weight="600" fill="#14532d">Contador actualizado</text>
+    <text x="170" y="615" text-anchor="middle" font-size="11" fill="#15803d">Suma kcal del día</text>
+  </g>
+
+  <!-- Rama 2: Ver historial -->
+  <g filter="url(#soft)">
+    <rect x="350" y="398" width="200" height="52" rx="10" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="450" y="422" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Ver historial</text>
+    <text x="450" y="439" text-anchor="middle" font-size="11" fill="#64748b">Días anteriores</text>
+  </g>
+
+  <!-- Rama 3: Cerrar sesión -->
+  <g filter="url(#soft)">
+    <rect x="630" y="398" width="200" height="52" rx="10" ry="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="730" y="422" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Cerrar sesión</text>
+    <text x="730" y="439" text-anchor="middle" font-size="11" fill="#64748b">Salir de la cuenta</text>
+  </g>
+  <line x1="730" y1="450" x2="730" y2="571" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <g filter="url(#soft)">
+    <rect x="665" y="574" width="130" height="44" rx="22" ry="22" fill="#0f172a"/>
+    <text x="730" y="601" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Fin</text>
+  </g>
+
+  <!-- Flecha de retorno al principal (desde Contador y desde Ver historial) -->
+  <path d="M 270 600 C 310 600, 310 292, 320 292" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <path d="M 450 450 C 450 470, 580 470, 580 292" fill="none" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+
+  <!-- Leyenda -->
+  <g transform="translate(70, 720)">
+    <rect x="0" y="0" width="760" height="70" rx="8" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+    <text x="16" y="22" font-size="12" font-weight="700" fill="#0f172a">Leyenda</text>
+    <line x1="16" y1="42" x2="50" y2="42" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="58" y="46" font-size="11" fill="#475569">Acción del usuario</text>
+    <line x1="200" y1="42" x2="234" y2="42" stroke="#94a3b8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+    <text x="242" y="46" font-size="11" fill="#475569">Retorno automático a la pantalla principal</text>
+    <rect x="520" y="34" width="18" height="14" rx="3" fill="#1e40af"/>
+    <text x="544" y="46" font-size="11" fill="#475569">Pantalla principal (estado central)</text>
+    <text x="16" y="62" font-size="10" fill="#64748b" font-style="italic">Datos persistidos en ORMLite (local) y sincronizados con Firebase cuando hay conexión.</text>
+  </g>
+</svg>
