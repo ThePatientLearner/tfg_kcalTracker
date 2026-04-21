@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1560" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1620" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
   <defs>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/>
@@ -15,341 +15,332 @@
     .decision { fill: #fef9c3; stroke: #b45309; stroke-width: 1.5; }
     .merge { fill: #f1f5f9; stroke: #64748b; stroke-width: 1.2; }
     .flow { stroke: #334155; stroke-width: 1.6; fill: none; }
-    .flowLoop { stroke: #0f766e; stroke-width: 1.6; fill: none; stroke-dasharray: 6 4; }
+    .flowLoop { stroke: #0f766e; stroke-width: 1.8; fill: none; stroke-dasharray: 7 5; }
     .t { font-size: 12px; fill: #0f172a; }
-    .tb { font-size: 12px; font-weight: 700; fill: #0f172a; }
+    .ts { font-size: 11px; fill: #0f172a; }
+    .tn { font-size: 10px; fill: #64748b; }
     .td { font-size: 11.5px; font-weight: 600; fill: #78350f; }
     .guard { font-size: 10.5px; fill: #334155; font-style: italic; }
     .guard-bg { fill: #f8fafc; }
+    .branch-hd { font-size: 12px; font-weight: 700; }
   </style>
 
-  <!-- Fondo -->
-  <rect width="1400" height="1560" fill="#f8fafc"/>
+  <rect width="1800" height="1620" fill="#f8fafc"/>
 
-  <!-- Título -->
-  <text x="700" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Diagrama de actividad — Cliente de la aplicación de kcal</text>
-  <text x="700" y="58" text-anchor="middle" font-size="12" fill="#64748b">Notación UML · nodo inicial, acciones, decisiones, merges y nodo final</text>
+  <!-- ================== TÍTULO ================== -->
+  <text x="900" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Diagrama de actividad — Cliente de la aplicación de kcal</text>
+  <text x="900" y="58" text-anchor="middle" font-size="12" fill="#64748b">Notación UML · nodo inicial, acciones, decisiones, merges y nodo final</text>
 
-  <!-- ============================== ACCESO ============================== -->
+  <!-- ================== ACCESO ================== -->
   <!-- Nodo inicial -->
-  <circle cx="700" cy="90" r="9" fill="#0f172a"/>
-  <line x1="700" y1="99" x2="700" y2="121" class="flow" marker-end="url(#arr)"/>
+  <circle cx="900" cy="85" r="9" fill="#0f172a"/>
+  <line x1="900" y1="94" x2="900" y2="114" class="flow" marker-end="url(#arr)"/>
 
   <!-- Abrir aplicación -->
-  <rect x="620" y="123" width="160" height="40" rx="20" ry="20" class="action"/>
-  <text x="700" y="148" text-anchor="middle" class="t">Abrir aplicación</text>
-  <line x1="700" y1="163" x2="700" y2="187" class="flow" marker-end="url(#arr)"/>
+  <rect x="820" y="116" width="160" height="40" rx="20" ry="20" class="action"/>
+  <text x="900" y="141" text-anchor="middle" class="t">Abrir aplicación</text>
+  <line x1="900" y1="156" x2="900" y2="176" class="flow" marker-end="url(#arr)"/>
 
-  <!-- Decisión: ¿Tiene cuenta? -->
-  <polygon points="700,189 790,235 700,281 610,235" class="decision"/>
-  <text x="700" y="230" text-anchor="middle" class="td">¿Tiene cuenta</text>
-  <text x="700" y="246" text-anchor="middle" class="td">de usuario?</text>
+  <!-- ¿Tiene cuenta? -->
+  <polygon points="900,178 990,222 900,266 810,222" class="decision"/>
+  <text x="900" y="218" text-anchor="middle" class="td">¿Tiene cuenta</text>
+  <text x="900" y="234" text-anchor="middle" class="td">de usuario?</text>
 
-  <!-- Guardas -->
-  <path d="M 610 235 L 500 235 L 500 277" class="flow" marker-end="url(#arr)"/>
-  <rect x="515" y="222" width="40" height="14" class="guard-bg"/>
-  <text x="535" y="233" text-anchor="middle" class="guard">[no]</text>
+  <!-- Guarda [no] -->
+  <path d="M 810 222 L 740 222 L 740 262" class="flow" marker-end="url(#arr)"/>
+  <rect x="752" y="208" width="32" height="15" class="guard-bg"/>
+  <text x="768" y="220" text-anchor="middle" class="guard">[no]</text>
 
-  <path d="M 790 235 L 900 235 L 900 277" class="flow" marker-end="url(#arr)"/>
-  <rect x="845" y="222" width="40" height="14" class="guard-bg"/>
-  <text x="865" y="233" text-anchor="middle" class="guard">[sí]</text>
+  <!-- Guarda [sí] -->
+  <path d="M 990 222 L 1060 222 L 1060 262" class="flow" marker-end="url(#arr)"/>
+  <rect x="1016" y="208" width="30" height="15" class="guard-bg"/>
+  <text x="1031" y="220" text-anchor="middle" class="guard">[sí]</text>
 
   <!-- Registrarse -->
-  <rect x="420" y="279" width="160" height="40" rx="20" ry="20" class="action"/>
-  <text x="500" y="304" text-anchor="middle" class="t">Registrarse</text>
-  <line x1="500" y1="319" x2="500" y2="341" class="flow" marker-end="url(#arr)"/>
+  <rect x="660" y="264" width="160" height="40" rx="20" ry="20" class="action"/>
+  <text x="740" y="289" text-anchor="middle" class="t">Registrarse</text>
+  <line x1="740" y1="304" x2="740" y2="324" class="flow" marker-end="url(#arr)"/>
 
   <!-- Configurar perfil -->
-  <rect x="405" y="343" width="190" height="44" rx="22" ry="22" class="action"/>
-  <text x="500" y="363" text-anchor="middle" class="t">Configurar perfil inicial</text>
-  <text x="500" y="378" text-anchor="middle" font-size="10" fill="#64748b">(edad, peso, altura, objetivo)</text>
+  <rect x="640" y="326" width="200" height="48" rx="24" ry="24" class="action"/>
+  <text x="740" y="347" text-anchor="middle" class="t">Configurar perfil inicial</text>
+  <text x="740" y="363" text-anchor="middle" class="tn">edad · peso · altura · objetivo</text>
 
   <!-- Iniciar sesión -->
-  <rect x="820" y="279" width="160" height="40" rx="20" ry="20" class="action"/>
-  <text x="900" y="304" text-anchor="middle" class="t">Iniciar sesión</text>
+  <rect x="980" y="264" width="160" height="40" rx="20" ry="20" class="action"/>
+  <text x="1060" y="289" text-anchor="middle" class="t">Iniciar sesión</text>
 
-  <!-- Merge de autenticación -->
-  <polygon points="700,405 720,425 700,445 680,425" class="merge"/>
-  <path d="M 500 387 L 500 425 L 680 425" class="flow" marker-end="url(#arr)"/>
-  <path d="M 900 319 L 900 425 L 720 425" class="flow" marker-end="url(#arr)"/>
+  <!-- Merge auth -->
+  <polygon points="900,400 925,425 900,450 875,425" class="merge"/>
+  <path d="M 740 374 L 740 425 L 875 425" class="flow" marker-end="url(#arr)"/>
+  <path d="M 1060 304 L 1060 425 L 925 425" class="flow" marker-end="url(#arr)"/>
+  <line x1="900" y1="450" x2="900" y2="472" class="flow" marker-end="url(#arr)"/>
 
-  <line x1="700" y1="445" x2="700" y2="464" class="flow" marker-end="url(#arr)"/>
+  <!-- Mostrar dashboard -->
+  <rect x="770" y="474" width="260" height="50" rx="25" ry="25" class="action-hub"/>
+  <text x="900" y="496" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Mostrar dashboard</text>
+  <text x="900" y="512" text-anchor="middle" font-size="10.5" fill="#1e3a8a">kcal día / objetivo / restantes</text>
+  <line x1="900" y1="524" x2="900" y2="544" class="flow" marker-end="url(#arr)"/>
 
-  <!-- Mostrar dashboard (hub) -->
-  <rect x="580" y="466" width="240" height="50" rx="25" ry="25" class="action-hub"/>
-  <text x="700" y="488" text-anchor="middle" font-size="13" font-weight="700" fill="#1e3a8a">Mostrar dashboard</text>
-  <text x="700" y="504" text-anchor="middle" font-size="10.5" fill="#1e3a8a">kcal día / objetivo / restantes</text>
+  <!-- Merge de retorno (bucle) -->
+  <polygon points="900,546 925,571 900,596 875,571" class="merge"/>
+  <text x="866" y="574" text-anchor="end" class="tn" font-style="italic">retorno de acciones</text>
+  <line x1="900" y1="596" x2="900" y2="618" class="flow" marker-end="url(#arr)"/>
 
-  <line x1="700" y1="516" x2="700" y2="540" class="flow" marker-end="url(#arr)"/>
+  <!-- ================== DECISIÓN PRINCIPAL ================== -->
+  <polygon points="900,620 1060,680 900,740 740,680" class="decision"/>
+  <text x="900" y="676" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">¿Qué acción</text>
+  <text x="900" y="694" text-anchor="middle" font-size="14" font-weight="700" fill="#78350f">desea realizar?</text>
 
-  <!-- Merge de retorno (bucle de acciones) -->
-  <polygon points="700,542 723,562 700,582 677,562" class="merge"/>
-  <text x="668" y="568" text-anchor="end" font-size="10" fill="#64748b" font-style="italic">retorno de acciones</text>
+  <!-- ================== FAN-OUT A 5 RAMAS (distribuidor con guardas) ================== -->
+  <!-- Eje del distribuidor -->
+  <line x1="900" y1="740" x2="900" y2="760" class="flow"/>
+  <line x1="220" y1="760" x2="1650" y2="760" class="flow"/>
 
-  <line x1="700" y1="582" x2="700" y2="602" class="flow" marker-end="url(#arr)"/>
+  <!-- Drop-downs a cada rama -->
+  <line x1="220" y1="760" x2="220" y2="790" class="flow" marker-end="url(#arr)"/>
+  <line x1="610" y1="760" x2="610" y2="790" class="flow" marker-end="url(#arr)"/>
+  <line x1="980" y1="760" x2="980" y2="790" class="flow" marker-end="url(#arr)"/>
+  <line x1="1340" y1="760" x2="1340" y2="790" class="flow" marker-end="url(#arr)"/>
+  <line x1="1650" y1="760" x2="1650" y2="790" class="flow" marker-end="url(#arr)"/>
 
-  <!-- ============================== DECISIÓN PRINCIPAL ============================== -->
-  <polygon points="700,604 850,660 700,716 550,660" class="decision"/>
-  <text x="700" y="656" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">¿Qué acción</text>
-  <text x="700" y="672" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">desea realizar?</text>
+  <!-- Guardas sobre los segmentos horizontales -->
+  <rect x="390" y="748" width="120" height="16" class="guard-bg"/>
+  <text x="450" y="760" text-anchor="middle" class="guard">[añadir comida]</text>
 
-  <!-- Fan out a 5 ramas con guardas -->
-  <!-- Guarda añadir comida -->
-  <path d="M 595 643 C 400 643, 300 690, 180 720" class="flow" marker-end="url(#arr)"/>
-  <rect x="370" y="638" width="120" height="15" class="guard-bg"/>
-  <text x="430" y="650" text-anchor="middle" class="guard">[añadir comida]</text>
+  <rect x="730" y="748" width="115" height="16" class="guard-bg"/>
+  <text x="788" y="760" text-anchor="middle" class="guard">[ver registro]</text>
 
-  <!-- Guarda ver registro -->
-  <path d="M 630 703 C 560 720, 500 720, 470 740" class="flow" marker-end="url(#arr)"/>
-  <rect x="503" y="710" width="110" height="15" class="guard-bg"/>
-  <text x="558" y="722" text-anchor="middle" class="guard">[ver registro]</text>
+  <rect x="1000" y="748" width="100" height="16" class="guard-bg"/>
+  <text x="1050" y="760" text-anchor="middle" class="guard">[ver historial]</text>
 
-  <!-- Guarda ver historial -->
-  <path d="M 700 716 L 700 740" class="flow" marker-end="url(#arr)"/>
-  <rect x="708" y="720" width="95" height="15" class="guard-bg"/>
-  <text x="755" y="732" text-anchor="middle" class="guard">[ver historial]</text>
+  <rect x="1170" y="748" width="115" height="16" class="guard-bg"/>
+  <text x="1228" y="760" text-anchor="middle" class="guard">[editar cuenta]</text>
 
-  <!-- Guarda editar cuenta -->
-  <path d="M 770 703 C 840 720, 900 720, 930 740" class="flow" marker-end="url(#arr)"/>
-  <rect x="790" y="710" width="110" height="15" class="guard-bg"/>
-  <text x="845" y="722" text-anchor="middle" class="guard">[editar cuenta]</text>
+  <rect x="1460" y="748" width="115" height="16" class="guard-bg"/>
+  <text x="1518" y="760" text-anchor="middle" class="guard">[cerrar sesión]</text>
 
-  <!-- Guarda cerrar sesión -->
-  <path d="M 805 643 C 1000 643, 1100 690, 1220 720" class="flow" marker-end="url(#arr)"/>
-  <rect x="910" y="638" width="125" height="15" class="guard-bg"/>
-  <text x="972" y="650" text-anchor="middle" class="guard">[cerrar sesión]</text>
+  <!-- ================== CABECERAS DE RAMAS ================== -->
+  <text x="220" y="815" text-anchor="middle" class="branch-hd" fill="#059669">RAMA A · AÑADIR COMIDA</text>
+  <text x="610" y="815" text-anchor="middle" class="branch-hd" fill="#d97706">RAMA B · REGISTRO DIARIO</text>
+  <text x="980" y="815" text-anchor="middle" class="branch-hd" fill="#7c3aed">RAMA C · HISTORIAL</text>
+  <text x="1340" y="815" text-anchor="middle" class="branch-hd" fill="#e11d48">RAMA D · CUENTA</text>
+  <text x="1650" y="815" text-anchor="middle" class="branch-hd" fill="#0f172a">RAMA E · CERRAR SESIÓN</text>
 
-  <!-- ============================== RAMA A: AÑADIR COMIDA ============================== -->
-  <rect x="20" y="706" width="320" height="16" class="guard-bg"/>
-  <text x="180" y="701" text-anchor="middle" font-size="11" font-weight="700" fill="#059669">RAMA A · AÑADIR COMIDA</text>
+  <!-- ================== RAMA A: AÑADIR COMIDA ================== -->
+  <!-- Caja principal -->
+  <rect x="110" y="835" width="220" height="44" rx="22" ry="22" class="action"/>
+  <text x="220" y="861" text-anchor="middle" class="t">Buscar alimento en API</text>
+  <line x1="220" y1="879" x2="220" y2="900" class="flow" marker-end="url(#arr)"/>
 
-  <!-- Buscar alimento -->
-  <rect x="80" y="722" width="200" height="42" rx="21" ry="21" class="action"/>
-  <text x="180" y="748" text-anchor="middle" class="t">Buscar alimento en API</text>
-  <line x1="180" y1="764" x2="180" y2="782" class="flow" marker-end="url(#arr)"/>
+  <!-- Decisión ¿Encontrado? -->
+  <polygon points="220,902 290,945 220,988 150,945" class="decision"/>
+  <text x="220" y="942" text-anchor="middle" class="td">¿Encontrado</text>
+  <text x="220" y="958" text-anchor="middle" class="td">en la API?</text>
 
-  <!-- ¿Encontrado? -->
-  <polygon points="180,784 255,828 180,872 105,828" class="decision"/>
-  <text x="180" y="824" text-anchor="middle" class="td">¿Encontrado</text>
-  <text x="180" y="840" text-anchor="middle" class="td">en la API?</text>
+  <!-- [no] hacia la izquierda -->
+  <path d="M 150 945 L 100 945 L 100 1010" class="flow" marker-end="url(#arr)"/>
+  <rect x="110" y="935" width="32" height="15" class="guard-bg"/>
+  <text x="126" y="947" text-anchor="middle" class="guard">[no]</text>
 
-  <!-- [no] path -->
-  <path d="M 105 828 L 55 828 L 55 902" class="flow" marker-end="url(#arr)"/>
-  <rect x="55" y="820" width="40" height="15" class="guard-bg"/>
-  <text x="75" y="832" text-anchor="middle" class="guard">[no]</text>
+  <rect x="40" y="1012" width="130" height="44" rx="22" ry="22" class="action"/>
+  <text x="105" y="1031" text-anchor="middle" class="ts">Notificar</text>
+  <text x="105" y="1047" text-anchor="middle" class="tn">no encontrado</text>
 
-  <rect x="10" y="904" width="100" height="40" rx="20" ry="20" class="action"/>
-  <text x="60" y="920" text-anchor="middle" font-size="11" class="t">Notificar</text>
-  <text x="60" y="934" text-anchor="middle" font-size="10" fill="#64748b">no encontrado</text>
+  <!-- [sí] hacia la derecha -->
+  <path d="M 290 945 L 340 945 L 340 1010" class="flow" marker-end="url(#arr)"/>
+  <rect x="297" y="935" width="30" height="15" class="guard-bg"/>
+  <text x="312" y="947" text-anchor="middle" class="guard">[sí]</text>
 
-  <!-- [sí] path -->
-  <path d="M 255 828 L 305 828 L 305 902" class="flow" marker-end="url(#arr)"/>
-  <rect x="265" y="820" width="40" height="15" class="guard-bg"/>
-  <text x="285" y="832" text-anchor="middle" class="guard">[sí]</text>
+  <rect x="270" y="1012" width="140" height="44" rx="22" ry="22" class="action"/>
+  <text x="340" y="1038" text-anchor="middle" class="ts">Seleccionar alimento</text>
+  <line x1="340" y1="1056" x2="340" y2="1078" class="flow" marker-end="url(#arr)"/>
 
-  <rect x="225" y="904" width="160" height="40" rx="20" ry="20" class="action"/>
-  <text x="305" y="929" text-anchor="middle" class="t">Seleccionar alimento</text>
-  <line x1="305" y1="944" x2="305" y2="964" class="flow" marker-end="url(#arr)"/>
+  <rect x="270" y="1080" width="140" height="44" rx="22" ry="22" class="action"/>
+  <text x="340" y="1106" text-anchor="middle" class="ts">Indicar cantidad (g)</text>
+  <line x1="340" y1="1124" x2="340" y2="1146" class="flow" marker-end="url(#arr)"/>
 
-  <rect x="225" y="966" width="160" height="40" rx="20" ry="20" class="action"/>
-  <text x="305" y="991" text-anchor="middle" class="t">Indicar cantidad (g)</text>
-  <line x1="305" y1="1006" x2="305" y2="1026" class="flow" marker-end="url(#arr)"/>
+  <rect x="270" y="1148" width="140" height="44" rx="22" ry="22" class="action"/>
+  <text x="340" y="1174" text-anchor="middle" class="ts">Clasificar ingesta</text>
+  <line x1="340" y1="1192" x2="340" y2="1214" class="flow" marker-end="url(#arr)"/>
 
-  <rect x="225" y="1028" width="160" height="40" rx="20" ry="20" class="action"/>
-  <text x="305" y="1053" text-anchor="middle" class="t">Clasificar ingesta</text>
-  <line x1="305" y1="1068" x2="305" y2="1088" class="flow" marker-end="url(#arr)"/>
-
-  <rect x="215" y="1090" width="180" height="44" rx="22" ry="22" class="action"/>
-  <text x="305" y="1109" text-anchor="middle" class="t">Guardar comida</text>
-  <text x="305" y="1124" text-anchor="middle" font-size="10" fill="#64748b">ORMLite + Firebase</text>
+  <rect x="265" y="1216" width="150" height="48" rx="24" ry="24" class="action"/>
+  <text x="340" y="1236" text-anchor="middle" class="ts">Guardar comida</text>
+  <text x="340" y="1252" text-anchor="middle" class="tn">ORMLite + Firebase</text>
 
   <!-- Merge rama A -->
-  <polygon points="180,1175 200,1195 180,1215 160,1195" class="merge"/>
-  <path d="M 60 944 L 60 1195 L 160 1195" class="flow" marker-end="url(#arr)"/>
-  <path d="M 305 1134 L 305 1195 L 200 1195" class="flow" marker-end="url(#arr)"/>
-  <line x1="180" y1="1215" x2="180" y2="1258" class="flow" marker-end="url(#arr)"/>
+  <polygon points="220,1300 245,1325 220,1350 195,1325" class="merge"/>
+  <path d="M 105 1056 L 105 1325 L 195 1325" class="flow" marker-end="url(#arr)"/>
+  <path d="M 340 1264 L 340 1325 L 245 1325" class="flow" marker-end="url(#arr)"/>
 
-  <!-- ============================== RAMA B: REGISTRO DIARIO ============================== -->
-  <rect x="360" y="706" width="220" height="16" class="guard-bg"/>
-  <text x="470" y="701" text-anchor="middle" font-size="11" font-weight="700" fill="#d97706">RAMA B · REGISTRO DIARIO</text>
+  <!-- ================== RAMA B: REGISTRO DIARIO ================== -->
+  <rect x="500" y="835" width="220" height="44" rx="22" ry="22" class="action"/>
+  <text x="610" y="861" text-anchor="middle" class="t">Ver comidas del día</text>
+  <line x1="610" y1="879" x2="610" y2="900" class="flow" marker-end="url(#arr)"/>
 
-  <rect x="370" y="742" width="200" height="42" rx="21" ry="21" class="action"/>
-  <text x="470" y="768" text-anchor="middle" class="t">Ver comidas del día</text>
-  <line x1="470" y1="784" x2="470" y2="802" class="flow" marker-end="url(#arr)"/>
+  <!-- Decisión ¿Acción sobre comida? -->
+  <polygon points="610,902 700,945 610,988 520,945" class="decision"/>
+  <text x="610" y="942" text-anchor="middle" class="td">¿Acción</text>
+  <text x="610" y="958" text-anchor="middle" class="td">sobre comida?</text>
 
-  <polygon points="470,804 560,850 470,896 380,850" class="decision"/>
-  <text x="470" y="846" text-anchor="middle" class="td">¿Acción</text>
-  <text x="470" y="862" text-anchor="middle" class="td">sobre comida?</text>
+  <!-- [editar] izquierda -->
+  <path d="M 520 945 L 490 945 L 490 1010" class="flow" marker-end="url(#arr)"/>
+  <rect x="450" y="935" width="52" height="15" class="guard-bg"/>
+  <text x="476" y="947" text-anchor="middle" class="guard">[editar]</text>
 
-  <!-- [editar] -->
-  <path d="M 380 850 L 330 850 L 330 930" class="flow" marker-end="url(#arr)"/>
-  <rect x="325" y="842" width="60" height="15" class="guard-bg"/>
-  <text x="355" y="854" text-anchor="middle" class="guard">[editar]</text>
+  <rect x="430" y="1012" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="490" y="1031" text-anchor="middle" class="ts">Editar</text>
+  <text x="490" y="1047" text-anchor="middle" class="tn">cantidad</text>
 
-  <rect x="275" y="932" width="110" height="42" rx="21" ry="21" class="action"/>
-  <text x="330" y="950" text-anchor="middle" font-size="11" class="t">Editar</text>
-  <text x="330" y="964" text-anchor="middle" font-size="10" fill="#64748b">cantidad</text>
+  <!-- [eliminar] derecha -->
+  <path d="M 700 945 L 730 945 L 730 1010" class="flow" marker-end="url(#arr)"/>
+  <rect x="718" y="935" width="65" height="15" class="guard-bg"/>
+  <text x="750" y="947" text-anchor="middle" class="guard">[eliminar]</text>
 
-  <!-- [eliminar] -->
-  <path d="M 560 850 L 610 850 L 610 930" class="flow" marker-end="url(#arr)"/>
-  <rect x="555" y="842" width="75" height="15" class="guard-bg"/>
-  <text x="593" y="854" text-anchor="middle" class="guard">[eliminar]</text>
+  <rect x="670" y="1012" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="730" y="1031" text-anchor="middle" class="ts">Eliminar</text>
+  <text x="730" y="1047" text-anchor="middle" class="tn">comida</text>
 
-  <rect x="555" y="932" width="110" height="42" rx="21" ry="21" class="action"/>
-  <text x="610" y="950" text-anchor="middle" font-size="11" class="t">Eliminar</text>
-  <text x="610" y="964" text-anchor="middle" font-size="10" fill="#64748b">comida</text>
-
-  <!-- [ninguna] -->
-  <path d="M 470 896 L 470 1030" class="flow"/>
-  <rect x="445" y="905" width="70" height="15" class="guard-bg"/>
-  <text x="480" y="917" text-anchor="middle" class="guard">[ninguna]</text>
+  <!-- [ninguna] centro -->
+  <path d="M 610 988 L 610 1320" class="flow"/>
+  <rect x="578" y="1000" width="65" height="15" class="guard-bg"/>
+  <text x="610" y="1012" text-anchor="middle" class="guard">[ninguna]</text>
 
   <!-- Merge rama B -->
-  <polygon points="470,1032 490,1052 470,1072 450,1052" class="merge"/>
-  <path d="M 330 974 L 330 1052 L 450 1052" class="flow" marker-end="url(#arr)"/>
-  <path d="M 610 974 L 610 1052 L 490 1052" class="flow" marker-end="url(#arr)"/>
-  <line x1="470" y1="1072" x2="470" y2="1258" class="flow" marker-end="url(#arr)"/>
+  <polygon points="610,1300 635,1325 610,1350 585,1325" class="merge"/>
+  <path d="M 490 1056 L 490 1325 L 585 1325" class="flow" marker-end="url(#arr)"/>
+  <path d="M 730 1056 L 730 1325 L 635 1325" class="flow" marker-end="url(#arr)"/>
 
-  <!-- ============================== RAMA C: HISTORIAL ============================== -->
-  <rect x="640" y="706" width="180" height="16" class="guard-bg"/>
-  <text x="730" y="701" text-anchor="middle" font-size="11" font-weight="700" fill="#7c3aed">RAMA C · HISTORIAL</text>
+  <!-- ================== RAMA C: HISTORIAL ================== -->
+  <!-- Decisión (primer elemento) -->
+  <polygon points="980,835 1090,890 980,945 870,890" class="decision"/>
+  <text x="980" y="886" text-anchor="middle" class="td">¿Tipo de</text>
+  <text x="980" y="902" text-anchor="middle" class="td">consulta?</text>
 
-  <polygon points="730,742 820,788 730,834 640,788" class="decision"/>
-  <text x="730" y="784" text-anchor="middle" class="td">¿Tipo de</text>
-  <text x="730" y="800" text-anchor="middle" class="td">consulta?</text>
+  <!-- [día] izquierda -->
+  <path d="M 870 890 L 840 890 L 840 968" class="flow" marker-end="url(#arr)"/>
+  <rect x="816" y="880" width="42" height="15" class="guard-bg"/>
+  <text x="837" y="892" text-anchor="middle" class="guard">[día]</text>
 
-  <!-- [día] -->
-  <path d="M 640 788 L 620 788 L 620 860" class="flow" marker-end="url(#arr)"/>
-  <rect x="580" y="780" width="45" height="15" class="guard-bg"/>
-  <text x="602" y="792" text-anchor="middle" class="guard">[día]</text>
+  <rect x="780" y="970" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="840" y="989" text-anchor="middle" class="ts">Seleccionar</text>
+  <text x="840" y="1005" text-anchor="middle" class="tn">fecha</text>
+  <line x1="840" y1="1014" x2="840" y2="1038" class="flow" marker-end="url(#arr)"/>
 
-  <rect x="560" y="862" width="120" height="42" rx="21" ry="21" class="action"/>
-  <text x="620" y="880" text-anchor="middle" font-size="11" class="t">Seleccionar</text>
-  <text x="620" y="894" text-anchor="middle" font-size="10" fill="#64748b">fecha</text>
-  <line x1="620" y1="904" x2="620" y2="924" class="flow" marker-end="url(#arr)"/>
+  <rect x="780" y="1040" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="840" y="1066" text-anchor="middle" class="ts">Ver día anterior</text>
 
-  <rect x="560" y="926" width="120" height="42" rx="21" ry="21" class="action"/>
-  <text x="620" y="952" text-anchor="middle" class="t">Ver día</text>
+  <!-- [estadísticas] derecha -->
+  <path d="M 1090 890 L 1120 890 L 1120 968" class="flow" marker-end="url(#arr)"/>
+  <rect x="1104" y="880" width="86" height="15" class="guard-bg"/>
+  <text x="1147" y="892" text-anchor="middle" class="guard">[estadísticas]</text>
 
-  <!-- [estadísticas] -->
-  <path d="M 820 788 L 840 788 L 840 860" class="flow" marker-end="url(#arr)"/>
-  <rect x="830" y="780" width="90" height="15" class="guard-bg"/>
-  <text x="875" y="792" text-anchor="middle" class="guard">[estadísticas]</text>
-
-  <rect x="780" y="862" width="120" height="42" rx="21" ry="21" class="action"/>
-  <text x="840" y="880" text-anchor="middle" font-size="11" class="t">Ver gráfica</text>
-  <text x="840" y="894" text-anchor="middle" font-size="10" fill="#64748b">semana / mes</text>
+  <rect x="1060" y="970" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="1120" y="989" text-anchor="middle" class="ts">Ver gráfica</text>
+  <text x="1120" y="1005" text-anchor="middle" class="tn">semana / mes</text>
 
   <!-- Merge rama C -->
-  <polygon points="730,1032 750,1052 730,1072 710,1052" class="merge"/>
-  <path d="M 620 968 L 620 1052 L 710 1052" class="flow" marker-end="url(#arr)"/>
-  <path d="M 840 904 L 840 1052 L 750 1052" class="flow" marker-end="url(#arr)"/>
-  <line x1="730" y1="1072" x2="730" y2="1258" class="flow" marker-end="url(#arr)"/>
+  <polygon points="980,1300 1005,1325 980,1350 955,1325" class="merge"/>
+  <path d="M 840 1084 L 840 1325 L 955 1325" class="flow" marker-end="url(#arr)"/>
+  <path d="M 1120 1014 L 1120 1325 L 1005 1325" class="flow" marker-end="url(#arr)"/>
 
-  <!-- ============================== RAMA D: CUENTA ============================== -->
-  <rect x="910" y="706" width="180" height="16" class="guard-bg"/>
-  <text x="1000" y="701" text-anchor="middle" font-size="11" font-weight="700" fill="#e11d48">RAMA D · CUENTA</text>
+  <!-- ================== RAMA D: CUENTA ================== -->
+  <polygon points="1340,835 1450,890 1340,945 1230,890" class="decision"/>
+  <text x="1340" y="886" text-anchor="middle" class="td">¿Qué</text>
+  <text x="1340" y="902" text-anchor="middle" class="td">editar?</text>
 
-  <polygon points="1000,742 1090,788 1000,834 910,788" class="decision"/>
-  <text x="1000" y="784" text-anchor="middle" class="td">¿Qué</text>
-  <text x="1000" y="800" text-anchor="middle" class="td">editar?</text>
+  <!-- [perfil] izquierda -->
+  <path d="M 1230 890 L 1200 890 L 1200 968" class="flow" marker-end="url(#arr)"/>
+  <rect x="1175" y="880" width="52" height="15" class="guard-bg"/>
+  <text x="1201" y="892" text-anchor="middle" class="guard">[perfil]</text>
 
-  <!-- [perfil] -->
-  <path d="M 910 788 L 890 788 L 890 860" class="flow" marker-end="url(#arr)"/>
-  <rect x="850" y="780" width="55" height="15" class="guard-bg"/>
-  <text x="877" y="792" text-anchor="middle" class="guard">[perfil]</text>
+  <rect x="1140" y="970" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="1200" y="989" text-anchor="middle" class="ts">Editar datos</text>
+  <text x="1200" y="1005" text-anchor="middle" class="tn">personales</text>
 
-  <rect x="830" y="862" width="120" height="42" rx="21" ry="21" class="action"/>
-  <text x="890" y="880" text-anchor="middle" font-size="11" class="t">Editar datos</text>
-  <text x="890" y="894" text-anchor="middle" font-size="10" fill="#64748b">personales</text>
+  <!-- [objetivo] derecha -->
+  <path d="M 1450 890 L 1480 890 L 1480 968" class="flow" marker-end="url(#arr)"/>
+  <rect x="1466" y="880" width="68" height="15" class="guard-bg"/>
+  <text x="1500" y="892" text-anchor="middle" class="guard">[objetivo]</text>
 
-  <!-- [objetivo] -->
-  <path d="M 1090 788 L 1110 788 L 1110 860" class="flow" marker-end="url(#arr)"/>
-  <rect x="1100" y="780" width="80" height="15" class="guard-bg"/>
-  <text x="1140" y="792" text-anchor="middle" class="guard">[objetivo]</text>
+  <rect x="1420" y="970" width="120" height="44" rx="22" ry="22" class="action"/>
+  <text x="1480" y="989" text-anchor="middle" class="ts">Modificar</text>
+  <text x="1480" y="1005" text-anchor="middle" class="tn">objetivo kcal</text>
 
-  <rect x="1050" y="862" width="120" height="42" rx="21" ry="21" class="action"/>
-  <text x="1110" y="880" text-anchor="middle" font-size="11" class="t">Modificar</text>
-  <text x="1110" y="894" text-anchor="middle" font-size="10" fill="#64748b">objetivo kcal</text>
-
-  <!-- Merge intermedio -->
-  <polygon points="1000,960 1020,980 1000,1000 980,980" class="merge"/>
-  <path d="M 890 904 L 890 980 L 980 980" class="flow" marker-end="url(#arr)"/>
-  <path d="M 1110 904 L 1110 980 L 1020 980" class="flow" marker-end="url(#arr)"/>
-  <line x1="1000" y1="1000" x2="1000" y2="1026" class="flow" marker-end="url(#arr)"/>
+  <!-- Merge intermedio D -->
+  <polygon points="1340,1060 1365,1085 1340,1110 1315,1085" class="merge"/>
+  <path d="M 1200 1014 L 1200 1085 L 1315 1085" class="flow" marker-end="url(#arr)"/>
+  <path d="M 1480 1014 L 1480 1085 L 1365 1085" class="flow" marker-end="url(#arr)"/>
+  <line x1="1340" y1="1110" x2="1340" y2="1132" class="flow" marker-end="url(#arr)"/>
 
   <!-- Guardar cambios -->
-  <rect x="910" y="1028" width="180" height="42" rx="21" ry="21" class="action"/>
-  <text x="1000" y="1046" text-anchor="middle" class="t">Guardar cambios</text>
-  <text x="1000" y="1060" text-anchor="middle" font-size="10" fill="#64748b">ORMLite + Firebase</text>
-  <line x1="1000" y1="1070" x2="1000" y2="1258" class="flow" marker-end="url(#arr)"/>
+  <rect x="1240" y="1134" width="200" height="48" rx="24" ry="24" class="action"/>
+  <text x="1340" y="1155" text-anchor="middle" class="t">Guardar cambios</text>
+  <text x="1340" y="1171" text-anchor="middle" class="tn">ORMLite + Firebase</text>
 
-  <!-- ============================== RAMA E: CERRAR SESIÓN ============================== -->
-  <rect x="1170" y="706" width="190" height="16" class="guard-bg"/>
-  <text x="1265" y="701" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">RAMA E · CERRAR SESIÓN</text>
+  <!-- Merge rama D (para unificar salida con las demás) -->
+  <polygon points="1340,1300 1365,1325 1340,1350 1315,1325" class="merge"/>
+  <line x1="1340" y1="1182" x2="1340" y2="1325" class="flow" marker-end="url(#arr)"/>
 
-  <rect x="1175" y="722" width="190" height="42" rx="21" ry="21" class="action"/>
-  <text x="1270" y="740" text-anchor="middle" class="t">Cerrar sesión</text>
-  <text x="1270" y="754" text-anchor="middle" font-size="10" fill="#64748b">Firebase Auth</text>
-  <line x1="1270" y1="764" x2="1270" y2="800" class="flow" marker-end="url(#arr)"/>
+  <!-- ================== RAMA E: CERRAR SESIÓN ================== -->
+  <rect x="1560" y="835" width="180" height="48" rx="24" ry="24" class="action"/>
+  <text x="1650" y="856" text-anchor="middle" class="t">Cerrar sesión</text>
+  <text x="1650" y="872" text-anchor="middle" class="tn">Firebase Auth</text>
+  <line x1="1650" y1="883" x2="1650" y2="915" class="flow" marker-end="url(#arr)"/>
 
   <!-- Nodo final (diana) -->
-  <circle cx="1270" cy="818" r="14" fill="none" stroke="#0f172a" stroke-width="1.8"/>
-  <circle cx="1270" cy="818" r="8" fill="#0f172a"/>
+  <circle cx="1650" cy="935" r="14" fill="none" stroke="#0f172a" stroke-width="1.8"/>
+  <circle cx="1650" cy="935" r="8" fill="#0f172a"/>
 
-  <!-- ============================== MERGE GLOBAL + BUCLE ============================== -->
-  <!-- Merge global (recoge A, B, C, D) -->
-  <polygon points="700,1260 725,1285 700,1310 675,1285" class="merge"/>
+  <!-- ================== MERGE GLOBAL + BUCLE ================== -->
+  <!-- Merge global grande -->
+  <polygon points="900,1390 950,1425 900,1460 850,1425" class="merge"/>
+  <text x="900" y="1430" text-anchor="middle" class="tn" font-style="italic">merge global</text>
 
-  <path d="M 180 1258 L 180 1285 L 675 1285" class="flow" marker-end="url(#arr)"/>
-  <path d="M 470 1258 L 470 1285" class="flow"/>
-  <path d="M 730 1258 L 730 1285" class="flow"/>
-  <path d="M 1000 1258 L 1000 1285 L 725 1285" class="flow" marker-end="url(#arr)"/>
+  <!-- Flechas de cada rama al merge global -->
+  <path d="M 220 1350 L 220 1425 L 850 1425" class="flow" marker-end="url(#arr)"/>
+  <path d="M 610 1350 L 610 1425 L 850 1425" class="flow"/>
+  <path d="M 980 1350 L 980 1425 L 950 1425" class="flow" marker-end="url(#arr)"/>
+  <path d="M 1340 1350 L 1340 1425 L 950 1425" class="flow"/>
 
-  <text x="550" y="1278" font-size="10" fill="#64748b" font-style="italic">merge global · retorno al dashboard</text>
+  <!-- Salida del merge global → bucle de retorno -->
+  <line x1="900" y1="1460" x2="900" y2="1485" class="flow"/>
 
-  <!-- Bucle de retorno: desde merge global hacia merge de retorno (y=562) -->
-  <path d="M 675 1285 L 40 1285 L 40 562 L 677 562" class="flowLoop" marker-end="url(#arrLoop)"/>
-  <rect x="46" y="913" width="20" height="15" class="guard-bg"/>
-  <text x="56" y="923" text-anchor="middle" class="guard" fill="#0f766e" font-style="italic">loop</text>
+  <!-- Bucle que sube por la izquierda y vuelve al merge de retorno -->
+  <path d="M 900 1485 L 30 1485 L 30 571 L 875 571" class="flowLoop" marker-end="url(#arrLoop)"/>
+  <rect x="18" y="1020" width="50" height="16" class="guard-bg"/>
+  <text x="43" y="1032" text-anchor="middle" class="guard" fill="#0f766e">[loop]</text>
 
-  <!-- ============================== LEYENDA ============================== -->
-  <g transform="translate(40, 1370)">
-    <rect x="0" y="0" width="1320" height="170" rx="10" ry="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- ================== LEYENDA ================== -->
+  <g transform="translate(40, 1510)">
+    <rect x="0" y="0" width="1720" height="90" rx="10" ry="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
     <text x="20" y="26" font-size="14" font-weight="700" fill="#0f172a">Leyenda — notación UML de actividades</text>
 
-    <!-- Fila 1 -->
-    <circle cx="40" cy="60" r="7" fill="#0f172a"/>
-    <text x="58" y="64" class="t">Nodo inicial</text>
+    <!-- Fila única -->
+    <circle cx="40" cy="58" r="7" fill="#0f172a"/>
+    <text x="56" y="62" class="ts">Nodo inicial</text>
 
-    <circle cx="200" cy="60" r="11" fill="none" stroke="#0f172a" stroke-width="1.6"/>
-    <circle cx="200" cy="60" r="6" fill="#0f172a"/>
-    <text x="220" y="64" class="t">Nodo final</text>
+    <circle cx="170" cy="58" r="10" fill="none" stroke="#0f172a" stroke-width="1.6"/>
+    <circle cx="170" cy="58" r="5.5" fill="#0f172a"/>
+    <text x="188" y="62" class="ts">Nodo final</text>
 
-    <rect x="330" y="48" width="90" height="26" rx="13" ry="13" class="action"/>
-    <text x="375" y="65" text-anchor="middle" class="t">Acción</text>
-    <text x="430" y="64" class="t">— actividad ejecutada</text>
+    <rect x="290" y="46" width="90" height="26" rx="13" ry="13" class="action"/>
+    <text x="335" y="63" text-anchor="middle" class="ts">Acción</text>
 
-    <polygon points="620,48 660,63 620,78 580,63" class="decision"/>
-    <text x="620" y="67" text-anchor="middle" class="td">Decisión</text>
-    <text x="670" y="64" class="t">— bifurca según guarda</text>
+    <polygon points="480,46 520,61 480,76 440,61" class="decision"/>
+    <text x="480" y="65" text-anchor="middle" class="td">Decisión</text>
 
-    <polygon points="900,52 917,63 900,74 883,63" class="merge"/>
-    <text x="928" y="67" class="t">Merge — reúne flujos en uno</text>
+    <polygon points="620,48 637,61 620,74 603,61" class="merge"/>
+    <text x="648" y="65" class="ts">Merge</text>
 
-    <!-- Fila 2 -->
-    <line x1="20" y1="110" x2="100" y2="110" class="flow" marker-end="url(#arr)"/>
-    <text x="110" y="114" class="t">Flujo de control</text>
+    <line x1="730" y1="61" x2="810" y2="61" class="flow" marker-end="url(#arr)"/>
+    <text x="820" y="65" class="ts">Flujo de control</text>
 
-    <line x1="280" y1="110" x2="360" y2="110" class="flowLoop" marker-end="url(#arrLoop)"/>
-    <text x="370" y="114" class="t">Bucle de retorno al dashboard</text>
+    <line x1="970" y1="61" x2="1050" y2="61" class="flowLoop" marker-end="url(#arrLoop)"/>
+    <text x="1060" y="65" class="ts">Bucle de retorno al dashboard</text>
 
-    <rect x="625" y="102" width="55" height="16" class="guard-bg" stroke="#cbd5e1"/>
-    <text x="652" y="114" text-anchor="middle" class="guard">[guarda]</text>
-    <text x="690" y="114" class="t">Condición sobre un flujo saliente de una decisión</text>
-
-    <!-- Fila 3: nota -->
-    <text x="20" y="148" font-size="11" fill="#475569" font-style="italic">Persistencia: cada acción que modifica datos guarda primero en local (ORMLite) y después sincroniza con Firebase cuando hay conexión.</text>
-    <text x="20" y="164" font-size="11" fill="#475569" font-style="italic">El cliente sólo necesita red para autenticarse, buscar alimentos en la API y sincronizar; el resto funciona en modo offline.</text>
+    <rect x="1310" y="53" width="55" height="16" class="guard-bg" stroke="#cbd5e1"/>
+    <text x="1337" y="65" text-anchor="middle" class="guard">[guarda]</text>
+    <text x="1375" y="65" class="ts">Condición de salida de una decisión</text>
   </g>
 </svg>

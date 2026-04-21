@@ -7,16 +7,17 @@
     android:layout_height="match_parent"
     android:background="#F5F7FA">
 
-    <!-- Logo -->
+    <!-- Mascota -->
     <ImageView
         android:id="@+id/imgLogoRegisterActivity"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@mipmap/ic_launcher"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/bunny_fit"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp" />
+        android:layout_marginTop="32dp" />
 
     <!-- Título -->
     <TextView
