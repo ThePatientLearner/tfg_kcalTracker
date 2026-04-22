@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
         // ── Botón +Pro ───────────────────────────────────────────────────────────
         binding.btnResetMainActivity.setOnClickListener(v -> {
             if (isUserPro()) {
-                Toast.makeText(this, "Ya eres Pro", Toast.LENGTH_SHORT).show();
+                showProUnsubscribeDialog();
             } else {
                 showProSubscriptionDialog();
             }
@@ -816,6 +816,24 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "¡Bienvenido a Kcal Tracker Pro!", Toast.LENGTH_LONG).show();
     }
 
+    private void showProUnsubscribeDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle("Cancelar suscripción Pro")
+                .setMessage("¿Seguro que quieres desuscribirte? Perderás las ventajas Pro de inmediato.")
+                .setPositiveButton("Sí, desuscribirme", (d, w) -> unsubscribeFromPro())
+                .setNegativeButton("Cancelar", null)
+                .show();
+    }
+
+    private void unsubscribeFromPro() {
+        if (currentProfile == null || currentUid == null) return;
+        currentProfile.setIsPro(false);
+        refUsers.child(currentUid).child("isPro").setValue(false);
+        localDb.saveUserProfile(currentUid, currentProfile);
+        updateProButton();
+        Toast.makeText(this, "Has cancelado la suscripción Pro", Toast.LENGTH_SHORT).show();
+    }
+
     // ══════════════════════════════════════════════════════════════════════════════
     //  AYUNO INTERMITENTE
     // ══════════════════════════════════════════════════════════════════════════════
@@ -873,6 +891,16 @@ public class MainActivity extends AppCompatActivity {
         long m = totalMin % 60;
         if (h == 0) return m + "m";
         return h + "h " + m + "m";
+    }
+
+    /** Formato con segundos para el timer grande del diálogo de estado. */
+    private static String formatWithSeconds(long ms) {
+        long totalSec = Math.max(0, ms / 1_000);
+        long h = totalSec / 3600;
+        long m = (totalSec % 3600) / 60;
+        long s = totalSec % 60;
+        if (h == 0) return String.format(Locale.getDefault(), "%d:%02d", m, s);
+        return String.format(Locale.getDefault(), "%d:%02d:%02d", h, m, s);
     }
 
     // ─── Diálogo selector ────────────────────────────────────────────────────────
@@ -934,7 +962,6 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton btnChange = view.findViewById(R.id.btnStatusChange);
 
         txtProtocol.setText("Ayuno " + s.protocolName);
-        txtRemaining.setText(formatShort(s.remainingMs));
 
         int color;
         if (s.phase == FastingManager.Phase.FASTING) {
@@ -949,12 +976,6 @@ public class MainActivity extends AppCompatActivity {
             color = 0xFF16A34A;
         }
 
-        // Progreso: cuánto de la fase actual ya transcurrió
-        if (s.totalPhaseMs > 0) {
-            long elapsed = s.totalPhaseMs - s.remainingMs;
-            int progress = (int) ((elapsed * 100) / s.totalPhaseMs);
-            bar.setProgress(Math.max(0, Math.min(100, progress)));
-        }
         bar.setIndicatorColor(color);
         txtPhase.setTextColor(color);
         txtProtocol.setTextColor(color);
@@ -970,6 +991,27 @@ public class MainActivity extends AppCompatActivity {
                 .create();
         Window w = dialog.getWindow();
         if (w != null) w.setBackgroundDrawableResource(android.R.color.transparent);
+
+        // Refresco cada segundo del timer grande y del círculo de progreso
+        Handler statusHandler = new Handler(Looper.getMainLooper());
+        Runnable statusTick = new Runnable() {
+            @Override public void run() {
+                FastingManager.State cur = FastingManager.getState(MainActivity.this);
+                if (!cur.active) {
+                    dialog.dismiss();
+                    return;
+                }
+                txtRemaining.setText(formatWithSeconds(cur.remainingMs));
+                if (cur.totalPhaseMs > 0) {
+                    long elapsed = cur.totalPhaseMs - cur.remainingMs;
+                    int progress = (int) ((elapsed * 100) / cur.totalPhaseMs);
+                    bar.setProgress(Math.max(0, Math.min(100, progress)));
+                }
+                statusHandler.postDelayed(this, 1_000L);
+            }
+        };
+        statusHandler.post(statusTick);
+        dialog.setOnDismissListener(d -> statusHandler.removeCallbacks(statusTick));
 
         btnStop.setOnClickListener(v -> {
             FastingManager.stop(this);
