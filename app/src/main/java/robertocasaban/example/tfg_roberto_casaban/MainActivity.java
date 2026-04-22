@@ -1,19 +1,19 @@
 package robertocasaban.example.tfg_roberto_casaban;
 
+import android.Manifest;
 import android.app.DatePickerDialog;
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.util.Log;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.res.ColorStateList;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
@@ -22,6 +22,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.function.Consumer;
 
 import androidx.activity.result.ActivityResultLauncher;
@@ -29,6 +32,7 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -44,10 +48,14 @@ import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
+import robertocasaban.example.tfg_roberto_casaban.adapters.FastingOptionsAdapter;
 import robertocasaban.example.tfg_roberto_casaban.adapters.FoodEntryAdapter;
 import robertocasaban.example.tfg_roberto_casaban.adapters.FoodSuggestionAdapter;
 import robertocasaban.example.tfg_roberto_casaban.database.LocalDatabaseHelper;
 import robertocasaban.example.tfg_roberto_casaban.databinding.ActivityMainBinding;
+import robertocasaban.example.tfg_roberto_casaban.fasting.FastingAlarmReceiver;
+import robertocasaban.example.tfg_roberto_casaban.fasting.FastingManager;
+import robertocasaban.example.tfg_roberto_casaban.models.FastingOption;
 import robertocasaban.example.tfg_roberto_casaban.models.FoodEntry;
 import robertocasaban.example.tfg_roberto_casaban.models.FoodProduct;
 import robertocasaban.example.tfg_roberto_casaban.models.UserProfile;
@@ -101,6 +109,21 @@ public class MainActivity extends AppCompatActivity {
                 if (result.getResultCode() == RESULT_OK) loadUserProfile();
             });
 
+    // ─── Ayuno intermitente: refresco periódico del botón (cada 30s) ─────────────
+    private final Handler fastingHandler = new Handler(Looper.getMainLooper());
+    private final Runnable fastingTick = new Runnable() {
+        @Override public void run() {
+            updateFastingButton();
+            fastingHandler.postDelayed(this, 30_000L);
+        }
+    };
+
+    // ─── Launcher para el permiso de notificaciones (API 33+) ────────────────────
+    private final ActivityResultLauncher<String> notificationPermissionLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), granted -> {
+                // Silencioso: si el usuario dice no, simplemente no habrá notificaciones.
+            });
+
     // ─────────────────────────────────────────────────────────────────────────────
 
     @Override
@@ -131,6 +154,12 @@ public class MainActivity extends AppCompatActivity {
         setupDateSelector();
         loadUserProfile();
 
+
+        // ── Ayuno intermitente ──────────────────────────────────────────────────
+        FastingAlarmReceiver.ensureChannel(this);
+        requestNotificationPermissionIfNeeded();
+        binding.btnFastingMainActivity.setOnClickListener(v -> onFastingButtonClicked());
+        updateFastingButton();
 
         // ── Botón +Pro ───────────────────────────────────────────────────────────
         binding.btnResetMainActivity.setOnClickListener(v -> {
@@ -720,6 +749,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         checkDailyReset();
+        // Arranca el ticker del botón de ayuno
+        fastingHandler.removeCallbacks(fastingTick);
+        fastingHandler.post(fastingTick);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        fastingHandler.removeCallbacks(fastingTick);
     }
 
     private void checkDailyReset() {
@@ -776,5 +814,175 @@ public class MainActivity extends AppCompatActivity {
         localDb.saveUserProfile(currentUid, currentProfile);
         updateProButton();
         Toast.makeText(this, "¡Bienvenido a Kcal Tracker Pro!", Toast.LENGTH_LONG).show();
+    }
+
+    // ══════════════════════════════════════════════════════════════════════════════
+    //  AYUNO INTERMITENTE
+    // ══════════════════════════════════════════════════════════════════════════════
+
+    private void requestNotificationPermissionIfNeeded() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return;
+        int status = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS);
+        if (status != PackageManager.PERMISSION_GRANTED) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS);
+        }
+    }
+
+    private void onFastingButtonClicked() {
+        FastingManager.State s = FastingManager.getState(this);
+        if (s.active) showFastingStatusDialog(s);
+        else          showFastingSelectorDialog();
+    }
+
+    /** Refresca el aspecto del botón (texto + color + icono) según la fase actual. */
+    private void updateFastingButton() {
+        FastingManager.State s = FastingManager.getState(this);
+        MaterialButton btn = binding.btnFastingMainActivity;
+
+        int bg;
+        int iconRes;
+        String label;
+
+        switch (s.phase) {
+            case FASTING:
+                bg      = 0xFF7C3AED;                  // morado: ayuno
+                iconRes = R.drawable.ic_moon;
+                label   = "Ayuno " + formatShort(s.remainingMs);
+                break;
+            case EATING:
+                bg      = 0xFF16A34A;                  // verde: puedes comer
+                iconRes = R.drawable.ic_meal;
+                label   = "Comer " + formatShort(s.remainingMs);
+                break;
+            case INACTIVE:
+            default:
+                bg      = 0xFF64748B;                  // gris neutro
+                iconRes = R.drawable.ic_timer;
+                label   = "Ayuno";
+                break;
+        }
+
+        btn.setText(label);
+        btn.setIconResource(iconRes);
+        btn.setBackgroundTintList(ColorStateList.valueOf(bg));
+    }
+
+    private static String formatShort(long ms) {
+        long totalMin = Math.max(0, ms / 60_000);
+        long h = totalMin / 60;
+        long m = totalMin % 60;
+        if (h == 0) return m + "m";
+        return h + "h " + m + "m";
+    }
+
+    // ─── Diálogo selector ────────────────────────────────────────────────────────
+
+    private void showFastingSelectorDialog() {
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_fasting_selector, null);
+        androidx.recyclerview.widget.RecyclerView rv = view.findViewById(R.id.rvFastingOptions);
+        rv.setLayoutManager(new LinearLayoutManager(this));
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(view)
+                .setNegativeButton("Cancelar", null)
+                .create();
+
+        FastingOptionsAdapter adapter = new FastingOptionsAdapter(
+                FastingOption.defaults(),
+                option -> {
+                    dialog.dismiss();
+                    askStartingPhase(option);
+                });
+        rv.setAdapter(adapter);
+        dialog.show();
+    }
+
+    /** Pregunta al usuario si quiere empezar por ayuno o por ventana de comer. */
+    private void askStartingPhase(FastingOption option) {
+        new AlertDialog.Builder(this)
+                .setTitle("Empezar " + option.name)
+                .setMessage("¿En qué fase estás ahora?\n\n"
+                        + "• Ayuno: tu próxima comida será en " + option.fastHours + " h\n"
+                        + "• Ventana abierta: puedes comer durante " + option.eatHours + " h")
+                .setPositiveButton("Ayuno", (d, w) -> {
+                    FastingManager.start(this, option, FastingManager.Phase.FASTING);
+                    updateFastingButton();
+                    Toast.makeText(this, "Ayuno " + option.name + " iniciado", Toast.LENGTH_SHORT).show();
+                })
+                .setNegativeButton("Ventana abierta", (d, w) -> {
+                    FastingManager.start(this, option, FastingManager.Phase.EATING);
+                    updateFastingButton();
+                    Toast.makeText(this, "Ayuno " + option.name + " iniciado", Toast.LENGTH_SHORT).show();
+                })
+                .setNeutralButton("Cancelar", null)
+                .show();
+    }
+
+    // ─── Diálogo de estado ───────────────────────────────────────────────────────
+
+    private void showFastingStatusDialog(FastingManager.State s) {
+        View view = LayoutInflater.from(this).inflate(R.layout.dialog_fasting_status, null);
+
+        TextView txtProtocol    = view.findViewById(R.id.txtStatusProtocol);
+        TextView txtPhase       = view.findViewById(R.id.txtStatusPhase);
+        TextView txtRemaining   = view.findViewById(R.id.txtStatusRemaining);
+        TextView txtHint        = view.findViewById(R.id.txtStatusHint);
+        TextView txtDescription = view.findViewById(R.id.txtStatusDescription);
+        com.google.android.material.progressindicator.CircularProgressIndicator bar =
+                view.findViewById(R.id.barStatusProgress);
+        MaterialButton btnStop   = view.findViewById(R.id.btnStatusStop);
+        MaterialButton btnChange = view.findViewById(R.id.btnStatusChange);
+
+        txtProtocol.setText("Ayuno " + s.protocolName);
+        txtRemaining.setText(formatShort(s.remainingMs));
+
+        int color;
+        if (s.phase == FastingManager.Phase.FASTING) {
+            txtPhase.setText("AYUNO");
+            txtHint.setText("hasta poder comer");
+            txtDescription.setText("Estás ayunando. Puedes beber agua, té o café sin azúcar.");
+            color = 0xFF7C3AED;
+        } else {
+            txtPhase.setText("VENTANA ABIERTA");
+            txtHint.setText("hasta el cierre");
+            txtDescription.setText("Tu ventana de comida está abierta. Come dentro de este tiempo.");
+            color = 0xFF16A34A;
+        }
+
+        // Progreso: cuánto de la fase actual ya transcurrió
+        if (s.totalPhaseMs > 0) {
+            long elapsed = s.totalPhaseMs - s.remainingMs;
+            int progress = (int) ((elapsed * 100) / s.totalPhaseMs);
+            bar.setProgress(Math.max(0, Math.min(100, progress)));
+        }
+        bar.setIndicatorColor(color);
+        txtPhase.setTextColor(color);
+        txtProtocol.setTextColor(color);
+        txtHint.setTextColor(color);
+
+        // Botón "Cambiar": morado con letras blancas
+        btnChange.setBackgroundTintList(ColorStateList.valueOf(0xFF7C3AED));
+        btnChange.setStrokeWidth(0);
+        btnChange.setTextColor(0xFFFFFFFF);
+
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setView(view)
+                .create();
+        Window w = dialog.getWindow();
+        if (w != null) w.setBackgroundDrawableResource(android.R.color.transparent);
+
+        btnStop.setOnClickListener(v -> {
+            FastingManager.stop(this);
+            updateFastingButton();
+            dialog.dismiss();
+            Toast.makeText(this, "Ayuno detenido", Toast.LENGTH_SHORT).show();
+        });
+
+        btnChange.setOnClickListener(v -> {
+            dialog.dismiss();
+            showFastingSelectorDialog();
+        });
+
+        dialog.show();
     }
 }
