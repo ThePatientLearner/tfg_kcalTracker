@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Guión de presentación — Kcal Tracker (TFG)</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #0f172a;
+    line-height: 1.55;
+    margin: 0;
+    padding: 28px 36px 40px 36px;
+    background: #ffffff;
+    font-size: 11.5pt;
+  }
+  header {
+    border-bottom: 3px solid #0284C7;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+  }
+  header h1 {
+    margin: 0 0 4px 0;
+    font-size: 22pt;
+    color: #0c4a6e;
+  }
+  header .subtitle {
+    color: #475569;
+    font-size: 11pt;
+  }
+  h2 {
+    background: linear-gradient(90deg, #0284C7 0%, #0ea5e9 100%);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13.5pt;
+    margin: 26px 0 10px 0;
+    page-break-after: avoid;
+  }
+  h3 {
+    color: #0c4a6e;
+    margin: 16px 0 6px 0;
+    font-size: 12pt;
+    border-left: 4px solid #0284C7;
+    padding-left: 8px;
+    page-break-after: avoid;
+  }
+  p { margin: 6px 0; }
+  ul { margin: 6px 0 6px 18px; padding: 0; }
+  li { margin: 3px 0; }
+  .callout {
+    background: #f0f9ff;
+    border-left: 4px solid #0ea5e9;
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 10.5pt;
+  }
+  .speaker {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 8px 12px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: 10.5pt;
+  }
+  .speaker strong { color: #92400e; }
+  code, pre {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 9.5pt;
+  }
+  pre {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 8px 0;
+    line-height: 1.45;
+    page-break-inside: avoid;
+  }
+  pre .k  { color: #f472b6; }  /* keywords */
+  pre .s  { color: #86efac; }  /* strings */
+  pre .c  { color: #94a3b8; font-style: italic; } /* comments */
+  pre .t  { color: #7dd3fc; }  /* types */
+  code.inl {
+    background: #e0f2fe;
+    padding: 1px 5px;
+    border-radius: 3px;
+    color: #0c4a6e;
+  }
+  table.index {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 8px 0 14px 0;
+    font-size: 10.5pt;
+  }
+  table.index th {
+    background: #e0f2fe;
+    color: #0c4a6e;
+    text-align: left;
+    padding: 6px 10px;
+    border-bottom: 2px solid #0ea5e9;
+  }
+  table.index td {
+    padding: 5px 10px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  .tag {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0c4a6e;
+    padding: 1px 8px;
+    border-radius: 10px;
+    font-size: 9pt;
+    font-weight: 600;
+    margin-right: 4px;
+  }
+  .tag.fb { background: #fde68a; color: #92400e; }
+  .tag.sq { background: #bbf7d0; color: #166534; }
+  .tag.ui { background: #fbcfe8; color: #9d174d; }
+  .tag.md { background: #e9d5ff; color: #6b21a8; }
+  .section {
+    page-break-inside: avoid;
+  }
+  .file {
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 10pt;
+    color: #475569;
+    margin-bottom: 4px;
+  }
+  footer {
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px solid #e2e8f0;
+    font-size: 9.5pt;
+    color: #64748b;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Guión de presentación — Kcal Tracker</h1>
+  <div class="subtitle">TFG · Roberto Casabán Climent · App Android (Java) para el control de calorías</div>
+</header>
+
+<!-- ÍNDICE -->
+<div class="section">
+  <h2>Índice del guión</h2>
+  <table class="index">
+    <tr><th style="width:30px">#</th><th>Parte del código</th><th>Qué demuestra</th></tr>
+    <tr><td>1</td><td>Introducción y arquitectura</td><td>Visión general del proyecto</td></tr>
+    <tr><td>2</td><td>Autenticación — <code class="inl">LogInActivity</code> / <code class="inl">RegisterActivity</code></td><td>Firebase Auth + Google Sign-In</td></tr>
+    <tr><td>3</td><td>Modelos de datos — <code class="inl">FoodProduct</code>, <code class="inl">FoodEntry</code>, <code class="inl">UserProfile</code></td><td>POJOs mapeados a Firebase</td></tr>
+    <tr><td>4</td><td>Pantalla principal — <code class="inl">MainActivity</code></td><td>Orquesta UI, BD local y remota</td></tr>
+    <tr><td>5</td><td>Búsqueda de alimentos (Firebase <code class="inl">/foods</code>)</td><td>Debounce + normalización de texto</td></tr>
+    <tr><td>6</td><td>Persistencia local — <code class="inl">LocalDatabaseHelper</code></td><td>SQLite, estrategia offline-first</td></tr>
+    <tr><td>7</td><td>Adaptadores — <code class="inl">FoodEntryAdapter</code>, <code class="inl">FoodSuggestionAdapter</code></td><td>RecyclerView + cálculo de totales</td></tr>
+    <tr><td>8</td><td>Cálculo IMC / TMB / objetivo kcal</td><td>Lógica nutricional de la app</td></tr>
+    <tr><td>9</td><td>Estadísticas — <code class="inl">EstadisticasActivity</code></td><td>MPAndroidChart sobre datos locales</td></tr>
+    <tr><td>10</td><td>Cierre</td><td>Conclusiones y posibles mejoras</td></tr>
+  </table>
+</div>
+
+<!-- 1. INTRODUCCIÓN -->
+<div class="section">
+  <h2>1 · Introducción y arquitectura general</h2>
+
+  <div class="speaker"><strong>Qué decir (≈45 s):</strong> "La aplicación es un <em>tracker</em> de calorías en Android nativo, escrito en Java. El usuario registra lo que come a lo largo del día, busca alimentos desde una base de datos compartida y la app le calcula kcal y macronutrientes sobre su objetivo personalizado."</div>
+
+  <h3>Capas del proyecto</h3>
+  <ul>
+    <li><span class="tag ui">UI</span> <b>Activities</b>: <code class="inl">LogInActivity</code>, <code class="inl">RegisterActivity</code>, <code class="inl">MainActivity</code>, <code class="inl">PerfilActivity</code>, <code class="inl">ObjetivoActivity</code>, <code class="inl">EstadisticasActivity</code>, <code class="inl">LogActivity</code>.</li>
+    <li><span class="tag md">Modelo</span> <b>models/</b>: <code class="inl">UserProfile</code>, <code class="inl">FoodProduct</code>, <code class="inl">FoodEntry</code>, <code class="inl">DailyMacros</code>.</li>
+    <li><span class="tag sq">Local</span> <b>database/</b>: <code class="inl">LocalDatabaseHelper</code> (SQLite).</li>
+    <li><span class="tag fb">Remoto</span> <b>Firebase</b>: Auth + Realtime Database (<code class="inl">/users</code>, <code class="inl">/foods</code>).</li>
+    <li><span class="tag ui">Adapters</span> <b>adapters/</b>: <code class="inl">FoodEntryAdapter</code>, <code class="inl">FoodSuggestionAdapter</code>, <code class="inl">StatLogAdapter</code>.</li>
+  </ul>
+
+  <div class="callout"><b>Idea fuerza:</b> el diseño es <b>offline-first</b>. Primero pinto desde SQLite (instantáneo, sin conexión); Firebase actualiza por encima cuando llega la respuesta. El usuario nunca ve una pantalla en blanco.</div>
+</div>
+
+<!-- 2. AUTENTICACIÓN -->
+<div class="section">
+  <h2>2 · Autenticación — LogInActivity</h2>
+  <div class="file">app/src/main/java/…/LogInActivity.java</div>
+
+  <div class="speaker"><strong>Qué decir:</strong> "Para la autenticación uso Firebase Auth con dos vías: email+contraseña y Google Sign-In. Si es la primera vez que el usuario entra con Google, abro un diálogo para completar el perfil (peso, altura, edad, sexo, objetivo)."</div>
+
+  <h3>Login clásico con email</h3>
+<pre><span class="k">private void</span> doLogin(<span class="t">String</span> email, <span class="t">String</span> password) {
+    auth.signInWithEmailAndPassword(email, password)
+        .addOnCompleteListener(<span class="k">this</span>, task -> {
+            <span class="k">if</span> (task.isSuccessful()) {
+                user = auth.getCurrentUser();
+                updateUi(user);   <span class="c">// → MainActivity</span>
+            } <span class="k">else</span> {
+                Toast.makeText(<span class="k">this</span>, <span class="s">"Error al iniciar sesión: "</span> + ..., Toast.LENGTH_SHORT).show();
+            }
+        });
+}</pre>
+
+  <h3>Google Sign-In + puente a Firebase</h3>
+<pre><span class="k">private void</span> firebaseAuthWithGoogle(<span class="t">String</span> idToken) {
+    AuthCredential credential = GoogleAuthProvider.getCredential(idToken, <span class="k">null</span>);
+    auth.signInWithCredential(credential)
+        .addOnCompleteListener(<span class="k">this</span>, task -> {
+            <span class="k">if</span> (task.isSuccessful()) checkProfileAndContinue(auth.getCurrentUser());
+        });
+}</pre>
+
+  <div class="callout"><b>Matiz a comentar:</b> <code class="inl">checkProfileAndContinue()</code> consulta <code class="inl">/users/{uid}</code> en Firebase. Si existe, voy directo a <code class="inl">MainActivity</code>; si no, muestro el popup de perfil para que rellene sus datos. Esto evita pedir dos veces lo mismo a usuarios que ya se habían registrado.</div>
+</div>
+
+<!-- 3. MODELOS -->
+<div class="section">
+  <h2>3 · Modelos de datos</h2>
+
+  <h3>FoodProduct — alimento del catálogo Firebase</h3>
+  <div class="file">app/src/main/java/…/models/FoodProduct.java</div>
+  <p>Representa cada alimento en <code class="inl">/foods/{id}</code> de la Realtime Database. Tiene el <b>constructor vacío</b> y <b>setters públicos</b> que Firebase exige para deserializar.</p>
+<pre><span class="k">public class</span> <span class="t">FoodProduct</span> {
+    <span class="k">private</span> <span class="t">String</span> nombre;
+    <span class="k">private</span> <span class="t">String</span> nombreLower;   <span class="c">// para búsqueda sin mayúsculas/acentos</span>
+    <span class="k">private double</span> calorias;      <span class="c">// kcal / 100 g</span>
+    <span class="k">private double</span> proteinas, grasas, carbohidratos, fibra;
+
+    <span class="k">public</span> <span class="t">FoodProduct</span>() {}  <span class="c">// REQUERIDO por Firebase</span>
+    ...
+}</pre>
+
+  <h3>FoodEntry — comida registrada por el usuario</h3>
+  <div class="file">app/src/main/java/…/models/FoodEntry.java</div>
+  <p>Guarda el alimento + <b>gramos consumidos</b>. Tiene métodos que convierten los valores por 100 g en totales reales:</p>
+<pre><span class="k">public double</span> getTotalKcal()  { <span class="k">return</span> (kcalPer100g    / 100.0) * grams; }
+<span class="k">public double</span> getTotalCarbs() { <span class="k">return</span> (carbsPer100g   / 100.0) * grams; }
+<span class="k">public double</span> getTotalProtein(){<span class="k">return</span> (proteinPer100g / 100.0) * grams; }
+<span class="k">public double</span> getTotalFat()   { <span class="k">return</span> (fatPer100g     / 100.0) * grams; }</pre>
+
+  <div class="speaker"><strong>Qué decir:</strong> "Separo <em>valores por 100 g</em> (nunca cambian) de <em>gramos</em> (decisión del usuario). Así puedo editar los gramos sin tocar las propiedades nutricionales originales del alimento."</div>
+
+  <h3>UserProfile — ficha del usuario</h3>
+  <p>Nombre, email, peso, altura, edad, peso objetivo, sexo y flag <code class="inl">isPro</code>. Se guarda en Firebase <code class="inl">/users/{uid}</code> y replicado en SQLite.</p>
+</div>
+
+<!-- 4. MAIN ACTIVITY -->
+<div class="section">
+  <h2>4 · Pantalla principal — MainActivity</h2>
+  <div class="file">app/src/main/java/…/MainActivity.java</div>
+
+  <div class="speaker"><strong>Qué decir:</strong> "La <code class="inl">MainActivity</code> es el orquestador. Inicializa Firebase, SQLite, ViewBinding, los RecyclerView, el selector de fecha y la Bottom Navigation. Y es quien dispara la carga del perfil y de las comidas del día."</div>
+
+  <h3>Inicialización en onCreate</h3>
+<pre>binding = ActivityMainBinding.inflate(getLayoutInflater());
+setContentView(binding.getRoot());
+
+sp      = getSharedPreferences(<span class="s">"tfg_prefs"</span>, MODE_PRIVATE);
+localDb = <span class="k">new</span> LocalDatabaseHelper(<span class="k">this</span>);
+
+FirebaseDatabase db = FirebaseDatabase.getInstance(
+        <span class="s">"https://tfg-robertocasaban-default-rtdb..."</span>);
+refUsers = db.getReference(<span class="s">"users"</span>);
+
+selectedDate = LocalDate.now();
+refUserFoods = refUsers.child(currentUid).child(<span class="s">"foods"</span>).child(todayDate);</pre>
+
+  <h3>Selector de fecha — historial navegable</h3>
+<pre>binding.btnPrevDayMainActivity.setOnClickListener(v ->
+        changeSelectedDate(selectedDate.minusDays(1)));
+binding.btnNextDayMainActivity.setOnClickListener(v ->
+        changeSelectedDate(selectedDate.plusDays(1)));
+binding.txtSelectedDateMainActivity.setOnClickListener(v -> {
+    <span class="k">new</span> DatePickerDialog(<span class="k">this</span>, (view, y, m, d) ->
+            changeSelectedDate(LocalDate.of(y, m + 1, d)), ...).show();
+});</pre>
+
+  <div class="callout"><b>Ejemplo para la demo:</b> "Cambio de día con las flechas, tira de SQLite y repinta; si hay red, Firebase refresca. Todo fluye por <code class="inl">changeSelectedDate()</code>."</div>
+</div>
+
+<!-- 5. BÚSQUEDA -->
+<div class="section">
+  <h2>5 · Búsqueda de alimentos en tiempo real</h2>
+
+  <div class="speaker"><strong>Qué decir:</strong> "La búsqueda no golpea Firebase a cada tecla. Uso un <b>debounce de 400 ms</b> con <code class="inl">Handler.postDelayed</code>, y normalizo el texto (minúsculas sin acentos) contra el campo <code class="inl">nombreLower</code> que grabé en cada alimento."</div>
+
+  <h3>Debounce con Handler</h3>
+<pre>binding.txtSearchMainActivity.addTextChangedListener(<span class="k">new</span> TextWatcher() {
+    @Override <span class="k">public void</span> afterTextChanged(Editable s) {
+        <span class="t">String</span> query = s.toString().trim();
+        <span class="k">if</span> (searchRunnable != <span class="k">null</span>) searchHandler.removeCallbacks(searchRunnable);
+        <span class="k">if</span> (query.length() &lt; 3) { hideSuggestions(); <span class="k">return</span>; }
+
+        searchRunnable = () -> searchFood(query);         <span class="c">// se ejecuta tras 400 ms</span>
+        searchHandler.postDelayed(searchRunnable, SEARCH_DELAY_MS);
+    }
+});</pre>
+
+  <h3>Normalización + filtrado en cliente</h3>
+<pre><span class="t">String</span> queryNorm = Normalizer.normalize(query.toLowerCase(), Normalizer.Form.NFD)
+        .replaceAll(<span class="s">"\\p{InCombiningDiacriticalMarks}+"</span>, <span class="s">""</span>);
+
+FirebaseDatabase.getInstance(...).getReference(<span class="s">"foods"</span>)
+    .addListenerForSingleValueEvent(<span class="k">new</span> ValueEventListener() {
+        @Override <span class="k">public void</span> onDataChange(DataSnapshot snap) {
+            <span class="k">for</span> (DataSnapshot child : snap.getChildren()) {
+                FoodProduct p = child.getValue(FoodProduct.<span class="k">class</span>);
+                <span class="k">if</span> (p.hasValidData() &amp;&amp; p.getNombreLower().contains(queryNorm))
+                    products.add(p);
+                <span class="k">if</span> (products.size() &gt;= 5) <span class="k">break</span>;
+            }
+            suggestionAdapter.setSuggestions(products);
+        }
+    });</pre>
+
+  <div class="callout"><b>Limitación honesta:</b> Firebase Realtime DB no soporta <code class="inl">contains()</code> nativo, así que descargo <code class="inl">/foods</code> y filtro en cliente. Cuando la base crezca mucho se migraría a Firestore con búsqueda por prefijo o a Algolia.</div>
+</div>
+
+<!-- 6. PERSISTENCIA LOCAL -->
+<div class="section">
+  <h2>6 · Persistencia local — LocalDatabaseHelper</h2>
+  <div class="file">app/src/main/java/…/database/LocalDatabaseHelper.java</div>
+
+  <div class="speaker"><strong>Qué decir:</strong> "Extiende <code class="inl">SQLiteOpenHelper</code>. Defino <b>tres tablas</b>: perfil de usuario, entradas de comida diarias y totales del día. Todo usa <code class="inl">INSERT OR REPLACE</code>, así cada guardado es idempotente."</div>
+
+  <h3>Las tres tablas</h3>
+  <ul>
+    <li><code class="inl">user_profile</code> — PK <code class="inl">uid</code> (1 fila por usuario).</li>
+    <li><code class="inl">food_entries</code> — PK <code class="inl">firebase_key</code> (la misma clave push que en Firebase: así evito duplicados cuando sincronizo).</li>
+    <li><code class="inl">daily_totals</code> — PK compuesta <code class="inl">(uid, date)</code>, un registro por día.</li>
+  </ul>
+
+  <h3>Guardar una entrada</h3>
+<pre><span class="k">public void</span> saveFoodEntry(<span class="t">String</span> uid, <span class="t">String</span> date, FoodEntry entry) {
+    <span class="k">if</span> (entry.getFirebaseKey() == <span class="k">null</span>) <span class="k">return</span>;
+    ContentValues v = <span class="k">new</span> ContentValues();
+    v.put(COL_FIREBASE_KEY, entry.getFirebaseKey());
+    v.put(COL_ENTRY_UID,    uid);
+    v.put(COL_DATE,         date);
+    v.put(COL_ENTRY_NAME,   entry.getName());
+    v.put(COL_KCAL_PER_100G, entry.getKcalPer100g());
+    ...
+    db.insertWithOnConflict(TABLE_FOOD_ENTRIES, <span class="k">null</span>, v,
+                            SQLiteDatabase.CONFLICT_REPLACE);
+}</pre>
+
+  <h3>Migraciones progresivas</h3>
+<pre>@Override <span class="k">public void</span> onUpgrade(SQLiteDatabase db, <span class="k">int</span> old, <span class="k">int</span> newV) {
+    <span class="k">if</span> (old &lt; 2) db.execSQL(CREATE_TABLE_FOOD_ENTRIES);
+    <span class="k">if</span> (old &lt; 4) db.execSQL(<span class="s">"ALTER TABLE ... ADD COLUMN sex ..."</span>);
+    <span class="k">if</span> (old &lt; 6) db.execSQL(<span class="s">"ALTER TABLE ... ADD COLUMN carbs_per_100g ..."</span>);
+    <span class="k">if</span> (old &lt; 7) db.execSQL(<span class="s">"ALTER TABLE ... ADD COLUMN total_fat ..."</span>);
+}</pre>
+
+  <div class="callout"><b>Detalle técnico interesante:</b> si actualizo la app en una versión posterior no borro la tabla (<code class="inl">DROP</code>), sino que <b>añado columnas</b>. Así los usuarios que ya tenían la app no pierden su historial.</div>
+
+  <h3>Estrategia offline-first en la práctica</h3>
+<pre><span class="c">// 1) Mostrar desde SQLite: instantáneo</span>
+UserProfile localProfile = localDb.getUserProfile(user.getUid());
+<span class="k">if</span> (localProfile != <span class="k">null</span>) updateProfileUI(localProfile);
+
+<span class="c">// 2) Firebase refresca por encima</span>
+refUsers.child(user.getUid()).addListenerForSingleValueEvent(...);</pre>
+
+  <h3>Refactor clave: separar "leer" de "persistir"</h3>
+  <div class="speaker"><strong>Qué decir:</strong> "Durante el desarrollo detecté un bug: al cargar un día sin conexión, la app sobrescribía Firebase con totales a 0 mientras SQLite aún estaba pintando. La solución fue partir la función en dos, y que los flujos de carga <b>nunca</b> escribieran en Firebase."</div>
+
+  <table class="index" style="font-size:10pt;">
+    <tr>
+      <th style="width:26%">Punto</th>
+      <th style="width:30%">Antes</th>
+      <th style="width:44%">Ahora</th>
+    </tr>
+    <tr>
+      <td><code class="inl">Logout</code></td>
+      <td><code class="inl">signOut()</code> + <code class="inl">sp.clear()</code></td>
+      <td>solo <code class="inl">signOut()</code> (conserva <code class="inl">last_reset_date</code>)</td>
+    </tr>
+    <tr>
+      <td><code class="inl">updateDailyDisplay()</code></td>
+      <td>Actualiza UI <b>+ sync Firebase</b></td>
+      <td>Solo actualiza UI (función pura de lectura)</td>
+    </tr>
+    <tr>
+      <td><code class="inl">addFoodEntry()</code></td>
+      <td><code class="inl">updateDailyDisplay()</code></td>
+      <td><code class="inl">persistAndUpdateDailyDisplay()</code> ✓ persiste</td>
+    </tr>
+    <tr>
+      <td>"Cambiar gramos"</td>
+      <td><code class="inl">updateDailyDisplay()</code></td>
+      <td><code class="inl">persistAndUpdateDailyDisplay()</code> ✓ persiste</td>
+    </tr>
+    <tr>
+      <td>"Eliminar"</td>
+      <td><code class="inl">updateDailyDisplay()</code></td>
+      <td><code class="inl">persistAndUpdateDailyDisplay()</code> ✓ persiste</td>
+    </tr>
+    <tr>
+      <td><code class="inl">loadTodayFoodEntries</code></td>
+      <td>Limpia local y adapter siempre</td>
+      <td>Solo limpia si Firebase tiene <b>al menos una entrada</b> (si responde vacío, preserva lo local)</td>
+    </tr>
+    <tr>
+      <td>Resto de cargas (<code class="inl">loadTodayFoodEntriesFromLocal</code>, <code class="inl">updateProfileUI</code>, <code class="inl">changeSelectedDate</code>…)</td>
+      <td><code class="inl">updateDailyDisplay()</code> escribía a Firebase</td>
+      <td><code class="inl">updateDailyDisplay()</code> ya no toca Firebase — solo pinta</td>
+    </tr>
+  </table>
+
+<pre><span class="c">// UI pura, sin efectos laterales</span>
+<span class="k">private void</span> updateDailyDisplay() { ... <span class="c">// solo repinta barras y textos</span> }
+
+<span class="c">// Única ruta que persiste: se llama cuando el usuario ACTÚA</span>
+<span class="k">private void</span> persistAndUpdateDailyDisplay() {
+    updateDailyDisplay();
+    syncDailyTotals(adapter.getTotalKcal(), adapter.getTotalCarbs(), ...);
+}</pre>
+
+  <div class="callout"><b>Regla resultante:</b> solo se escribe en Firebase/SQLite cuando el usuario <i>añade, edita o elimina</i> una comida. Las rutas de carga son de solo lectura. Esto evita la condición de carrera "local pinta antes, remoto llega vacío y machaca los totales con 0".</div>
+</div>
+
+<!-- 7. ADAPTERS -->
+<div class="section">
+  <h2>7 · Adaptadores — RecyclerView</h2>
+
+  <div class="speaker"><strong>Qué decir:</strong> "La lista de comidas del día y las sugerencias de búsqueda son dos <code class="inl">RecyclerView</code>. El adaptador de entradas, además de pintar, centraliza el <b>cálculo de totales</b> del día."</div>
+
+  <h3>FoodEntryAdapter — totales en un solo sitio</h3>
+<pre><span class="k">public double</span> getTotalKcal() {
+    <span class="k">double</span> total = 0;
+    <span class="k">for</span> (FoodEntry e : entries) total += e.getTotalKcal();
+    <span class="k">return</span> total;
+}
+<span class="c">// Igual para getTotalCarbs(), getTotalProtein(), getTotalFat()</span></pre>
+
+  <h3>Listener con callback</h3>
+<pre><span class="k">public interface</span> OnEntryClickListener {
+    <span class="k">void</span> onEntryClick(<span class="k">int</span> position, FoodEntry entry);
+}</pre>
+  <p>La Activity decide qué hacer: abre un diálogo "Cambiar gramos / Eliminar". El adaptador no sabe nada de Firebase, solo de la UI.</p>
+
+  <div class="callout"><b>Buena práctica a destacar:</b> <b>separación de responsabilidades</b>. El adaptador pinta y suma; la Activity decide qué pasa al pulsar. Así el adaptador es reutilizable.</div>
+</div>
+
+<!-- 8. CÁLCULO IMC / OBJETIVO -->
+<div class="section">
+  <h2>8 · Cálculo IMC, TMB y objetivo de kcal</h2>
+
+  <div class="speaker"><strong>Qué decir:</strong> "Cuando cargo el perfil, calculo el IMC para clasificar al usuario (bajo peso, normal, sobrepeso, obesidad I/II/III) y estimo su gasto energético diario (TDEE) con la fórmula de <b>Mifflin-St Jeor</b>. Según la categoría, ajusto el objetivo de kcal."</div>
+
+<pre><span class="k">double</span> heightM = profile.getHeight() / 100.0;
+<span class="k">double</span> imc     = profile.getWeight() / (heightM * heightM);
+<span class="k">double</span> tmbAdj  = <span class="s">"Mujer"</span>.equals(profile.getSex()) ? -161 : 5;
+<span class="k">double</span> tmb     = (10 * weight) + (6.25 * height) - (5 * age) + tmbAdj;
+<span class="k">double</span> tdee    = tmb * 1.375;   <span class="c">// actividad ligera</span>
+
+<span class="k">if</span> (imc &lt; 18.5)      kcalObjetivo = tdee * 1.15;  <span class="c">// bajo peso → superávit suave</span>
+<span class="k">else if</span> (imc &lt; 25)   kcalObjetivo = tdee;         <span class="c">// normal → mantenimiento</span>
+<span class="k">else if</span> (imc &lt; 30)   kcalObjetivo = tdee * 0.85;  <span class="c">// sobrepeso → déficit 15 %</span>
+<span class="k">else</span>                kcalObjetivo = tdee * 0.75;  <span class="c">// obesidad → déficit 25 %</span>
+
+<span class="c">// Suelo de seguridad: nunca por debajo de 1200 (mujer) / 1500 (hombre)</span>
+<span class="k">double</span> minSafe = <span class="s">"Mujer"</span>.equals(profile.getSex()) ? 1200 : 1500;
+<span class="k">if</span> (kcalObjetivo &lt; minSafe) kcalObjetivo = minSafe;
+
+<span class="c">// Distribución estándar de macros</span>
+carbsObjetivo   = (kcalObjetivo * 0.50) / 4.0;   <span class="c">// 50 % carbos (4 kcal/g)</span>
+proteinObjetivo = (kcalObjetivo * 0.20) / 4.0;   <span class="c">// 20 % proteína (4 kcal/g)</span>
+fatObjetivo     = (kcalObjetivo * 0.30) / 9.0;   <span class="c">// 30 % grasa  (9 kcal/g)</span></pre>
+
+  <div class="callout"><b>Por qué es relevante:</b> es la única lógica "de negocio" de la app y da personalización real. Los valores nunca bajan de un <b>suelo de seguridad</b> para no recomendar dietas peligrosas.</div>
+</div>
+
+<!-- 9. ESTADÍSTICAS -->
+<div class="section">
+  <h2>9 · Estadísticas — gráfica de evolución</h2>
+  <div class="file">app/src/main/java/…/EstadisticasActivity.java</div>
+
+  <div class="speaker"><strong>Qué decir:</strong> "La pantalla de estadísticas usa la librería <b>MPAndroidChart</b> para dibujar la evolución de kcal por día. Los datos se sacan de la tabla <code class="inl">daily_totals</code> de SQLite con un solo <code class="inl">SELECT</code> ordenado por fecha."</div>
+
+<pre><span class="c">// Primero SQLite (instantáneo)</span>
+Map&lt;String, DailyMacros&gt; local = localDb.getAllDailyMacros(currentUid);
+<span class="k">if</span> (!local.isEmpty()) updateUI(local);
+
+<span class="c">// Firebase refresca por encima</span>
+loadFromFirebase();</pre>
+
+  <p>El mismo patrón "<i>pintar local → refrescar remoto</i>" que en el resto de la app: coherencia y disponibilidad sin red.</p>
+</div>
+
+<!-- 10. CIERRE -->
+<div class="section">
+  <h2>10 · Cierre — puntos fuertes y mejoras</h2>
+
+  <h3>Puntos fuertes del código</h3>
+  <ul>
+    <li><b>Offline-first consistente:</b> todas las pantallas pintan primero desde SQLite.</li>
+    <li><b>Sincronización con la misma clave</b> (<code class="inl">firebase_key</code>) en local y remoto → sin duplicados.</li>
+    <li><b>Debounce de búsqueda</b> para no saturar Firebase.</li>
+    <li><b>Migraciones progresivas de SQLite</b> que preservan datos del usuario.</li>
+    <li><b>Separación clara</b> UI / modelo / persistencia / adaptadores.</li>
+  </ul>
+
+  <h3>Mejoras futuras (para la pregunta del tribunal)</h3>
+  <ul>
+    <li>Migrar a <b>Firestore</b> y búsqueda por prefijo o Algolia para escalar el catálogo.</li>
+    <li>Fusionar <code class="inl">LocalDatabaseHelper</code> con <b>Room</b> u <b>ORMLite</b> (anotaciones en vez de SQL crudo).</li>
+    <li>Patrón <b>MVVM</b> con <code class="inl">ViewModel</code> + <code class="inl">LiveData</code> para desacoplar la Activity.</li>
+    <li>Tests instrumentados de los cálculos nutricionales.</li>
+  </ul>
+
+  <div class="speaker"><strong>Frase de cierre sugerida:</strong> "En resumen: la app aplica un patrón offline-first con Firebase como fuente remota y SQLite como caché local, coordinados por una misma clave. La lógica nutricional queda aislada y es fácil de sustituir por una más avanzada si se quisiera ampliar el proyecto."</div>
+</div>
+
+<footer>Guión de presentación · Kcal Tracker · Roberto Casabán Climent · 2026</footer>
+
+</body>
+</html>

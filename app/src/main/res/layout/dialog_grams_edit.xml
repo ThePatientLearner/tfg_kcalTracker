@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="12dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/txtGramsSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="#64748B"
+        android:textSize="14sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnGramsMinus"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_circle_button"
+            android:contentDescription="Disminuir 50g"
+            android:src="@drawable/ic_minus" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editGramsValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:maxLength="5"
+                android:minWidth="72dp"
+                android:textAlignment="center"
+                android:textColor="#0F172A"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="g"
+                android:textColor="#64748B"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnGramsPlus"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/bg_circle_button"
+            android:contentDescription="Aumentar 50g"
+            android:src="@drawable/ic_plus" />
+
+    </LinearLayout>
+
+</LinearLayout>

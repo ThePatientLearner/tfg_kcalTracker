@@ -44,6 +44,24 @@ public class FoodEntryAdapter extends RecyclerView.Adapter<FoodEntryAdapter.View
         return total;
     }
 
+    public double getTotalCarbs() {
+        double total = 0;
+        for (FoodEntry e : entries) total += e.getTotalCarbs();
+        return total;
+    }
+
+    public double getTotalProtein() {
+        double total = 0;
+        for (FoodEntry e : entries) total += e.getTotalProtein();
+        return total;
+    }
+
+    public double getTotalFat() {
+        double total = 0;
+        for (FoodEntry e : entries) total += e.getTotalFat();
+        return total;
+    }
+
     /** Elimina una entrada por posición */
     public void removeEntry(int position) {
         entries.remove(position);
@@ -76,6 +94,9 @@ public class FoodEntryAdapter extends RecyclerView.Adapter<FoodEntryAdapter.View
         holder.txtName.setText(entry.getName());
         holder.txtDetails.setText(String.format("%.0fg  •  %.0f kcal/100g", entry.getGrams(), entry.getKcalPer100g()));
         holder.txtKcal.setText(String.format("%.0f", entry.getTotalKcal()));
+        holder.txtCarbs.setText(String.format("%.0fg C", entry.getTotalCarbs()));
+        holder.txtProtein.setText(String.format("%.0fg P", entry.getTotalProtein()));
+        holder.txtFat.setText(String.format("%.0fg G", entry.getTotalFat()));
         holder.itemView.setOnClickListener(v -> {
             if (listener != null) listener.onEntryClick(holder.getAdapterPosition(), entry);
         });
@@ -88,12 +109,18 @@ public class FoodEntryAdapter extends RecyclerView.Adapter<FoodEntryAdapter.View
         final TextView txtName;
         final TextView txtDetails;
         final TextView txtKcal;
+        final TextView txtCarbs;
+        final TextView txtProtein;
+        final TextView txtFat;
 
         ViewHolder(@NonNull View v) {
             super(v);
             txtName    = v.findViewById(R.id.lblFoodNameCard);
             txtDetails = v.findViewById(R.id.lblFoodDetailsCard);
             txtKcal    = v.findViewById(R.id.lblKcalValueCard);
+            txtCarbs   = v.findViewById(R.id.lblCarbsCard);
+            txtProtein = v.findViewById(R.id.lblProteinCard);
+            txtFat     = v.findViewById(R.id.lblFatCard);
         }
     }
 }

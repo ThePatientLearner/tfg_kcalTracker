@@ -11,13 +11,14 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import robertocasaban.example.tfg_roberto_casaban.models.DailyMacros;
 import robertocasaban.example.tfg_roberto_casaban.models.FoodEntry;
 import robertocasaban.example.tfg_roberto_casaban.models.UserProfile;
 
 public class LocalDatabaseHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME    = "tfg_local.db";
-    private static final int    DB_VERSION = 5;
+    private static final int    DB_VERSION = 7;
 
     // ─── Tabla: perfil de usuario ─────────────────────────────────────────────
     public static final String TABLE_USER_PROFILE = "user_profile";
@@ -51,16 +52,22 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_DATE             = "date";
     public static final String COL_ENTRY_NAME       = "name";
     public static final String COL_KCAL_PER_100G    = "kcal_per_100g";
+    public static final String COL_CARBS_PER_100G   = "carbs_per_100g";
+    public static final String COL_PROTEIN_PER_100G = "protein_per_100g";
+    public static final String COL_FAT_PER_100G     = "fat_per_100g";
     public static final String COL_GRAMS            = "grams";
 
     private static final String CREATE_TABLE_FOOD_ENTRIES =
             "CREATE TABLE " + TABLE_FOOD_ENTRIES + " (" +
-            COL_FIREBASE_KEY  + " TEXT PRIMARY KEY, " +
-            COL_ENTRY_UID     + " TEXT NOT NULL, " +
-            COL_DATE          + " TEXT NOT NULL, " +
-            COL_ENTRY_NAME    + " TEXT, " +
-            COL_KCAL_PER_100G + " REAL, " +
-            COL_GRAMS         + " REAL" +
+            COL_FIREBASE_KEY    + " TEXT PRIMARY KEY, " +
+            COL_ENTRY_UID       + " TEXT NOT NULL, " +
+            COL_DATE            + " TEXT NOT NULL, " +
+            COL_ENTRY_NAME      + " TEXT, " +
+            COL_KCAL_PER_100G   + " REAL, " +
+            COL_CARBS_PER_100G  + " REAL DEFAULT 0, " +
+            COL_PROTEIN_PER_100G+ " REAL DEFAULT 0, " +
+            COL_FAT_PER_100G    + " REAL DEFAULT 0, " +
+            COL_GRAMS           + " REAL" +
             ");";
 
     // ─── Tabla: totales diarios de kcal ──────────────────────────────────────
@@ -68,12 +75,18 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
     public static final String COL_TOTAL_UID       = "uid";
     public static final String COL_TOTAL_DATE      = "date";
     public static final String COL_TOTAL_KCAL      = "total_kcal";
+    public static final String COL_TOTAL_CARBS     = "total_carbs";
+    public static final String COL_TOTAL_PROTEIN   = "total_protein";
+    public static final String COL_TOTAL_FAT       = "total_fat";
 
     private static final String CREATE_TABLE_DAILY_TOTALS =
             "CREATE TABLE " + TABLE_DAILY_TOTALS + " (" +
-            COL_TOTAL_UID  + " TEXT NOT NULL, " +
-            COL_TOTAL_DATE + " TEXT NOT NULL, " +
-            COL_TOTAL_KCAL + " REAL, " +
+            COL_TOTAL_UID     + " TEXT NOT NULL, " +
+            COL_TOTAL_DATE    + " TEXT NOT NULL, " +
+            COL_TOTAL_KCAL    + " REAL, " +
+            COL_TOTAL_CARBS   + " REAL DEFAULT 0, " +
+            COL_TOTAL_PROTEIN + " REAL DEFAULT 0, " +
+            COL_TOTAL_FAT     + " REAL DEFAULT 0, " +
             "PRIMARY KEY (" + COL_TOTAL_UID + ", " + COL_TOTAL_DATE + ")" +
             ");";
 
@@ -101,6 +114,16 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         }
         if (oldVersion < 5) {
             db.execSQL("ALTER TABLE " + TABLE_USER_PROFILE + " ADD COLUMN " + COL_IS_PRO + " INTEGER DEFAULT 0");
+        }
+        if (oldVersion < 6) {
+            db.execSQL("ALTER TABLE " + TABLE_FOOD_ENTRIES + " ADD COLUMN " + COL_CARBS_PER_100G   + " REAL DEFAULT 0");
+            db.execSQL("ALTER TABLE " + TABLE_FOOD_ENTRIES + " ADD COLUMN " + COL_PROTEIN_PER_100G + " REAL DEFAULT 0");
+            db.execSQL("ALTER TABLE " + TABLE_FOOD_ENTRIES + " ADD COLUMN " + COL_FAT_PER_100G     + " REAL DEFAULT 0");
+        }
+        if (oldVersion < 7) {
+            db.execSQL("ALTER TABLE " + TABLE_DAILY_TOTALS + " ADD COLUMN " + COL_TOTAL_CARBS   + " REAL DEFAULT 0");
+            db.execSQL("ALTER TABLE " + TABLE_DAILY_TOTALS + " ADD COLUMN " + COL_TOTAL_PROTEIN + " REAL DEFAULT 0");
+            db.execSQL("ALTER TABLE " + TABLE_DAILY_TOTALS + " ADD COLUMN " + COL_TOTAL_FAT     + " REAL DEFAULT 0");
         }
     }
 
@@ -169,12 +192,15 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = getWritableDatabase();
 
         ContentValues values = new ContentValues();
-        values.put(COL_FIREBASE_KEY,  entry.getFirebaseKey());
-        values.put(COL_ENTRY_UID,     uid);
-        values.put(COL_DATE,          date);
-        values.put(COL_ENTRY_NAME,    entry.getName());
-        values.put(COL_KCAL_PER_100G, entry.getKcalPer100g());
-        values.put(COL_GRAMS,         entry.getGrams());
+        values.put(COL_FIREBASE_KEY,     entry.getFirebaseKey());
+        values.put(COL_ENTRY_UID,        uid);
+        values.put(COL_DATE,             date);
+        values.put(COL_ENTRY_NAME,       entry.getName());
+        values.put(COL_KCAL_PER_100G,    entry.getKcalPer100g());
+        values.put(COL_CARBS_PER_100G,   entry.getCarbsPer100g());
+        values.put(COL_PROTEIN_PER_100G, entry.getProteinPer100g());
+        values.put(COL_FAT_PER_100G,     entry.getFatPer100g());
+        values.put(COL_GRAMS,            entry.getGrams());
 
         db.insertWithOnConflict(TABLE_FOOD_ENTRIES, null, values, SQLiteDatabase.CONFLICT_REPLACE);
     }
@@ -220,12 +246,15 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
 
         if (cursor != null) {
             while (cursor.moveToNext()) {
-                String name  = cursor.getString(cursor.getColumnIndexOrThrow(COL_ENTRY_NAME));
-                double kcal  = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_KCAL_PER_100G));
-                double grams = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_GRAMS));
-                String key   = cursor.getString(cursor.getColumnIndexOrThrow(COL_FIREBASE_KEY));
+                String name    = cursor.getString(cursor.getColumnIndexOrThrow(COL_ENTRY_NAME));
+                double kcal    = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_KCAL_PER_100G));
+                double carbs   = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_CARBS_PER_100G));
+                double protein = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_PROTEIN_PER_100G));
+                double fat     = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_FAT_PER_100G));
+                double grams   = cursor.getDouble(cursor.getColumnIndexOrThrow(COL_GRAMS));
+                String key     = cursor.getString(cursor.getColumnIndexOrThrow(COL_FIREBASE_KEY));
 
-                FoodEntry entry = new FoodEntry(name, kcal, grams);
+                FoodEntry entry = new FoodEntry(name, kcal, carbs, protein, fat, grams);
                 entry.setFirebaseKey(key);
                 entries.add(entry);
             }
@@ -251,6 +280,31 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         db.insertWithOnConflict(TABLE_DAILY_TOTALS, null, values, SQLiteDatabase.CONFLICT_REPLACE);
     }
 
+    /** Elimina un total diario concreto (para purgar fantasmas sincronizando con Firebase). */
+    public void deleteDailyTotal(String uid, String date) {
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(TABLE_DAILY_TOTALS,
+                COL_TOTAL_UID + " = ? AND " + COL_TOTAL_DATE + " = ?",
+                new String[]{uid, date});
+    }
+
+    /** Inserta o actualiza los totales diarios de kcal y macros. */
+    public void saveDailyTotals(String uid, String date,
+                                double totalKcal, double totalCarbs,
+                                double totalProtein, double totalFat) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(COL_TOTAL_UID,     uid);
+        values.put(COL_TOTAL_DATE,    date);
+        values.put(COL_TOTAL_KCAL,    totalKcal);
+        values.put(COL_TOTAL_CARBS,   totalCarbs);
+        values.put(COL_TOTAL_PROTEIN, totalProtein);
+        values.put(COL_TOTAL_FAT,     totalFat);
+
+        db.insertWithOnConflict(TABLE_DAILY_TOTALS, null, values, SQLiteDatabase.CONFLICT_REPLACE);
+    }
+
     /** Devuelve el total de kcal guardado para un día. Retorna 0.0 si no existe. */
     public double getDailyTotal(String uid, String date) {
         SQLiteDatabase db = getReadableDatabase();
@@ -270,6 +324,36 @@ public class LocalDatabaseHelper extends SQLiteOpenHelper {
         }
 
         return total;
+    }
+
+    /** Devuelve todos los totales diarios con macros, ordenados por fecha ascendente. */
+    public Map<String, DailyMacros> getAllDailyMacros(String uid) {
+        SQLiteDatabase db = getReadableDatabase();
+        Map<String, DailyMacros> all = new LinkedHashMap<>();
+
+        Cursor cursor = db.query(
+                TABLE_DAILY_TOTALS,
+                new String[]{COL_TOTAL_DATE, COL_TOTAL_KCAL, COL_TOTAL_CARBS, COL_TOTAL_PROTEIN, COL_TOTAL_FAT},
+                COL_TOTAL_UID + " = ?",
+                new String[]{uid},
+                null, null,
+                COL_TOTAL_DATE + " ASC"
+        );
+
+        if (cursor != null) {
+            while (cursor.moveToNext()) {
+                String date = cursor.getString(cursor.getColumnIndexOrThrow(COL_TOTAL_DATE));
+                all.put(date, new DailyMacros(
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_TOTAL_KCAL)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_TOTAL_CARBS)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_TOTAL_PROTEIN)),
+                        cursor.getDouble(cursor.getColumnIndexOrThrow(COL_TOTAL_FAT))
+                ));
+            }
+            cursor.close();
+        }
+
+        return all;
     }
 
     /** Devuelve todos los totales diarios de un usuario, ordenados por fecha ascendente. */

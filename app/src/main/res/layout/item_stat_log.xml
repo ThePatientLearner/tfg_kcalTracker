@@ -12,39 +12,81 @@
     app:strokeColor="#F1F5F9"
     app:strokeWidth="1dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:paddingHorizontal="16dp"
         android:paddingVertical="14dp">
 
-        <!-- Fecha -->
-        <TextView
-            android:id="@+id/txtStatDate"
-            android:layout_width="0dp"
+        <!-- Fila fecha + kcal -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2026-03-29"
-            android:textColor="#0F172A"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txtStatKcal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <!-- Kcal del día -->
+            <TextView
+                android:id="@+id/txtStatDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2026-03-29"
+                android:textColor="#0F172A"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtStatKcal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1250 kcal"
+                android:textColor="#0284C7"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Barra tricolor de equilibrio (proporción de kcal por macro) -->
+        <LinearLayout
+            android:id="@+id/barBalanceContainer"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="10dp"
+            android:background="#F1F5F9"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/segCarbs"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#F59E0B" />
+
+            <View
+                android:id="@+id/segProtein"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#0284C7" />
+
+            <View
+                android:id="@+id/segFat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#EF4444" />
+        </LinearLayout>
+
+        <!-- Detalle de gramos -->
         <TextView
-            android:id="@+id/txtStatKcal"
+            android:id="@+id/txtStatMacros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1250 kcal"
-            android:textColor="#0284C7"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_marginTop="8dp"
+            android:text="0g C  ·  0g P  ·  0g G"
+            android:textColor="#64748B"
+            android:textSize="12sp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>

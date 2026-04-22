@@ -45,7 +45,8 @@ import robertocasaban.example.tfg_roberto_casaban.models.UserProfile;
 
 public class LogInActivity extends AppCompatActivity {
 
-    private static final int RC_GOOGLE_SIGN_IN = 9001;
+    private static final int  RC_GOOGLE_SIGN_IN = 9001;
+    private static final long BUNNY_DELAY_MS    = 1000L;
 
     private ActivityLogBinding binding;
     private FirebaseUser user;
@@ -55,6 +56,9 @@ public class LogInActivity extends AppCompatActivity {
     private LocalDatabaseHelper localDb;
     private Handler animHandler;
     private Runnable animRunnable;
+
+    private final Handler bunnyHandler = new Handler(Looper.getMainLooper());
+    private Runnable bunnyRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -250,13 +254,19 @@ public class LogInActivity extends AppCompatActivity {
             @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
             @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
             @Override public void afterTextChanged(Editable s) {
-                refreshBunny(imageBunny, txtStatus,
+                if (bunnyRunnable != null) bunnyHandler.removeCallbacks(bunnyRunnable);
+                bunnyRunnable = () -> refreshBunny(imageBunny, txtStatus,
                         editWeight.getText().toString(),
                         editHeight.getText().toString());
+                bunnyHandler.postDelayed(bunnyRunnable, BUNNY_DELAY_MS);
             }
         };
         editWeight.addTextChangedListener(bunnyWatcher);
         editHeight.addTextChangedListener(bunnyWatcher);
+
+        dialog.setOnDismissListener(d -> {
+            if (bunnyRunnable != null) bunnyHandler.removeCallbacks(bunnyRunnable);
+        });
 
         // Prerrellenar nombre con el de Google si existe
         if (firebaseUser.getDisplayName() != null && !firebaseUser.getDisplayName().isEmpty()) {
@@ -324,24 +334,27 @@ public class LogInActivity extends AppCompatActivity {
         int    textColor;
         int    bgColor;
 
-        if (imc < 18.5) {
+        if (imc < 16.0) {
             bunnyDrawable = R.drawable.bunny_underweight;
-            statusText = "Bajo peso";   textColor = 0xFF0D47A1; bgColor = 0xFFE3F2FD;
+            statusText = "Delgadez severa"; textColor = 0xFF7F1D1D; bgColor = 0xFFFECACA;
+        } else if (imc < 18.5) {
+            bunnyDrawable = R.drawable.bunny_underweight;
+            statusText = "Bajo peso";       textColor = 0xFF0D47A1; bgColor = 0xFFE3F2FD;
         } else if (imc < 25.0) {
             bunnyDrawable = R.drawable.bunny_fit;
-            statusText = "Normal";      textColor = 0xFF166534; bgColor = 0xFFDCFCE7;
+            statusText = "Normal";          textColor = 0xFF166534; bgColor = 0xFFDCFCE7;
         } else if (imc < 30.0) {
             bunnyDrawable = R.drawable.bunny_overweight;
-            statusText = "Sobrepeso";   textColor = 0xFFE65100; bgColor = 0xFFFFF3E0;
+            statusText = "Sobrepeso";       textColor = 0xFFB45309; bgColor = 0xFFFEF3C7;
         } else if (imc < 35.0) {
             bunnyDrawable = R.drawable.bunny_obese1;
-            statusText = "Obesidad I";  textColor = 0xFFB71C1C; bgColor = 0xFFFFEBEE;
+            statusText = "Obesidad I";      textColor = 0xFFC2410C; bgColor = 0xFFFFEDD5;
         } else if (imc < 40.0) {
             bunnyDrawable = R.drawable.bunny_obese2;
-            statusText = "Obesidad II"; textColor = 0xFFB71C1C; bgColor = 0xFFFFCDD2;
+            statusText = "Obesidad II";     textColor = 0xFFB91C1C; bgColor = 0xFFFEE2E2;
         } else {
             bunnyDrawable = R.drawable.bunny_obese3;
-            statusText = "Obesidad III"; textColor = 0xFF7F0000; bgColor = 0xFFEF9A9A;
+            statusText = "Obesidad III";    textColor = 0xFF7F1D1D; bgColor = 0xFFFECACA;
         }
 
         imageBunny.setImageResource(bunnyDrawable);

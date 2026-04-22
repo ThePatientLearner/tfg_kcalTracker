@@ -1,12 +1,19 @@
 package robertocasaban.example.tfg_roberto_casaban;
 
 import android.content.Intent;
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -23,11 +30,16 @@ import robertocasaban.example.tfg_roberto_casaban.models.UserProfile;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    private static final long BUNNY_DELAY_MS = 1000L;
+
     private ActivityRegisterBinding binding;
     private FirebaseAuth auth;
     private FirebaseDatabase database;
     private DatabaseReference refUsers;
     private LocalDatabaseHelper localDb;
+
+    private final Handler bunnyHandler = new Handler(Looper.getMainLooper());
+    private Runnable bunnyRunnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,7 +109,27 @@ public class RegisterActivity extends AppCompatActivity {
         EditText   editGoalWeight = dialogView.findViewById(R.id.editGoalWeight);
         RadioGroup radioGroupSex  = dialogView.findViewById(R.id.radioGroupSex);
         Button     btnSave        = dialogView.findViewById(R.id.button);
+        ImageView  imageBunny     = dialogView.findViewById(R.id.imageProfileHeader);
+        TextView   txtStatus      = dialogView.findViewById(R.id.txtStatusPopup);
         dialogView.findViewById(R.id.btnDeleteAccount).setVisibility(View.GONE);
+
+        TextWatcher bunnyWatcher = new TextWatcher() {
+            @Override public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override public void onTextChanged(CharSequence s, int start, int before, int count) {}
+            @Override public void afterTextChanged(Editable s) {
+                if (bunnyRunnable != null) bunnyHandler.removeCallbacks(bunnyRunnable);
+                bunnyRunnable = () -> refreshBunny(imageBunny, txtStatus,
+                        editWeight.getText().toString(),
+                        editHeight.getText().toString());
+                bunnyHandler.postDelayed(bunnyRunnable, BUNNY_DELAY_MS);
+            }
+        };
+        editWeight.addTextChangedListener(bunnyWatcher);
+        editHeight.addTextChangedListener(bunnyWatcher);
+
+        dialog.setOnDismissListener(d -> {
+            if (bunnyRunnable != null) bunnyHandler.removeCallbacks(bunnyRunnable);
+        });
 
         btnSave.setOnClickListener(v -> {
             String name      = editName.getText().toString().trim();
@@ -143,5 +175,56 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
         dialog.show();
+    }
+
+    private void refreshBunny(ImageView imageBunny, TextView txtStatus, String weightStr, String heightStr) {
+        double weight, height;
+        try {
+            weight = Double.parseDouble(weightStr);
+            height = Double.parseDouble(heightStr);
+        } catch (NumberFormatException e) {
+            return;
+        }
+        if (weight <= 0 || height <= 0) return;
+
+        double heightM = height / 100.0;
+        double imc = weight / (heightM * heightM);
+
+        int    bunnyDrawable;
+        String statusText;
+        int    textColor;
+        int    bgColor;
+
+        if (imc < 16.0) {
+            bunnyDrawable = R.drawable.bunny_underweight;
+            statusText = "Delgadez severa"; textColor = 0xFF7F1D1D; bgColor = 0xFFFECACA;
+        } else if (imc < 18.5) {
+            bunnyDrawable = R.drawable.bunny_underweight;
+            statusText = "Bajo peso";       textColor = 0xFF0D47A1; bgColor = 0xFFE3F2FD;
+        } else if (imc < 25.0) {
+            bunnyDrawable = R.drawable.bunny_fit;
+            statusText = "Normal";          textColor = 0xFF166534; bgColor = 0xFFDCFCE7;
+        } else if (imc < 30.0) {
+            bunnyDrawable = R.drawable.bunny_overweight;
+            statusText = "Sobrepeso";       textColor = 0xFFB45309; bgColor = 0xFFFEF3C7;
+        } else if (imc < 35.0) {
+            bunnyDrawable = R.drawable.bunny_obese1;
+            statusText = "Obesidad I";      textColor = 0xFFC2410C; bgColor = 0xFFFFEDD5;
+        } else if (imc < 40.0) {
+            bunnyDrawable = R.drawable.bunny_obese2;
+            statusText = "Obesidad II";     textColor = 0xFFB91C1C; bgColor = 0xFFFEE2E2;
+        } else {
+            bunnyDrawable = R.drawable.bunny_obese3;
+            statusText = "Obesidad III";    textColor = 0xFF7F1D1D; bgColor = 0xFFFECACA;
+        }
+
+        imageBunny.setImageResource(bunnyDrawable);
+        txtStatus.setText(statusText);
+        txtStatus.setTextColor(textColor);
+        GradientDrawable badge = new GradientDrawable();
+        badge.setShape(GradientDrawable.RECTANGLE);
+        badge.setCornerRadius(32f);
+        badge.setColor(bgColor);
+        txtStatus.setBackground(badge);
     }
 }

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 1560"
+     font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7fafc"/>
+      <stop offset="100%" stop-color="#eef2f7"/>
+    </linearGradient>
+    <linearGradient id="headerBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="headerGreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="headerPurple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="headerOrange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+    <marker id="arrowReturn" viewBox="0 0 10 10" refX="9" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <!-- fondo -->
+  <rect width="1240" height="1560" fill="url(#bgGrad)"/>
+
+  <!-- título -->
+  <text x="620" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#0f172a">
+    Kcal Tracker — Diagrama de flujo de actividad del usuario
+  </text>
+  <text x="620" y="64" text-anchor="middle" font-size="12" fill="#64748b" font-style="italic">
+    Recorrido típico desde el acceso a la app hasta el registro de comidas y consulta de estadísticas
+  </text>
+
+  <!-- ===== FLUJO PRINCIPAL SUPERIOR ===== -->
+
+  <!-- INICIO -->
+  <g filter="url(#shadow)">
+    <ellipse cx="620" cy="110" rx="58" ry="26" fill="url(#headerBlue)"/>
+    <text x="620" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Inicio</text>
+  </g>
+  <line x1="620" y1="136" x2="620" y2="162" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Abrir app -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="165" width="240" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="620" y="196" text-anchor="middle" font-size="13" fill="#0f172a">Abrir Kcal Tracker</text>
+  </g>
+  <line x1="620" y1="215" x2="620" y2="241" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Pantalla Login -->
+  <g filter="url(#shadow)">
+    <rect x="500" y="243" width="240" height="52" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="500" y="243" width="240" height="18" rx="10" fill="#2563eb"/>
+    <rect x="500" y="253" width="240" height="8" fill="#2563eb"/>
+    <text x="620" y="257" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">PANTALLA</text>
+    <text x="620" y="282" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Login</text>
+  </g>
+  <line x1="620" y1="295" x2="620" y2="321" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ¿Tiene cuenta? (rombo) -->
+  <g filter="url(#shadow)">
+    <polygon points="620,323 730,378 620,433 510,378" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/>
+  </g>
+  <text x="620" y="375" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">¿Tiene</text>
+  <text x="620" y="390" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">cuenta?</text>
+
+  <!-- etiquetas Sí/No del rombo -->
+  <rect x="452" y="363" width="34" height="20" rx="4" fill="#fecaca"/>
+  <text x="469" y="377" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b">No</text>
+  <rect x="754" y="363" width="34" height="20" rx="4" fill="#bbf7d0"/>
+  <text x="771" y="377" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Sí</text>
+
+  <!-- ===== RAMA IZQUIERDA: REGISTRO ===== -->
+
+  <!-- flecha rombo → bloque registro -->
+  <path d="M 510,378 L 280,378 L 280,455" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Bloque Registro (subproceso condensado) -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="457" width="400" height="220" rx="14" fill="#ffffff" stroke="#16a34a" stroke-width="1.8"/>
+    <rect x="80" y="457" width="400" height="36" rx="14" fill="url(#headerGreen)"/>
+    <rect x="80" y="479" width="400" height="14" fill="#16a34a"/>
+    <!-- doble borde vertical izq/der (subproceso) -->
+    <line x1="92" y1="497" x2="92" y2="673" stroke="#16a34a" stroke-width="1.5"/>
+    <line x1="468" y1="497" x2="468" y2="673" stroke="#16a34a" stroke-width="1.5"/>
+
+    <text x="280" y="481" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Registro (usuario nuevo)</text>
+
+    <text x="110" y="518" font-size="12" font-weight="700" fill="#0f172a">1.</text>
+    <text x="128" y="518" font-size="12" fill="#0f172a">Introduce email y contraseña</text>
+
+    <text x="110" y="548" font-size="12" font-weight="700" fill="#0f172a">2.</text>
+    <text x="128" y="548" font-size="12" fill="#0f172a">Firebase Auth crea la cuenta</text>
+
+    <text x="110" y="578" font-size="12" font-weight="700" fill="#0f172a">3.</text>
+    <text x="128" y="578" font-size="12" fill="#0f172a">Introduce datos personales:</text>
+    <text x="128" y="596" font-size="11" fill="#475569" font-style="italic">nombre, peso, altura, edad, sexo, objetivo</text>
+
+    <text x="110" y="626" font-size="12" font-weight="700" fill="#0f172a">4.</text>
+    <text x="128" y="626" font-size="12" fill="#0f172a">Guarda perfil en Firebase + SQLite</text>
+
+    <text x="110" y="654" font-size="11" fill="#64748b" font-style="italic">(alimenta el cálculo del objetivo Harris-Benedict)</text>
+  </g>
+
+  <!-- flecha registro → Home -->
+  <path d="M 280,677 L 280,720 L 620,720" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- ===== RAMA DERECHA: LOGIN EXISTENTE ===== -->
+
+  <!-- flecha rombo → introducir credenciales -->
+  <path d="M 730,378 L 960,378 L 960,448" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Introduce credenciales -->
+  <g filter="url(#shadow)">
+    <rect x="830" y="450" width="260" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5"/>
+    <text x="960" y="481" text-anchor="middle" font-size="12" fill="#0f172a">Introduce email y contraseña</text>
+  </g>
+  <line x1="960" y1="500" x2="960" y2="524" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ¿Credenciales válidas? rombo -->
+  <g filter="url(#shadow)">
+    <polygon points="960,526 1070,574 960,622 850,574" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/>
+  </g>
+  <text x="960" y="570" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">¿Credenciales</text>
+  <text x="960" y="585" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">válidas?</text>
+
+  <!-- etiquetas Sí/No -->
+  <rect x="1080" y="563" width="34" height="20" rx="4" fill="#fecaca"/>
+  <text x="1097" y="577" text-anchor="middle" font-size="11" font-weight="700" fill="#991b1b">No</text>
+  <rect x="1000" y="628" width="34" height="20" rx="4" fill="#bbf7d0"/>
+  <text x="1017" y="642" text-anchor="middle" font-size="11" font-weight="700" fill="#166534">Sí</text>
+
+  <!-- No → Mostrar error -->
+  <line x1="1070" y1="574" x2="1128" y2="574" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1130" y="545" width="100" height="60" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="1180" y="572" text-anchor="middle" font-size="11" font-weight="700" fill="#7f1d1d">Mostrar</text>
+    <text x="1180" y="588" text-anchor="middle" font-size="11" font-weight="700" fill="#7f1d1d">error</text>
+  </g>
+
+  <!-- error → vuelve a Login (flecha punteada larga hacia arriba) -->
+  <path d="M 1180,545 L 1180,270 L 740,270" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#arrowRed)"/>
+  <text x="1190" y="410" font-size="10" fill="#dc2626" font-style="italic">reintento</text>
+
+  <!-- Sí → Home -->
+  <line x1="960" y1="622" x2="960" y2="698" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 960,698 L 960,720 L 720,720" stroke="#16a34a" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- ===== HOME (HUB CENTRAL) ===== -->
+  <g filter="url(#shadow)">
+    <rect x="520" y="705" width="200" height="68" rx="14" fill="#ffffff" stroke="#7c3aed" stroke-width="2.2"/>
+    <rect x="520" y="705" width="200" height="26" rx="14" fill="url(#headerPurple)"/>
+    <rect x="520" y="720" width="200" height="11" fill="#7c3aed"/>
+    <text x="620" y="723" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">PANTALLA PRINCIPAL</text>
+    <text x="620" y="755" text-anchor="middle" font-size="16" font-weight="700" fill="#4c1d95">HOME</text>
+  </g>
+
+  <!-- Home → ¿Qué acción? -->
+  <line x1="620" y1="773" x2="620" y2="799" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ¿Qué acción? rombo central -->
+  <g filter="url(#shadow)">
+    <polygon points="620,801 745,858 620,915 495,858" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.8"/>
+  </g>
+  <text x="620" y="852" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">¿Qué acción</text>
+  <text x="620" y="868" text-anchor="middle" font-size="12" font-weight="700" fill="#78350f">realiza el usuario?</text>
+
+  <!-- ===== RAMAS INFERIORES (5 opciones) ===== -->
+
+  <!-- Bus horizontal para conectar el rombo con las 5 ramas -->
+  <line x1="620" y1="915" x2="620" y2="945" stroke="#475569" stroke-width="2"/>
+  <line x1="140" y1="945" x2="1100" y2="945" stroke="#475569" stroke-width="2"/>
+  <line x1="140" y1="945" x2="140" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="380" y1="945" x2="380" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="945" x2="620" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="860" y1="945" x2="860" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="1100" y1="945" x2="1100" y2="985" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- etiquetas del bus (acciones) -->
+  <rect x="78" y="924" width="124" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="140" y="937" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">Registrar comida</text>
+  <rect x="332" y="924" width="96" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="380" y="937" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">Ver objetivo</text>
+  <rect x="562" y="924" width="116" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="620" y="937" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">Ver estadísticas</text>
+  <rect x="812" y="924" width="96" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="860" y="937" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">Editar perfil</text>
+  <rect x="1048" y="924" width="104" height="18" rx="4" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="1100" y="937" text-anchor="middle" font-size="10" font-weight="700" fill="#475569">Cerrar sesión</text>
+
+  <!-- RAMA 1: Registrar comida (subproceso largo) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="990" width="200" height="360" rx="12" fill="#ffffff" stroke="#f97316" stroke-width="1.8"/>
+    <rect x="40" y="990" width="200" height="30" rx="12" fill="url(#headerOrange)"/>
+    <rect x="40" y="1008" width="200" height="12" fill="#f97316"/>
+    <line x1="50" y1="1024" x2="50" y2="1346" stroke="#f97316" stroke-width="1.3"/>
+    <line x1="230" y1="1024" x2="230" y2="1346" stroke="#f97316" stroke-width="1.3"/>
+
+    <text x="140" y="1011" text-anchor="middle" font-size="12" font-weight="700" fill="#ffffff">Registrar comida</text>
+
+    <!-- paso 1 -->
+    <rect x="62" y="1040" width="156" height="38" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+    <text x="140" y="1057" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">1. Buscar alimento</text>
+    <text x="140" y="1072" text-anchor="middle" font-size="10" fill="#9a3412">(Firebase, 625 productos)</text>
+    <line x1="140" y1="1078" x2="140" y2="1088" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- paso 2 -->
+    <rect x="62" y="1090" width="156" height="28" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+    <text x="140" y="1109" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">2. Seleccionar alimento</text>
+    <line x1="140" y1="1118" x2="140" y2="1128" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- paso 3 -->
+    <rect x="62" y="1130" width="156" height="28" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+    <text x="140" y="1149" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">3. Introducir gramos</text>
+    <line x1="140" y1="1158" x2="140" y2="1168" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- paso 4 -->
+    <rect x="62" y="1170" width="156" height="38" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+    <text x="140" y="1187" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">4. Calcular kcal</text>
+    <text x="140" y="1202" text-anchor="middle" font-size="10" fill="#9a3412">automáticamente</text>
+    <line x1="140" y1="1208" x2="140" y2="1218" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- paso 5 -->
+    <rect x="62" y="1220" width="156" height="38" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+    <text x="140" y="1237" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">5. Guardar registro</text>
+    <text x="140" y="1252" text-anchor="middle" font-size="10" fill="#9a3412">Firebase + SQLite</text>
+    <line x1="140" y1="1258" x2="140" y2="1268" stroke="#f97316" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- paso 6 -->
+    <rect x="62" y="1270" width="156" height="50" rx="6" fill="#fff7ed" stroke="#fdba74" stroke-width="1"/>
+    <text x="140" y="1287" text-anchor="middle" font-size="11" font-weight="700" fill="#7c2d12">6. Actualizar mascota</text>
+    <text x="140" y="1302" text-anchor="middle" font-size="10" fill="#9a3412">según estado</text>
+    <text x="140" y="1316" text-anchor="middle" font-size="10" fill="#9a3412">nutricional</text>
+  </g>
+
+  <!-- RAMA 2: Ver objetivo -->
+  <g filter="url(#shadow)">
+    <rect x="300" y="990" width="160" height="82" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="300" y="990" width="160" height="22" rx="10" fill="#2563eb"/>
+    <rect x="300" y="1002" width="160" height="10" fill="#2563eb"/>
+    <text x="380" y="1005" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">PANTALLA</text>
+    <text x="380" y="1036" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Objetivo</text>
+    <text x="380" y="1054" text-anchor="middle" font-size="10" fill="#475569">Harris-Benedict</text>
+    <text x="380" y="1066" text-anchor="middle" font-size="10" fill="#475569">+ progreso diario</text>
+  </g>
+
+  <!-- RAMA 3: Ver estadísticas -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="990" width="160" height="82" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="540" y="990" width="160" height="22" rx="10" fill="#2563eb"/>
+    <rect x="540" y="1002" width="160" height="10" fill="#2563eb"/>
+    <text x="620" y="1005" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">PANTALLA</text>
+    <text x="620" y="1036" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Estadísticas</text>
+    <text x="620" y="1054" text-anchor="middle" font-size="10" fill="#475569">Gráfico evolución</text>
+    <text x="620" y="1066" text-anchor="middle" font-size="10" fill="#475569">MPAndroidChart</text>
+  </g>
+
+  <!-- RAMA 4: Editar perfil -->
+  <g filter="url(#shadow)">
+    <rect x="780" y="990" width="160" height="82" rx="10" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+    <rect x="780" y="990" width="160" height="22" rx="10" fill="#2563eb"/>
+    <rect x="780" y="1002" width="160" height="10" fill="#2563eb"/>
+    <text x="860" y="1005" text-anchor="middle" font-size="10" font-weight="700" fill="#ffffff">PANTALLA</text>
+    <text x="860" y="1036" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Perfil</text>
+    <text x="860" y="1054" text-anchor="middle" font-size="10" fill="#475569">Modificar datos</text>
+    <text x="860" y="1066" text-anchor="middle" font-size="10" fill="#475569">personales</text>
+  </g>
+
+  <!-- RAMA 5: Cerrar sesión -->
+  <g filter="url(#shadow)">
+    <rect x="1020" y="990" width="160" height="60" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="1100" y="1015" text-anchor="middle" font-size="12" font-weight="700" fill="#7f1d1d">Cerrar sesión</text>
+    <text x="1100" y="1035" text-anchor="middle" font-size="10" fill="#991b1b">Firebase Auth sign out</text>
+  </g>
+  <line x1="1100" y1="1050" x2="1100" y2="1080" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- FIN -->
+  <g filter="url(#shadow)">
+    <ellipse cx="1100" cy="1105" rx="58" ry="26" fill="#475569"/>
+    <text x="1100" y="1110" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">Fin</text>
+  </g>
+
+  <!-- ===== FLECHAS DE RETORNO A HOME ===== -->
+
+  <!-- bus inferior de retorno -->
+  <line x1="140" y1="1365" x2="140" y2="1420" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <line x1="380" y1="1085" x2="380" y2="1420" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <line x1="620" y1="1085" x2="620" y2="1420" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <line x1="860" y1="1085" x2="860" y2="1420" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <line x1="140" y1="1420" x2="860" y2="1420" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3"/>
+
+  <!-- flecha del bus retorno subiendo por la derecha a Home -->
+  <path d="M 860,1420 L 1010,1420 L 1010,740 L 720,740" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3" fill="none" marker-end="url(#arrowReturn)"/>
+
+  <!-- etiqueta de retorno -->
+  <rect x="460" y="1400" width="240" height="20" rx="4" fill="#ffffff" stroke="#7c3aed" stroke-width="1"/>
+  <text x="580" y="1414" text-anchor="middle" font-size="10" font-weight="700" fill="#7c3aed" font-style="italic">
+    Todas las acciones retornan a Home
+  </text>
+
+  <!-- ===== LEYENDA ===== -->
+  <g transform="translate(60, 1470)">
+    <rect x="0" y="0" width="1120" height="70" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="20" y="20" font-size="11" font-weight="700" fill="#0f172a">Leyenda</text>
+
+    <ellipse cx="88" cy="45" rx="18" ry="10" fill="url(#headerBlue)"/>
+    <text x="118" y="49" font-size="11" fill="#475569">Terminal (inicio)</text>
+
+    <ellipse cx="260" cy="45" rx="18" ry="10" fill="#475569"/>
+    <text x="290" y="49" font-size="11" fill="#475569">Terminal (fin)</text>
+
+    <rect x="410" y="36" width="36" height="20" rx="4" fill="#ffffff" stroke="#cbd5e1"/>
+    <text x="456" y="49" font-size="11" fill="#475569">Acción / pantalla</text>
+
+    <polygon points="620,32 644,46 620,60 596,46" fill="#fef3c7" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="656" y="49" font-size="11" fill="#475569">Decisión</text>
+
+    <rect x="760" y="36" width="36" height="20" rx="3" fill="#ffffff" stroke="#f97316" stroke-width="1.3"/>
+    <line x1="764" y1="36" x2="764" y2="56" stroke="#f97316" stroke-width="1"/>
+    <line x1="792" y1="36" x2="792" y2="56" stroke="#f97316" stroke-width="1"/>
+    <text x="806" y="49" font-size="11" fill="#475569">Subproceso</text>
+
+    <line x1="920" y1="46" x2="970" y2="46" stroke="#7c3aed" stroke-width="1.8" stroke-dasharray="5,3"/>
+    <text x="978" y="49" font-size="11" fill="#475569">Retorno a Home</text>
+  </g>
+</svg>

@@ -10,6 +10,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -100,24 +103,27 @@ public class PerfilActivity extends AppCompatActivity {
         int    textColor;
         int    bgColor;
 
-        if (imc < 18.5) {
+        if (imc < 16.0) {
             bunnyDrawable = R.drawable.bunny_underweight;
-            statusText = "Bajo peso";  textColor = 0xFF0D47A1; bgColor = 0xFFE3F2FD;
+            statusText = "Delgadez severa"; textColor = 0xFF7F1D1D; bgColor = 0xFFFECACA;
+        } else if (imc < 18.5) {
+            bunnyDrawable = R.drawable.bunny_underweight;
+            statusText = "Bajo peso";       textColor = 0xFF0D47A1; bgColor = 0xFFE3F2FD;
         } else if (imc < 25.0) {
             bunnyDrawable = R.drawable.bunny_fit;
-            statusText = "Normal";     textColor = 0xFF166534; bgColor = 0xFFDCFCE7;
+            statusText = "Normal";          textColor = 0xFF166534; bgColor = 0xFFDCFCE7;
         } else if (imc < 30.0) {
             bunnyDrawable = R.drawable.bunny_overweight;
-            statusText = "Sobrepeso";  textColor = 0xFFE65100; bgColor = 0xFFFFF3E0;
+            statusText = "Sobrepeso";       textColor = 0xFFB45309; bgColor = 0xFFFEF3C7;
         } else if (imc < 35.0) {
             bunnyDrawable = R.drawable.bunny_obese1;
-            statusText = "Obesidad I"; textColor = 0xFFB71C1C; bgColor = 0xFFFFEBEE;
+            statusText = "Obesidad I";      textColor = 0xFFC2410C; bgColor = 0xFFFFEDD5;
         } else if (imc < 40.0) {
             bunnyDrawable = R.drawable.bunny_obese2;
-            statusText = "Obesidad II"; textColor = 0xFFB71C1C; bgColor = 0xFFFFCDD2;
+            statusText = "Obesidad II";     textColor = 0xFFB91C1C; bgColor = 0xFFFEE2E2;
         } else {
             bunnyDrawable = R.drawable.bunny_obese3;
-            statusText = "Obesidad III"; textColor = 0xFF7F0000; bgColor = 0xFFEF9A9A;
+            statusText = "Obesidad III";    textColor = 0xFF7F1D1D; bgColor = 0xFFFECACA;
         }
 
         binding.imageProfileHeader.setImageResource(bunnyDrawable);
@@ -164,7 +170,23 @@ public class PerfilActivity extends AppCompatActivity {
                     sex
             );
 
-            refUsers.child(user.getUid()).setValue(updated)
+            // Preservar el flag Pro existente: UserProfile nace con isPro=false
+            // y si guardásemos el objeto entero perderíamos el estado de suscripción.
+            UserProfile previous = localDb.getUserProfile(user.getUid());
+            if (previous != null) updated.setIsPro(previous.getIsPro());
+
+            // IMPORTANTE: usamos updateChildren (no setValue) para NO sobrescribir
+            // los subnodos hermanos como "foods/" (historial de comidas) ni "isPro".
+            Map<String, Object> updates = new HashMap<>();
+            updates.put("name",       updated.getName());
+            updates.put("email",      updated.getEmail());
+            updates.put("weight",     updated.getWeight());
+            updates.put("height",     updated.getHeight());
+            updates.put("age",        updated.getAge());
+            updates.put("goalWeight", updated.getGoalWeight());
+            updates.put("sex",        updated.getSex());
+
+            refUsers.child(user.getUid()).updateChildren(updates)
                     .addOnSuccessListener(aVoid -> {
                         localDb.saveUserProfile(user.getUid(), updated);
                         Toast.makeText(this, "Perfil actualizado", Toast.LENGTH_SHORT).show();
