@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TFG_Roberto_Casaban</string>
+    <string name="app_name">Kcal Tracker</string>
     <string name="password">contraseña</string>
     <string name="Login">Log in\n</string>
     <string name="login">Log in</string>

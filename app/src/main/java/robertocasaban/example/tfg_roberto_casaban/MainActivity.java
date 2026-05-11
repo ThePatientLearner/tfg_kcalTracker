@@ -865,12 +865,12 @@ public class MainActivity extends AppCompatActivity {
             case FASTING:
                 bg      = 0xFF7C3AED;                  // morado: ayuno
                 iconRes = R.drawable.ic_moon;
-                label   = "Ayuno " + formatShort(s.remainingMs);
+                label   = formatShort(s.remainingMs);
                 break;
             case EATING:
                 bg      = 0xFF16A34A;                  // verde: puedes comer
                 iconRes = R.drawable.ic_meal;
-                label   = "Comer " + formatShort(s.remainingMs);
+                label   = formatShort(s.remainingMs);
                 break;
             case INACTIVE:
             default:
